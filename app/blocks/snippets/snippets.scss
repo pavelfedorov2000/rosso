@@ -1,0 +1,76 @@
+/* @supports ((-webkit-backdrop-filter: blur(31px)) or (backdrop-filter: blur(31px))) {
+    background: #fff;
+    backdrop-filter: blur(31px);
+} */
+
+// text border
+/* .border-text {
+	color: black;
+	-webkit-text-fill-color: white;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: black;
+}
+
+// gradient-text
+.gradient-text {
+	background: -webkit-linear-gradient(#eee, #333);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+} */
+
+
+// COUNTER LIST
+/* ol.counter {
+	counter-reset: num;
+
+	li {
+		position: relative;
+
+		&:before {
+			content: counter(num);
+			counter-increment: num;
+			position: absolute;
+		}
+	}
+} */
+
+
+// SWITCHER
+/* .switcher-input {
+	display: none;
+}
+
+.switcher-input+.switcher-style {
+	position: relative;
+	padding: 0 0 0 6rem;
+	cursor: pointer;
+
+	&:before,
+	&:after {
+		content: '';
+		position: absolute;
+		transition: .2s;
+	}
+
+	&:before {
+		top: -0.8rem;
+		left: 0;
+		width: 4rem;
+		height: 2.4rem;
+		border: 0.1rem solid $dark-gray;
+		border-radius: 3.4rem;
+	}
+
+	&:after {
+		top: -0.4rem;
+		left: 0.4rem;
+		width: 1.6rem;
+		height: 1.6rem;
+		background: $dark-gray;
+		border-radius: 50%;
+	}
+}
+
+.switcher-input:checked+.switcher-style::after {
+	left: 2rem;
+} */
