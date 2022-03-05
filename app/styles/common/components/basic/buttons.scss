@@ -1,0 +1,13 @@
+.btn {
+    text-align: center;
+    transition: 0.3s all;
+
+    @media (any-hover: hover) {
+        &:hover {
+        }
+    }
+
+    &--border {
+        //border: 0.1rem solid #;
+    }
+}

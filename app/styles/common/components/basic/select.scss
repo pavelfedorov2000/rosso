@@ -1,3 +1,12 @@
+// Only arrow styling
+.select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background-image: url(../img/select-drop.svg);
+	background-position: calc(100% - 20px) 50%;
+	background-repeat: no-repeat;
+}
+
 // Custom select
 .select {
 	position: relative;
