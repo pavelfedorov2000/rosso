@@ -1,0 +1,103 @@
+@@include("blocks/head/head.html", {"title": "О компании"})
+<div class="wrapper">
+	@@include("blocks/header/header.html")
+	@@include("blocks/burger/burger.html")
+	<main class="page company-history">
+		<div class="page__top container">
+			<nav class="breadcrumbs" aria-label="breadcrumbs">
+				<ol class="breadcrumbs__list">
+					<li class="breadcrumbs__item">
+						<a href="#">
+							Главная
+						</a>
+					</li>
+					<li class="breadcrumbs__item">
+						<span>
+							О компании
+						</span>
+					</li>
+				</ol>
+			</nav>
+		</div>
+		<div class="company-history container">
+			<h1 class="title-48 company-history__title">История компании</h1>
+			<span class="company-history__line company-history__line--1 company-history__line--vertical"></span>
+			<span class="company-history__line company-history__line--2"></span>
+			<span class="company-history__line company-history__line--3 company-history__line--vertical"></span>
+			<div class="company-history__main-text">
+				<p>
+					Компания РОССО была создана в январе 1998 года, как поставщик качественной мебельной фурнитуры и
+					комплектующих для мебельных производств Санкт-Петербурга, а с 1999 года – и Москвы. Мы с самого
+					начала
+					взяли
+					за правило поставлять такой товар, который не только требовался бы мебельщикам и был для них
+					выгодным,
+					но
+					ещё и нравился бы нам самим.
+				</p>
+
+				<p>
+					В итоге мы отобрали для своей складской программы несколько известных европейских брендов с
+					наилучшим
+					соотношением цены и качества. Среди них: STABILUS, FRANKE, TEKA (Германия), METAKOR (Бельгия), FGV,
+					GIUSTI,
+					BOSETTI- MARELLA, EKOTECH (Италия), GAMET, NOMET, REJS, KORNER (Польша), LINCOS (Россия), и другие.
+				</p>
+			</div>
+			<div class="company-history__block container company-history__block--1">
+				<picture class="company-history__img">
+					<source type="image/webp" data-srcset="assets/images/content/history/01.webp"
+						srcset="assets/images/src.webp">
+					<img class="lazy" data-src="assets/images/content/history/01.jpg" src="assets/images/src.jpg"
+						alt="фото" width="1280" height="533">
+				</picture>
+				<span class="company-history__block-line company-history__block-line--horizontal"></span>
+				<div class="company-history__text company-history__text--1">
+					<p>
+						Ежегодно, начиная с 1999 года, компания принимает участие в главной мебельной выставке России
+						«Мебель».
+						Неоднократно принимала участие в важнейших региональных выставках. Сотрудники компании регулярно
+						посещают международные выставки.
+					</p>
+				</div>
+				<div class="company-history__text company-history__text--2">
+					<p>
+						Благодаря этому и постоянному общению с клиентами из разных регионов нам удаётся быть в курсе
+						основных
+						мебельных
+						тенденций и потребностей клиентов.
+					</p>
+				</div>
+			</div>
+			@@include("blocks/furniture-handles/furniture-handles.html")
+			<div class="company-history__block container company-history__block--2">
+				<span class="company-history__block-line company-history__block-line--vertical"></span>
+				<picture class="company-history__img">
+					<source type="image/webp" data-srcset="assets/images/content/history/02.webp"
+						srcset="assets/images/src.webp">
+					<img class="lazy" data-src="assets/images/content/history/02.jpg" src="assets/images/src.jpg"
+						alt="фото" width="1280" height="664">
+				</picture>
+				<span class="company-history__block-line company-history__block-line--horizontal"></span>
+				<div class="company-history__text company-history__text--1">
+					<p>
+						Кроме ручек, компания РОССО предлагает широкий интересный ассортимент товара как для мебельных
+						производств, так и
+						для частных лиц.
+					</p>
+				</div>
+				<div class="company-history__text company-history__text--2">
+					<p>
+						Для небольших мебельных производителей мы также сможем сделать интересные предложения на наш
+						товар. Забрать его
+						можно будет у наших представителей в регионах, либо, если таких нет, мы отправим товар
+						транспортной компанией.
+					</p>
+				</div>
+			</div>
+		</div>
+	</main>
+	@@include("blocks/footer/footer.html")
+	<!-- @@include("blocks/popups/popups.html") -->
+</div>
+@@include("blocks/link/link.html")

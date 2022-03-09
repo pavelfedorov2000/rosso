@@ -1,56 +1,41 @@
-<header class="header">
-	<!-- <div class="header__top">
-        <div class="container header__top-inner">
-
-        </div>
-    </div>
-    <div class="header__bottom">
-        <div class="container header__bottom-inner">
-
-        </div>
-    </div> -->
-
-	<div class="container">
-		<div class="header__inner">
-			<div class="logo header__logo">
-				<a class="logo__link" href="#">
-					<img class="logo__img" src="assets/images/logo/header-logo.png" alt="Логотип">
-				</a>
-			</div>
-			<nav class="menu header__menu">
-				<ul class="menu__list heade__menu-list">
-					<li class="menu__item header__menu-item">
-						<a class="menu__link header__menu-link" href="#">
-
-						</a>
-					</li>
-					<li class="menu__item header__menu-item">
-						<a class="menu__link header__menu-link" href="#">
-
-						</a>
-					</li>
-					<li class="menu__item header__menu-item">
-						<a class="menu__link header__menu-link" href="#">
-
-						</a>
-					</li>
-					<li class="menu__item header__menu-item">
-						<a class="menu__link header__menu-link" href="#">
-
-						</a>
-					</li>
-					<li class="menu__item header__menu-item">
-						<a class="menu__link header__menu-link" href="#">
-
-						</a>
-					</li>
-				</ul>
-			</nav>
-			<button class="burger-btn" type="button">
-				<span></span>
-				<span></span>
-				<span></span>
-			</button>
-		</div>
+<header class="header container">
+	<div class="header__city">
+		<svg class="header__icon">
+			<use xlink:href="assets/images/sprite.svg#pin"></use>
+		</svg>
+		Санкт-Петербург
 	</div>
+	@@include('blocks/header-menu/header-menu.html')
+	<a class="header__phone" href="tel:+78123806686">
+		<svg class="header__icon">
+			<use xlink:href="assets/images/sprite.svg#phone"></use>
+		</svg>
+		+7(812) 380-66-86
+	</a>
+	<div class="header__line"></div>
+	<button class="burger-btn header__burger" type="button" aria-label="Открыть меню">
+		<svg class="header__icon">
+			<use xlink:href="assets/images/sprite.svg#burger"></use>
+		</svg>
+	</button>
+	<div class="header__links">
+		<button class="header__link js-catalog header__link--bold" type="button" aria-label="Открыть каталог">
+			<svg class="header__icon">
+				<use xlink:href="assets/images/sprite.svg#burger"></use>
+			</svg>
+			Каталог
+		</button>
+		<a href="#" class="header__link">Новинки</a>
+		<a href="#" class="header__link">Распродажа</a>
+	</div>
+	<div class="logo header__logo">
+		<a class="logo__link" href="#">
+			<picture>
+				<source type="image/webp" data-srcset="assets/images/logo/logo.webp" srcset="assets/images/src.webp">
+				<img class="lazy logo__img" data-src="assets/images/logo/logo.png" src="assets/images/src.jpg"
+					alt="логотип Россо">
+			</picture>
+		</a>
+	</div>
+	@@include('blocks/header-actions/header-actions.html')
 </header>

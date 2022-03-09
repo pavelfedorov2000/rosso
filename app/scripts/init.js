@@ -1,8 +1,9 @@
 new LazyLoad();
 //new WOW().init();
-//app.burger.init();
-//app.slider.init();
-//app.menu.init();
+app.burger.init();
+app.dropCatalog.init();
+app.frameSystem.init();
+app.asideFilters.init();
 //app.popup.init();
 //app.validation.init();
 
@@ -17,7 +18,7 @@ new LazyLoad();
 
 
 //smoooth scroll to section
-document.querySelectorAll('.menu__link').forEach(link => {
+/* document.querySelectorAll('.menu__link').forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
         window.scrollTo({
@@ -28,7 +29,7 @@ document.querySelectorAll('.menu__link').forEach(link => {
         burgerBtn.classList.remove('burger-btn--active');
         burgerMenu.classList.remove('burger-menu--active');
     });
-});
+}); */
 
 // Custom jquery select
 /* $('.select__title').on('click', function () {

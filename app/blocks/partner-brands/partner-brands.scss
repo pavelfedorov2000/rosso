@@ -1,0 +1,211 @@
+.partner-brands {
+    grid-template-rows: 12rem 16rem 28rem;
+    grid-template-areas:
+        '. . . . . . . . transformica transformica transformica transformica salice salice salice salice stabilus stabilus stabilus stabilus rejs rejs rejs rejs'
+        '. title title title title title title . transformica transformica transformica transformica salice salice salice salice stabilus stabilus stabilus stabilus rejs rejs rejs rejs'
+        '. title title title title title title . confurn confurn confurn confurn ozmf ozmf ozmf ozmf btn btn btn btn btn btn btn btn';
+    @media (max-width: 1366px) {
+        grid-template-rows: 8.5rem 20rem - 8.5rem 20rem;
+    }
+    @media (max-width: 1024px) {
+        grid-template-rows: 20rem 20rem 6.3rem;
+        grid-template-areas:
+            '. . title title title title title title title title title title transformica transformica transformica transformica transformica transformica salice salice salice salice salice salice'
+            'rejs rejs rejs rejs rejs rejs stabilus stabilus stabilus stabilus stabilus stabilus confurn confurn confurn confurn confurn confurn ozmf ozmf ozmf ozmf ozmf ozmf'
+            'btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn';
+    }
+    @media (max-width: 767px) {
+        grid-template-rows: 4rem max-content 4rem 16rem 16rem 16rem 6rem;
+        grid-template-areas:
+            '. . . . . . . . . . . . . . . . . . . . . . . .'
+            '. . title title title title title title title title title title title title title title title title title title title title . .'
+            '. . . . . . . . . . . . . . . . . . . . . . . .'
+            'transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica salice salice salice salice salice salice salice salice salice salice salice salice'
+            'rejs rejs rejs rejs rejs rejs rejs rejs rejs rejs rejs rejs stabilus stabilus stabilus stabilus stabilus stabilus stabilus stabilus stabilus stabilus stabilus stabilus'
+            'confurn confurn confurn confurn confurn confurn confurn confurn confurn confurn confurn confurn ozmf ozmf ozmf ozmf ozmf ozmf ozmf ozmf ozmf ozmf ozmf ozmf'
+            'btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn';
+    }
+    // .partner-brands__title
+
+    &__title {
+        grid-area: title;
+        @media (min-width: 768px) and (max-width: 1024px) {
+            display: grid;
+            place-items: center;
+        }
+        @media (max-width: 767px) {
+            font-size: 1.4rem;
+            line-height: 1.8rem;
+        }
+    }
+
+    // .partner-brands__brand
+
+    &__brand {
+        @extend %grid-center;
+        border: 1px solid $light-gray;
+        border-left: none;
+        img {
+            width: 24rem;
+            @media (max-width: 1366px) {
+                width: 17rem;
+            }
+            @media (max-width: 1024px) {
+                width: 15rem;
+            }
+            @media (max-width: 767px) {
+                width: 12rem;
+            }
+        }
+    }
+
+    // .partner-brands__brand--transformica
+
+    &__brand--transformica {
+        grid-area: transformica;
+        @media (min-width: 768px) {
+            border-left: 1px solid $light-gray;
+        }
+        img {
+            height: 3.2rem;
+            @media (max-width: 1366px) {
+                height: 2.3rem;
+            }
+            @media (max-width: 1024px) {
+                height: 2rem;
+            }
+            @media (max-width: 767px) {
+                height: 1.6rem;
+            }
+        }
+    }
+
+    // .partner-brands__brand--salice
+
+    &__brand--salice {
+        grid-area: salice;
+        @media (max-width: 767px) {
+            border-right: none;
+        }
+        img {
+            height: 4.4rem;
+            @media (max-width: 1366px) {
+                height: 3.1rem;
+            }
+            @media (max-width: 1024px) {
+                height: 2.7rem;
+            }
+            @media (max-width: 767px) {
+                height: 2.2rem;
+            }
+        }
+    }
+
+    // .partner-brands__brand--stabilus
+
+    &__brand--stabilus {
+        grid-area: stabilus;
+        @media (max-width: 767px) {
+            border-top: none;
+            border-right: none;
+        }
+        img {
+            height: 5.9rem;
+            @media (max-width: 1366px) {
+                height: 4.2rem;
+            }
+            @media (max-width: 1024px) {
+                height: 3.4rem;
+            }
+            @media (max-width: 767px) {
+                height: 2.8rem;
+            }
+        }
+    }
+
+    // .partner-brands__brand--rejs
+
+    &__brand--rejs {
+        grid-area: rejs;
+        @media (max-width: 767px) {
+            border-top: none;
+        }
+        img {
+            height: 8.6rem;
+            @media (max-width: 1366px) {
+                height: 6.1rem;
+            }
+            @media (max-width: 1024px) {
+                height: 5rem;
+            }
+            @media (max-width: 767px) {
+                height: 4rem;
+            }
+        }
+    }
+
+    // .partner-brands__brand--confurn
+
+    &__brand--confurn {
+        grid-area: confurn;
+        border-top: none;
+        @media (min-width: 1025px) {
+            border-left: 1px solid $light-gray;
+        }
+        img {
+            height: 8.4rem;
+            @media (max-width: 1366px) {
+                height: 5.9rem;
+            }
+            @media (max-width: 1024px) {
+                height: 5.3rem;
+            }
+            @media (max-width: 767px) {
+                height: 4.3rem;
+            }
+        }
+    }
+
+    // .partner-brands__brand--ozmf
+
+    &__brand--ozmf {
+        grid-area: ozmf;
+        border-top: none;
+        @media (max-width: 767px) {
+            border-right: none;
+        }
+        img {
+            height: 11.8rem;
+            @media (max-width: 1366px) {
+                height: 8.3rem;
+            }
+            @media (max-width: 1024px) {
+                height: 7.2rem;
+            }
+            @media (max-width: 767px) {
+                height: 5.8rem;
+            }
+        }
+    }
+
+    // .partner-brands__btn
+
+    &__btn {
+        grid-area: btn;
+        justify-content: center;
+        justify-items: center;
+        border-top: none;
+        @media (min-width: 1025px) {
+            border-left: none;
+        }
+        @media (max-width: 1024px) {
+            justify-content: flex-end;
+            justify-items: end;
+            display: grid;
+            grid-template-columns: repeat(24, 1fr);
+            .btn__inner {
+                grid-column: 1 / 24;
+            }
+        }
+    }
+}

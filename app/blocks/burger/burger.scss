@@ -1,65 +1,76 @@
-.burger-btn {
-	display: none;
-
-	@media (max-width: 1024px) {
-		width: 3rem;
-		height: 2.7rem;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		cursor: pointer;
-	}
-
-	&__item {
-		display: block;
-		width: 100%;
-		height: 3px;
-		background-color: #fff;
-		transition: 0.5s all;
-	}
-
-	&--active {
-		.burger-btn__item {
-			&:nth-child(1) {
-				transform: rotate(45deg);
-				margin-top: 1.2rem;
-			}
-
-			&:nth-child(2) {
-				display: none;
-			}
-
-			&:nth-child(3) {
-				transform: rotate(-45deg);
-				margin-bottom: 1.2rem;
-			}
-		}
-	}
-}
-
 .burger-menu {
-	display: none;
+    display: none;
 
-	@media (max-width: 1024px) {
-		display: block;
-		position: absolute;
-		top: 0;
-		left: -100%;
-		z-index: 101;
-		width: 50%;
-		height: 100vh;
-		//background-color: $accent;
-		transition: 0.5s left;
-		overflow: auto;
-	}
+    @media (max-width: 1024px) {
+        display: block;
+        position: fixed;
+        top: 6.2rem;
+        z-index: 101;
+        width: 100vw;
+        left: -100vw;
+        z-index: 101;
+        transition: 0.5s left;
+        background-color: rgba(#000, 0.5);
+        overflow: auto;
+        height: calc(100vh - 6.2rem);
+    }
 
-	@media (max-width: 575px) {
-		width: 100%;
-	}
+    &--active {
+        @media (max-width: 1024px) {
+            left: 0;
+        }
+    }
 
-	&--active {
-		@media (max-width: 1024px) {
-			left: 0;
-		}
-	}
+    &__body {
+        width: 35.4rem;
+        display: grid;
+        grid-template-columns: repeat(11, 1fr);
+        align-content: start;
+        background-color: #fff;
+        min-height: calc(100vh - 6.2rem);
+        > * {
+            &:not(.burger-menu__divider) {
+                grid-column: 2 / 11;
+                @media (max-width: 767px) {
+                    grid-column: 3 / 23;
+                }
+            }
+        }
+        @media (max-width: 767px) {
+            width: 100%;
+            grid-template-columns: repeat(24, 1fr);
+        }
+    }
+
+    &__title {
+        @extend %text-12;
+        padding: 2rem 0;
+    }
+
+    &__divider {
+        grid-column: span 11;
+        height: 0.1rem;
+        background-color: #c1c1c1;
+        @media (max-width: 767px) {
+            grid-column: span 24;
+        }
+    }
+
+    &__links {
+        padding: 2rem 0;
+        &:not(:last-child) {
+            border-bottom: 0.1rem solid #c1c1c1;
+        }
+    }
+
+    &__links,
+    &__list {
+        display: grid;
+        grid-auto-flow: row;
+        grid-gap: 1rem;
+    }
+
+    &__link {
+        @extend %text-12;
+    }
 }

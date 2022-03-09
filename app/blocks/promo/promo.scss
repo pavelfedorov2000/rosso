@@ -1,3 +1,98 @@
 .promo {
-  // your code
+    grid-template-rows: 1fr max-content 7.5rem 0.1rem 6rem max-content 1fr 12rem;
+    grid-template-areas:
+        'image image image image image image image image . . . . . . . . . . . . line1 . . .'
+        'image image image image image image image image . title title title title title title title title title title . line1 . . .'
+        'image image image image image image image image . . . . . . . . . . . . line1 . . .'
+        'image image image image image image image image line2 line2 line2 line2 line2 line2 line2 line2 line2 line2 line2 line2 line2 line2 line2 line2'
+        'image image image image image image image image . . . . . . . . . . . . line3 . . .'
+        'image image image image image image image image . . . . text text text text text text text . line3 . . .'
+        'image image image image image image image image . . . . . . . . . . . . line3 . . .'
+        'image image image image image image image image btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn';
+    @media (max-width: 1366px) {
+        grid-template-rows: 1fr max-content 3rem 0.1rem 4rem max-content 1fr 8.5rem;
+    }
+    @media (max-width: 1024px) {
+        grid-template-rows: 1fr max-content 4rem 0.1rem 4.5rem max-content 15rem 8.5rem;
+        grid-template-areas:
+            'image image image image image image image image image image image image image . . . . . . . . . . .'
+            'image image image image image image image image image image image image image . title title title title title title title title title .'
+            'image image image image image image image image image image image image image . . . . . . . . . . .'
+            'line2 line2 line2 line2 line2 line2 line2 line2 line2 line2 line2 line2 line2 line2 line2 line2 line2 line2 line2 line2 line2 line2 line2 line2'
+            '. . . . . . . . . . . . . line3 . . . . . . . . . .'
+            '. . text text text text text text text . . . . line3 . . . . . . . . . .'
+            '. . . . . . . . . . . . . line3 . . . . . . . . . .'
+            'btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn';
+    }
+    @media (max-width: 767px) {
+        grid-template-rows: 1fr max-content 2.5rem 0.1rem 3.5rem max-content 13.5rem 6rem;
+        grid-template-areas:
+            'image image image image image image image image image image . . . . . . . . . . . . . .'
+            'image image image image image image image image image image . title title title title title title title title title title title title .'
+            'image image image image image image image image image image . . . . . . . . . . . . . .'
+            'line2 line2 line2 line2 line2 line2 line2 line2 line2 line2 line2 line2 line2 line2 line2 line2 line2 line2 line2 line2 line2 line2 line2 line2'
+            '. . . . . . . . . . . . . . . . . . line3 . . . . .'
+            '. . text text text text text text text text text text text text text text . . line3 . . . . .'
+            '. . . . . . . . . . . . . . . . . . line3 . . . . .'
+            'btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn';
+    }
+    // .promo__image
+
+    &__image {
+        grid-area: image;
+    }
+
+    // .promo__title
+
+    &__title {
+        grid-area: title;
+        @media (min-width: 768px) and (max-width: 1024px) {
+            font-size: 2.4rem;
+            line-height: 2.9rem;
+        }
+    }
+
+    &__line {
+        display: block;
+        background-color: $light-gray;
+        &--1 {
+            grid-area: line1;
+            @media (max-width: 1024px) {
+                display: none;
+            }
+        }
+        &--2 {
+            grid-area: line2;
+        }
+        &--3 {
+            grid-area: line3;
+        }
+        &--vertical {
+            width: 0.1rem;
+        }
+    }
+
+    // .promo__text
+
+    &__text {
+        grid-area: text;
+        @extend %text-18;
+    }
+
+    // .promo__btn
+
+    &__btn {
+        grid-area: btn;
+        display: grid;
+        grid-template-columns: repeat(16, 1fr);
+        @media (max-width: 767px) {
+            font-size: 1.2rem;
+            line-height: 1.4rem;
+        }
+    }
+
+    &__btn-inner {
+        grid-column: span 15;
+        justify-content: flex-end;
+    }
 }

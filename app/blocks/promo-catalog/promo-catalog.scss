@@ -1,0 +1,102 @@
+.promo-catalog {
+    min-height: calc(100vh - 6.2rem - 11.6rem - 6rem);
+    grid-template-rows: 19rem max-content 3rem 0.1rem 6rem 1fr 6rem;
+    grid-template-areas:
+        'img-1 img-1 img-1 img-1 img-1 img-1 . . . . . . . . . . . . . line-1 . . . .'
+        'img-1 img-1 img-1 img-1 img-1 img-1 . title title title title title title title title title title title . line-1 . . . .'
+        'img-1 img-1 img-1 img-1 img-1 img-1 . . . . . . . . . . . . . line-1 . . . .'
+        'img-1 img-1 img-1 img-1 img-1 img-1 line-2 line-2 line-2 line-2 line-2 line-2 line-2 line-2 line-2 line-2 line-2 line-2 line-2 img-2 img-2 img-2 img-2 img-2'
+        'img-1 img-1 img-1 img-1 img-1 img-1 . . . . . . . . . . . . . img-2 img-2 img-2 img-2 img-2'
+        'img-1 img-1 img-1 img-1 img-1 img-1 . . . text text text text text text text . . . img-2 img-2 img-2 img-2 img-2'
+        'img-1 img-1 img-1 img-1 img-1 img-1 . . . . . . . . . . . . . img-2 img-2 img-2 img-2 img-2';
+    @media (max-width: 1366px) {
+        min-height: calc(100vh - 4.4rem - 8.2rem - 4.3rem);
+        grid-template-rows: 13.5rem max-content 2.5rem 0.1rem 4rem 1fr 4rem;
+    }
+    @media (max-width: 1024px) {
+        min-height: auto;
+        //min-height: calc(100vh - 6.2rem - 4.3rem);
+        grid-template-rows: 1fr max-content 5rem 5.5rem max-content 7rem;
+        grid-template-areas:
+            'img-1 img-1 img-1 img-1 img-1 img-1 img-1 img-1 img-1 img-1 img-1 img-1 img-1 . . . . . . . . . . .'
+            'img-1 img-1 img-1 img-1 img-1 img-1 img-1 img-1 img-1 img-1 img-1 img-1 img-1 . title title title title title title . . . . '
+            'img-1 img-1 img-1 img-1 img-1 img-1 img-1 img-1 img-1 img-1 img-1 img-1 img-1 . . . . . . . . . . .'
+            '. . . . . . . . . . . . . img-2 img-2 img-2 img-2 img-2 img-2 img-2 img-2 img-2 img-2 img-2'
+            '. . text text text text text text text text text . . img-2 img-2 img-2 img-2 img-2 img-2 img-2 img-2 img-2 img-2 img-2'
+            '. . . . . . . . . . . . . img-2 img-2 img-2 img-2 img-2 img-2 img-2 img-2 img-2 img-2 img-2';
+    }
+    @media (max-width: 767px) {
+        grid-template-rows: 1fr max-content 2rem 0.1rem 4rem max-content 4rem;
+        grid-template-areas:
+            'img-1 img-1 img-1 img-1 img-1 img-1 img-1 img-1 img-1 img-1 . . . . . . . . . . . . . .'
+            'img-1 img-1 img-1 img-1 img-1 img-1 img-1 img-1 img-1 img-1 . title title title title title title title title title title title title . '
+            'img-1 img-1 img-1 img-1 img-1 img-1 img-1 img-1 img-1 img-1 . . . . . . . . . . . . . .'
+            'img-1 img-1 img-1 img-1 img-1 img-1 img-1 img-1 img-1 img-1 line-2 line-2 line-2 line-2 line-2 line-2 line-2 line-2 line-2 line-2 line-2 line-2 line-2 line-2'
+            '. . . . . . . . . . . . . . . . . . . . . . . .'
+            '. . text text text text text text text text text text text text text text text text text text text . . .'
+            '. . . . . . . . . . . . . . . . . . . . . . . .';
+    }
+    // .promo-catalog__img
+
+    &__img {
+        img {
+            @extend %cover;
+        }
+    }
+
+    &__line {
+        background-color: $light-gray;
+        &--1 {
+            display: none;
+            @media (min-width: 1025px) {
+                display: block;
+                width: 0.1rem;
+                grid-area: line-1;
+            }
+        }
+        &--2 {
+            grid-area: line-2;
+        }
+    }
+
+    // .promo-catalog__img--1
+
+    &__img--1 {
+        grid-area: img-1;
+    }
+
+    // .promo-catalog__title
+
+    &__title {
+        grid-area: title;
+        @media (min-width: 768px) and (max-width: 1024px) {
+            font-size: 2.4rem;
+            line-height: 2.9rem;
+        }
+    }
+
+    // .promo-catalog__text
+
+    &__text {
+        grid-area: text;
+        @extend %text-16;
+        @media (max-width: 1366px) {
+            font-size: 1.4rem;
+            line-height: 2.1rem;
+        }
+        @media (max-width: 1024px) {
+            font-size: 1.2rem;
+            line-height: 1.8rem;
+        }
+    }
+
+    // .promo-catalog__img--2
+
+    &__img--2 {
+        display: none;
+        @media (min-width: 768px) {
+            display: block;
+            grid-area: img-2;
+        }
+    }
+}

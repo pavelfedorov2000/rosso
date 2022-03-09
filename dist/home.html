@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!--Page Title-->
+	<title>Главная</title>
+	<!--SEO-->
+	<meta name="description" content="Description">
+	<meta name="keywords" content="keyword1, keyword2">
+	<!--Additional meta tags-->
+	<meta name="msthemecompatible" content="no">
+	<meta name="HandheldFriendly" content="True">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="address=no">
+	<!--Favicons-->
+	<link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
+	<link rel="manifest" href="./favicons/site.webmanifest">
+	<link rel="mask-icon" href="./favicons/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="./favicons/favicon.ico">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-config" content="./favicons/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+	<!--Styles-->
+	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" /> -->
+	<!-- <link rel="stylesheet" href="./assets/libs/css/animate.min.css"> -->
+	<link rel="stylesheet" href="./assets/libs/css/swiper-bundle.min.css">
+	<link id="app-css" rel="stylesheet" href="./assets/styles/app.min.css">
+	<script>
+		document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, 'js');
+		if (!('ontouchstart' in document.documentElement)) {
+			document.documentElement.className += ' no-touchevents';
+		} else {
+			document.documentElement.className += ' touchevents';
+		}
+	</script>
+</head>
+
+<body>
+	<noscript>
+		<div class="no-js-warning">Для корректной работы сайта <b>включите JavaScript</b> в браузере</div>
+	</noscript>
+	<?xml version="1.0" encoding="utf-8"?><svg style="display: none;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<symbol viewBox="0 0 24 24" id="btn-arrow-black" xmlns="http://www.w3.org/2000/svg">
+			<path d="M5 13h11.86l-3.63 4.36a1 1 0 101.54 1.28l5-6c.034-.048.064-.098.09-.15 0-.05.05-.08.07-.13A1 1 0 0020 12a1 1 0 00-.07-.36c0-.05-.05-.08-.07-.13a1.198 1.198 0 00-.09-.15l-5-6a1 1 0 00-1.41-.13.999.999 0 00-.13 1.41L16.86 11H5a1 1 0 000 2z" />
+		</symbol>
+		<symbol viewBox="0 0 24 24" id="btn-arrow-white" xmlns="http://www.w3.org/2000/svg">
+			<path d="M5 13h11.86l-3.63 4.36a1 1 0 101.54 1.28l5-6c.034-.048.064-.098.09-.15 0-.05.05-.08.07-.13A1 1 0 0020 12a1 1 0 00-.07-.36c0-.05-.05-.08-.07-.13a1.198 1.198 0 00-.09-.15l-5-6a1 1 0 00-1.41-.13.999.999 0 00-.13 1.41L16.86 11H5a1 1 0 000 2z" />
+		</symbol>
+		<symbol viewBox="0 0 24 24" id="burger" xmlns="http://www.w3.org/2000/svg">
+			<path d="M4.209 13H19.79c.668 0 1.209-.42 1.209-.94v-.12c0-.52-.541-.94-1.209-.94H4.21c-.67 0-1.21.42-1.21.94v.12c0 .52.541.94 1.209.94zM3.94 8h16.12c.52 0 .94-.42.94-.94v-.12a.94.94 0 00-.94-.94H3.94a.94.94 0 00-.94.94v.12c0 .52.42.94.94.94zm0 10h16.12c.52 0 .94-.42.94-.94v-.12a.94.94 0 00-.94-.94H3.94a.94.94 0 00-.94.94v.12c0 .52.42.94.94.94z" />
+		</symbol>
+		<symbol viewBox="0 0 24 24" id="cart" xmlns="http://www.w3.org/2000/svg">
+			<path d="M21.08 7a2 2 0 00-1.7-1H6.58L6 3.74A1 1 0 005 3H3a1 1 0 100 2h1.24L7 15.26A1 1 0 008 16h9a1 1 0 00.89-.55l3.28-6.56A2 2 0 0021.08 7zm-4.7 7H8.76L7.13 8h12.25l-3 6zM7.5 21a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm10 0a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+		</symbol>
+		<symbol viewBox="0 0 24 24" id="favorite" xmlns="http://www.w3.org/2000/svg">
+			<path d="M12 21a.998.998 0 01-.71-.29l-7.77-7.78a5.26 5.26 0 010-7.4 5.24 5.24 0 017.4 0L12 6.61l1.08-1.08a5.24 5.24 0 017.4 0 5.26 5.26 0 010 7.4l-7.77 7.78A1.001 1.001 0 0112 21zM7.22 6a3.2 3.2 0 00-2.28.94 3.24 3.24 0 000 4.57L12 18.58l7.06-7.07a3.24 3.24 0 000-4.57 3.32 3.32 0 00-4.56 0l-1.79 1.8a1 1 0 01-1.42 0L9.5 6.94A3.2 3.2 0 007.22 6z" />
+		</symbol>
+		<symbol viewBox="0 0 24 24" id="phone" xmlns="http://www.w3.org/2000/svg">
+			<path d="M17.4 22A15.42 15.42 0 012 6.6 4.6 4.6 0 016.6 2a3.94 3.94 0 01.77.07c.245.036.486.097.72.18a1 1 0 01.65.75l1.37 6a1 1 0 01-.26.92c-.13.14-.14.15-1.37.79a9.91 9.91 0 004.87 4.89c.65-1.24.66-1.25.8-1.38a1 1 0 01.92-.26l6 1.37a1.001 1.001 0 01.72.65 4.338 4.338 0 01.25 1.49A4.6 4.6 0 0117.4 22zM6.6 4A2.61 2.61 0 004 6.6 13.41 13.41 0 0017.4 20a2.61 2.61 0 002.6-2.6v-.33L15.36 16l-.29.55c-.45.87-.78 1.5-1.62 1.16a11.85 11.85 0 01-7.18-7.21c-.36-.78.32-1.14 1.18-1.59L8 8.64 6.93 4H6.6z" />
+		</symbol>
+		<symbol viewBox="0 0 24 24" id="pin" xmlns="http://www.w3.org/2000/svg">
+			<path d="M12 14c2.206 0 4-1.794 4-4s-1.794-4-4-4-4 1.794-4 4 1.794 4 4 4zm0-6c1.103 0 2 .897 2 2s-.897 2-2 2-2-.897-2-2 .897-2 2-2z" />
+			<path d="M11.42 21.814a.998.998 0 001.16 0C12.884 21.599 20.03 16.44 20 10c0-4.411-3.589-8-8-8-4.41 0-8 3.589-8 7.995-.029 6.445 7.116 11.604 7.42 11.819zM12 4c3.31 0 6 2.691 6 6.005.021 4.438-4.388 8.423-6 9.73-1.61-1.308-6.02-5.294-6-9.735 0-3.309 2.691-6 6-6z" />
+		</symbol>
+		<symbol viewBox="0 0 24 24" id="search" xmlns="http://www.w3.org/2000/svg">
+			<path d="M20.71 19.29l-3.4-3.39A7.92 7.92 0 0019 11a8 8 0 10-8 8 7.92 7.92 0 004.9-1.69l3.39 3.4a1.002 1.002 0 001.639-.325 1 1 0 00-.219-1.095zM5 11a6 6 0 1112 0 6 6 0 01-12 0z" />
+		</symbol>
+		<symbol viewBox="0 0 24 24" id="user" xmlns="http://www.w3.org/2000/svg">
+			<path d="M12 11a4 4 0 100-8 4 4 0 000 8zm0-6a2 2 0 110 4 2 2 0 010-4zm0 8a7 7 0 00-7 7 1 1 0 102 0 5 5 0 1110 0 1 1 0 002 0 7 7 0 00-7-7z" />
+		</symbol>
+	</svg>
+	<div class="wrapper">
+		<header class="header container">
+			<div class="header__city">
+				<svg class="header__icon">
+					<use xlink:href="assets/images/sprite.svg#pin"></use>
+				</svg>
+				Санкт-Петербург
+			</div>
+			<nav class="header__menu">
+				<ul class="header__menu-list">
+					<li>
+						<a class="menu-link header__menu-link" href="#">О компании</a>
+					</li>
+					<li>
+						<a class="menu-link header__menu-link" href="#">Бренды</a>
+					</li>
+					<li>
+						<a class="menu-link header__menu-link" href="#">Доставка и оплата</a>
+					</li>
+					<li>
+						<a class="menu-link header__menu-link" href="#">Гарантии</a>
+					</li>
+					<li>
+						<a class="menu-link header__menu-link" href="#">Обмен / возврат</a>
+					</li>
+					<li>
+						<a class="menu-link header__menu-link" href="#">Новости</a>
+					</li>
+					<li>
+						<a class="menu-link header__menu-link" href="#">Статьи</a>
+					</li>
+					<li>
+						<a class="menu-link header__menu-link" href="#">Контакты</a>
+					</li>
+				</ul>
+			</nav>
+			<a class="header__phone" href="tel:+78123806686">
+				<svg class="header__icon">
+					<use xlink:href="assets/images/sprite.svg#phone"></use>
+				</svg>
+				+7(812) 380-66-86
+			</a>
+			<div class="header__line"></div>
+			<button class="burger-btn header__burger" type="button" aria-label="Открыть меню">
+				<svg class="header__icon">
+					<use xlink:href="assets/images/sprite.svg#burger"></use>
+				</svg>
+			</button>
+			<div class="header__links">
+				<button class="header__link js-catalog header__link--bold" type="button" aria-label="Открыть каталог">
+					<svg class="header__icon">
+						<use xlink:href="assets/images/sprite.svg#burger"></use>
+					</svg>
+					Каталог
+				</button>
+				<a href="#" class="header__link">Новинки</a>
+				<a href="#" class="header__link">Распродажа</a>
+			</div>
+			<div class="logo header__logo">
+				<a class="logo__link" href="#">
+					<picture>
+						<source type="image/webp" data-srcset="assets/images/logo/logo.webp" srcset="assets/images/src.webp">
+						<img class="lazy logo__img" data-src="assets/images/logo/logo.png" src="assets/images/src.jpg" alt="логотип Россо">
+					</picture>
+				</a>
+			</div>
+			<div class="header__actions">
+				<button class="header__action js-search-form" type="button" aria-label="Открыть поиск">
+					<svg class="header__icon">
+						<use xlink:href="assets/images/sprite.svg#search"></use>
+					</svg>
+				</button>
+				<button class="header__action js-enter" type="button" aria-label="Войти">
+					<svg class="header__icon">
+						<use xlink:href="assets/images/sprite.svg#user"></use>
+					</svg>
+				</button>
+				<a class="header__action js-favorite" href="#">
+					<span>3</span>
+					<svg class="header__icon">
+						<use xlink:href="assets/images/sprite.svg#favorite"></use>
+					</svg>
+				</a>
+				<button class="header__action js-cart" type="button" aria-label="Открыть корзину">
+					<span>2</span>
+					<svg class="header__icon">
+						<use xlink:href="assets/images/sprite.svg#cart"></use>
+					</svg>
+				</button>
+			</div>
+		</header>
+		<div class="burger-menu">
+			<div class="burger-menu__body">
+				<div class="burger-menu__title js-catalog">Каталог</div>
+				<span class="burger-menu__divider"></span>
+				<div class="burger-menu__links">
+					<a class="menu-link burger-menu__link menu-link--accent" href="#">Новинки</a>
+					<a class="menu-link burger-menu__link menu-link--accent" href="#">Распродажа</a>
+				</div>
+				<nav class="burger-menu__links">
+					<ul class="burger-menu__list">
+						<li>
+							<a class="menu-link burger-menu__link" href="#">О компании</a>
+						</li>
+						<li>
+							<a class="menu-link burger-menu__link" href="#">Бренды</a>
+						</li>
+						<li>
+							<a class="menu-link burger-menu__link" href="#">Доставка и оплата</a>
+						</li>
+						<li>
+							<a class="menu-link burger-menu__link" href="#">Гарантии</a>
+						</li>
+						<li>
+							<a class="menu-link burger-menu__link" href="#">Обмен / возврат</a>
+						</li>
+						<li>
+							<a class="menu-link burger-menu__link" href="#">Новости</a>
+						</li>
+						<li>
+							<a class="menu-link burger-menu__link" href="#">Статьи</a>
+						</li>
+						<li>
+							<a class="menu-link burger-menu__link" href="#">Контакты</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="burger-menu__links">
+					<a class="menu-link burger-menu__link" href="#">Избранное</a>
+					<a class="menu-link burger-menu__link" href="#">Вход для поставщиков</a>
+				</div>
+			</div>
+		</div>
+		<main class="page">
+			<section class="promo container">
+				<picture class="promo__image">
+					<source type="image/webp" data-srcset="assets/images/content/promo.webp" srcset="assets/images/src.webp">
+					<img class="lazy" data-src="assets/images/content/promo.jpg" src="assets/images/src.jpg" alt="фото">
+				</picture>
+				<h1 class="title-48 promo__title">
+					Поставщик качественной
+					мебельной фурнитуры
+				</h1>
+				<span class="promo__line promo__line--1 promo__line--vertical"></span>
+				<span class="promo__line promo__line--2"></span>
+				<span class="promo__line promo__line--3 promo__line--vertical"></span>
+				<div class="promo__text">
+					Мы стали специалистами в поставках одного из самых сложных и, в то же время, самых красивых направлений
+					фурнитуры для мебели – лицевой фурнитуры, а точнее – мебельных ручек.
+				</div>
+				<a href="#" class="btn promo__btn">
+					<div class="btn__inner promo__btn-inner">
+						В каталог
+						<svg class="btn__arrow">
+							<use xlink:href="assets/images/sprite.svg#btn-arrow-white"></use>
+						</svg>
+					</div>
+				</a>
+			</section>
+			<section class="popular-categories container">
+				<h2 class="title-48 popular-categories__title">Популярные категории</h2>
+				<article class="popular-categories__item popular-category popular-categories__item--1 popular-categories__item--big">
+					<a href="#" class="popular-category__inner">
+						<picture class="popular-category__img">
+							<source type="image/webp" data-srcset="assets/images/content/popular-categories/01.webp" srcset="assets/images/src.webp">
+							<img class="lazy" data-src="assets/images/content/popular-categories/01.png" src="assets/images/src.jpg" alt="фото" width="320" height="320">
+						</picture>
+						<h5 class="popular-category__title">Ручки мебельные</h5>
+					</a>
+				</article>
+				<article class="popular-categories__item popular-category popular-categories__item--2 popular-categories__item--big">
+					<a href="#" class="popular-category__inner">
+						<picture class="popular-category__img">
+							<source type="image/webp" data-srcset="assets/images/content/popular-categories/02.webp" srcset="assets/images/src.webp">
+							<img class="lazy" data-src="assets/images/content/popular-categories/02.png" src="assets/images/src.jpg" alt="фото" width="320" height="320">
+						</picture>
+						<h5 class="popular-category__title">Фасады мебельные</h5>
+					</a>
+				</article>
+				<article class="popular-categories__item popular-category popular-categories__item--3 popular-categories__item--small">
+					<a href="#" class="popular-category__inner">
+						<picture class="popular-category__img">
+							<source type="image/webp" data-srcset="assets/images/content/popular-categories/03.webp" srcset="assets/images/src.webp">
+							<img class="lazy" data-src="assets/images/content/popular-categories/03.png" src="assets/images/src.jpg" alt="фото" width="192" height="131">
+						</picture>
+						<h5 class="popular-category__title">Профили фасадные</h5>
+					</a>
+				</article>
+				<article class="popular-categories__item popular-category popular-categories__item--4 popular-categories__item--small">
+					<a href="#" class="popular-category__inner">
+						<picture class="popular-category__img">
+							<source type="image/webp" data-srcset="assets/images/content/popular-categories/04.webp" srcset="assets/images/src.webp">
+							<img class="lazy" data-src="assets/images/content/popular-categories/04.png" src="assets/images/src.jpg" alt="фото" width="216" height="133">
+						</picture>
+						<h5 class="popular-category__title">Выдвижные ящики</h5>
+					</a>
+				</article>
+				<a href="#" class="btn popular-categories__link btn--border">
+					<div class="btn__inner">
+						Все категории
+						<svg class="btn__arrow">
+							<use xlink:href="assets/images/sprite.svg#btn-arrow-black"></use>
+						</svg>
+					</div>
+				</a>
+			</section>
+			<section class="frame-system container">
+				<h2 class="title-24 frame-system__title">
+					Универсальная алюминевая
+					каркасная система
+				</h2>
+				<div class="frame-system__text">
+					В нашем интернет-магазине предлагается под заказ алюминиевая система полок различной геометрии, которая позволит
+					создать легкие, невесомые, но в тоже время прочные конструкции, способные сэкономить пространство, придать
+					помещению эффектный дизайнерский вид.
+				</div>
+				<span class="frame-system__line frame-system__line--1"></span>
+				<div class="swiper frame-system__slider frame-system-slider">
+					<div class="swiper-wrapper frame-system-slider__item">
+						<div class="swiper-slide">
+							<span class="frame-system-slider__label">New</span>
+							<picture>
+								<source type="image/webp" data-srcset="assets/images/content/frame-system.webp" srcset="assets/images/src.webp">
+								<img class="lazy" data-src="assets/images/content/frame-system.jpg" src="assets/images/src.jpg" alt="фото" width="1280" height="583">
+							</picture>
+						</div>
+						<div class="swiper-slide frame-system-slider__item">
+							<picture>
+								<source type="image/webp" data-srcset="assets/images/content/frame-system.webp" srcset="assets/images/src.webp">
+								<img class="lazy" data-src="assets/images/content/frame-system.jpg" src="assets/images/src.jpg" alt="фото" width="1280" height="583">
+							</picture>
+						</div>
+						<div class="swiper-slide frame-system-slider__item">
+							<picture>
+								<source type="image/webp" data-srcset="assets/images/content/frame-system.webp" srcset="assets/images/src.webp">
+								<img class="lazy" data-src="assets/images/content/frame-system.jpg" src="assets/images/src.jpg" alt="фото" width="1280" height="583">
+							</picture>
+						</div>
+						<div class="swiper-slide frame-system-slider__item">
+							<picture>
+								<source type="image/webp" data-srcset="assets/images/content/frame-system.webp" srcset="assets/images/src.webp">
+								<img class="lazy" data-src="assets/images/content/frame-system.jpg" src="assets/images/src.jpg" alt="фото" width="1280" height="583">
+							</picture>
+						</div>
+						<div class="swiper-slide frame-system-slider__item">
+							<picture>
+								<source type="image/webp" data-srcset="assets/images/content/frame-system.webp" srcset="assets/images/src.webp">
+								<img class="lazy" data-src="assets/images/content/frame-system.jpg" src="assets/images/src.jpg" alt="фото" width="1280" height="583">
+							</picture>
+						</div>
+					</div>
+				</div>
+				<div class="frame-system__pagination">
+					<div class="swiper-pagination frame-system__pagination-nums"></div>
+				</div>
+				<div class="swiper-button-prev frame-system__arrow frame-system__arrow--prev">
+					<svg>
+						<use xlink:href="assets/images/sprite.svg#slider-arrow-left"></use>
+					</svg>
+				</div>
+				<div class="swiper-button-next frame-system__arrow frame-system__arrow--next">
+					<svg>
+						<use xlink:href="assets/images/sprite.svg#slider-arrow-right"></use>
+					</svg>
+				</div>
+				<a href="#" class="btn frame-system__btn btn--white">
+					<div class="btn__inner">
+						В каталог
+						<svg class="btn__arrow">
+							<use xlink:href="assets/images/sprite.svg#btn-arrow-black"></use>
+						</svg>
+					</div>
+				</a>
+				<span class="frame-system__line frame-system__line--2"></span>
+			</section>
+			<section class="partner-brands container">
+				<h2 class="title-48 partner-brands__title">Бренды партнеров</h2>
+				<a href="#" class="partner-brands__brand partner-brands__brand--transformica">
+					<picture>
+						<source type="image/webp" data-srcset="assets/images/logo/partner-brands/transformica.webp" srcset="assets/images/src.webp">
+						<img class="lazy" data-src="assets/images/logo/partner-brands/transformica.png" src="assets/images/src.jpg" alt="фото" width="240" height="32">
+					</picture>
+				</a>
+				<a href="#" class="partner-brands__brand partner-brands__brand--salice">
+					<picture>
+						<source type="image/webp" data-srcset="assets/images/logo/partner-brands/salice.webp" srcset="assets/images/src.webp">
+						<img class="lazy" data-src="assets/images/logo/partner-brands/salice.png" src="assets/images/src.jpg" alt="фото" width="240" height="44">
+					</picture>
+				</a>
+				<a href="#" class="partner-brands__brand partner-brands__brand--stabilus">
+					<picture>
+						<source type="image/webp" data-srcset="assets/images/logo/partner-brands/stabilus.webp" srcset="assets/images/src.webp">
+						<img class="lazy" data-src="assets/images/logo/partner-brands/stabilus.png" src="assets/images/src.jpg" alt="фото" width="240" height="59">
+					</picture>
+				</a>
+				<a href="#" class="partner-brands__brand partner-brands__brand--rejs">
+					<picture>
+						<source type="image/webp" data-srcset="assets/images/logo/partner-brands/rejs.webp" srcset="assets/images/src.webp">
+						<img class="lazy" data-src="assets/images/logo/partner-brands/rejs.png" src="assets/images/src.jpg" alt="фото" width="240" height="86">
+					</picture>
+				</a>
+				<a href="#" class="partner-brands__brand partner-brands__brand--confurn">
+					<picture>
+						<source type="image/webp" data-srcset="assets/images/logo/partner-brands/confurn.webp" srcset="assets/images/src.webp">
+						<img class="lazy" data-src="assets/images/logo/partner-brands/confurn.png" src="assets/images/src.jpg" alt="фото" width="240" height="84">
+					</picture>
+				</a>
+				<a href="#" class="partner-brands__brand partner-brands__brand--ozmf">
+					<picture>
+						<source type="image/webp" data-srcset="assets/images/logo/partner-brands/ozmf.webp" srcset="assets/images/src.webp">
+						<img class="lazy" data-src="assets/images/logo/partner-brands/ozmf.png" src="assets/images/src.jpg" alt="фото" width="240" height="118">
+					</picture>
+				</a>
+				<a href="#" class="btn partner-brands__btn btn--white">
+					<div class="btn__inner">
+						Все бренды
+						<svg class="btn__arrow">
+							<use xlink:href="assets/images/sprite.svg#btn-arrow-black"></use>
+						</svg>
+					</div>
+				</a>
+			</section>
+			<section class="connect-us container">
+				<h2 class="title-48 connect-us__title">Связаться с&nbsp;нами</h2>
+				<div class="connect-us-item connect-us-item--contacts">
+					<h6 class="connect-us-item__title">Контакты</h6>
+					<div class="connect-us-item__content">
+						<div class="connect-us-item__block">
+							<p><a href="tel:+78123806686">+7(812) 380-66-86</a> (Санкт-Петербург)</p>
+							<p><a href="tel:+74955067832">+7(495) 506-78-32</a> (Москва)</p>
+							<p><a href="mailto:info@rosso.su">info@rosso.su</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="connect-us-item connect-us-item--address">
+					<h6 class="connect-us-item__title">Адрес</h6>
+					<div class="connect-us-item__content">
+						<div class="connect-us-item__block">
+							<p>г. Санкт-Петербург</p>
+							<p>Полюстровский пр., д. 50</p>
+							<p>Пн- Пт. С 10.00 ДО 18.00</p>
+						</div>
+						<div class="connect-us-item__block">
+							<p>г. Москва, Московская область</p>
+							<p>ул. Фабричная, д.6</p>
+							<p>Пн- Пт. С 10.00 ДО 18.00</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="container footer__container">
+				<div class="footer__menu-row">
+					<div class="footer__menu-col">
+						<h6 class="footer__menu-title">Каталог</h6>
+						<ul class="footer__menu-list">
+							<li><a class="footer__menu-link" href="#">Ручки мебельные</a></li>
+							<li><a class="footer__menu-link" href="#">Фасады мебельные</a></li>
+							<li><a class="footer__menu-link" href="#">Новинки</a></li>
+							<li><a class="footer__menu-link" href="#">Распродажа</a></li>
+						</ul>
+					</div>
+					<div class="footer__menu-col">
+						<h6 class="footer__menu-title">Покупателю</h6>
+						<ul class="footer__menu-list">
+							<li><a class="footer__menu-link" href="#">Доставка</a></li>
+							<li><a class="footer__menu-link" href="#">Возврат / обмен</a></li>
+							<li><a class="footer__menu-link" href="#">Гарантии</a></li>
+							<li><a class="footer__menu-link" href="#">Договор оферты</a></li>
+						</ul>
+					</div>
+					<div class="footer__menu-col">
+						<h6 class="footer__menu-title">Компания</h6>
+						<ul class="footer__menu-list">
+							<li><a class="footer__menu-link" href="#">О нас</a></li>
+							<li><a class="footer__menu-link" href="#">Парнеры</a></li>
+							<li><a class="footer__menu-link" href="#">Новости</a></li>
+							<li><a class="footer__menu-link" href="#">Дипломы / сертификаты</a></li>
+						</ul>
+					</div>
+					<div class="footer__menu-col">
+						<h6 class="footer__menu-title">Мы принимаем</h6>
+						<ul class="footer__menu-list">
+							<li><a class="footer__menu-link" href="#">Mastercard</a></li>
+							<li><a class="footer__menu-link" href="#">Visa</a></li>
+							<li><a class="footer__menu-link" href="#">JСВ</a></li>
+							<li><a class="footer__menu-link" href="#">МИР</a></li>
+						</ul>
+					</div>
+					<div class="footer__menu-col">
+						<h6 class="footer__menu-title">Социальные сети</h6>
+						<ul class="footer__menu-list">
+							<li><a class="footer__menu-link" href="#">Instagram</a></li>
+							<li><a class="footer__menu-link" href="#">Вконтакте</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer__line"></div>
+				<div class="footer__copyright">2011-2020 © РОССО - комплектующие и фурнитура для мебели высокого качества.</div>
+				<a href="#" class="footer__politics">Политика конфиденциальности</a>
+			</div>
+		</footer>
+	</div>
+	<script src="./assets/libs/js/jquery.min.js"></script>
+	<!-- <script src="./assets/libs/js/svg4everybody.min.js"></script> -->
+	<script src="./assets/libs/js/swiper-bundle.min.js"></script>
+	<!-- <script src="./assets/libs/js/jquery.validate.min.js"></script> -->
+	<!-- <script src="./assets/libs/js/jquery.maskedinput.js"></script> -->
+	<!-- <script src="./assets/libs/js/jquery.fancybox.min.js"></script> -->
+	<!-- <script src="./assets/libs/js/wow.min.js"></script> -->
+	<script src="./assets/libs/js/lazyload.min.js"></script>
+	<!-- <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script> -->
+	<script src="./assets/scripts/app.min.js"></script>
+</body>
+
+</html>

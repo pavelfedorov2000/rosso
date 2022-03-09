@@ -1,9 +1,15 @@
-@@include("blocks/head/head.html", {"title": Главная"})
-@@include("blocks/header/header.html")
-<main class="page">
-	@@include("blocks/promo/promo.html")
-	@@include("blocks/about/about.html")
-</main>
-@@include("blocks/footer/footer.html")
-<!-- @@include("blocks/popups/popups.html") -->
+@@include("blocks/head/head.html", {"title": "Главная"})
+<div class="wrapper">
+	@@include("blocks/header/header.html")
+	@@include("blocks/burger/burger.html")
+	<main class="page">
+		@@include("blocks/promo/promo.html")
+		@@include("blocks/popular-categories/popular-categories.html")
+		@@include("blocks/frame-system/frame-system.html")
+		@@include("blocks/partner-brands/partner-brands.html")
+		@@include("blocks/connect-us/connect-us.html")
+	</main>
+	@@include("blocks/footer/footer.html")
+	<!-- @@include("blocks/popups/popups.html") -->
+</div>
 @@include("blocks/link/link.html")

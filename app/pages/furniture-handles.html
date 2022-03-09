@@ -1,0 +1,36 @@
+@@include("blocks/head/head.html", {"title": "Главная"})
+<div class="wrapper">
+	@@include("blocks/header/header.html")
+	@@include("blocks/burger/burger.html")
+	<main class="page">
+		<div class="page__top container">
+			<nav class="breadcrumbs" aria-label="breadcrumbs">
+				<ol class="breadcrumbs__list">
+					<li class="breadcrumbs__item">
+						<a href="#">
+							Главная
+						</a>
+					</li>
+					<li class="breadcrumbs__item">
+						<a href="#">
+							Каталог
+						</a>
+					</li>
+					<li class="breadcrumbs__item">
+						<span>
+							Ручки мебельные
+						</span>
+					</li>
+				</ol>
+			</nav>
+		</div>
+		@@include("blocks/promo-catalog/promo-catalog.html")
+
+		<div class="catalog container">
+
+		</div>
+	</main>
+	@@include("blocks/footer/footer.html")
+	<!-- @@include("blocks/popups/popups.html") -->
+</div>
+@@include("blocks/link/link.html")

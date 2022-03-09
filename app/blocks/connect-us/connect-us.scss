@@ -1,0 +1,110 @@
+.connect-us {
+    background-color: $accent;
+    color: #fff;
+    border-bottom: 0.1rem solid $gray;
+    grid-template-rows: 10rem max-content max-content;
+    grid-template-areas:
+        '. . . . . . . . contacts contacts contacts contacts contacts contacts contacts contacts contacts contacts contacts contacts contacts contacts contacts contacts'
+        '. title title title title title . . contacts contacts contacts contacts contacts contacts contacts contacts contacts contacts contacts contacts contacts contacts contacts contacts'
+        '. title title title title title . . address address address address address address address address address address address address address address address address';
+    @media (max-width: 1366px) {
+        grid-template-rows: 7rem max-content max-content;
+    }
+    @media (max-width: 1024px) {
+        grid-template-rows: 10rem max-content 7rem max-content max-content;
+        grid-template-areas:
+            '. . . . . . . . . . . . . . . . . . . . . . . . '
+            '. . title title title title title title title title . . . . . . . . . . . . . . '
+            '. . . . . . . . . . . . . . . . . . . . . . . . '
+            'contacts contacts contacts contacts contacts contacts contacts contacts contacts contacts contacts contacts contacts contacts contacts contacts contacts contacts contacts contacts contacts contacts contacts contacts'
+            'address address address address address address address address address address address address address address address address address address address address address address address address';
+    }
+    @media (max-width: 767px) {
+        grid-template-rows: 3rem max-content 3rem max-content max-content;
+    }
+    // .connect-us__title
+
+    &__title {
+        grid-area: title;
+    }
+}
+
+.connect-us-item {
+    border: 0.1rem solid $gray;
+    display: grid;
+    grid-template-rows: 10rem max-content 10rem;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-areas:
+        '. . . . . . . . . . . . . . . .'
+        '. title title title . content content content content content content content content content content .'
+        '. . . . . . . . . . . . . . . .';
+    @media (max-width: 1366px) {
+        grid-template-rows: 7rem max-content 7rem;
+    }
+    @media (max-width: 1024px) {
+        grid-template-columns: repeat(24, 1fr);
+        grid-template-areas:
+            '. . . . . . . . . . . . . . . . . . . . . . . .'
+            '. . title title title . . . . content content content content content content content content content content content content content . .'
+            '. . . . . . . . . . . . . . . . . . . . . . . .';
+    }
+    @media (max-width: 767px) {
+        grid-template-rows: 4rem max-content 2rem max-content 4rem;
+        grid-template-areas:
+            '. . . . . . . . . . . . . . . . . . . . . . . .'
+            '. . title title title title title title title title title title title title title title title title title title title title . .'
+            '. . . . . . . . . . . . . . . . . . . . . . . .'
+            '. . content content content content content content content content content content content content content content content content content content content content . .'
+            '. . . . . . . . . . . . . . . . . . . . . . . .';
+    }
+    // .connect-us-item__title
+
+    &__title {
+        @extend %text-18;
+        line-height: 2.2rem;
+        font-weight: 600;
+        color: $gray;
+        grid-area: title;
+        @media (max-width: 1366px) {
+            font-size: 1.4rem;
+            line-height: 1.7rem;
+        }
+    }
+
+    // .connect-us-item__content
+
+    &__content {
+        grid-area: content;
+        display: grid;
+        grid-gap: 10rem;
+        @media (max-width: 1366px) {
+            grid-gap: 7rem;
+        }
+    }
+
+    // .connect-us-item__block
+
+    &__block {
+        display: grid;
+        grid-gap: 1rem;
+        p {
+            @extend %text-24;
+            @media (max-width: 1366px) {
+                font-size: 1.8rem;
+                line-height: 2.2rem;
+            }
+            @media (max-width: 767px) {
+                font-size: 1.2rem;
+                line-height: 1.6rem;
+            }
+        }
+    }
+}
+.connect-us-item--contacts {
+    grid-area: contacts;
+}
+.connect-us-item--address {
+    grid-area: address;
+    border-top: none;
+    border-bottom: none;
+}

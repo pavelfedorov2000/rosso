@@ -1,1 +1,252 @@
+.header {
+    /* @media (max-width: 1024px) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        background-color: #fff;
+    } */
+    // .header__container
+    min-height: 6.2rem + 11.6rem;
+    border: 0.1rem solid #ebebeb;
+    align-items: center;
+    grid-template-rows: 2rem max-content 2rem 0.1rem 3rem max-content 3rem;
+    grid-template-areas:
+        '. . . . . . . . . . . . . . . . . . . . . . . .'
+        '. city city city . menu menu menu menu menu menu menu menu menu menu menu menu menu menu menu phone phone phone .'
+        '. . . . . . . . . . . . . . . . . . . . . . . .'
+        'line line line line line line line line line line line line line line line line line line line line line line line line'
+        '. . . . . . . . . . . . . . . . . . . . . . . .'
+        '. links links links links links links . . . logo logo logo logo . . . . . . actions actions actions .'
+        '. . . . . . . . . . . . . . . . . . . . . . . .';
+    @media (max-width: 1366px) {
+        min-height: 4.4rem + 8.2rem;
+        grid-template-rows: 1.3rem max-content 1.3rem 0.1rem 2.4rem max-content 2.4rem;
+    }
+    @media (max-width: 1024px) {
+        min-height: 6.2rem;
+        grid-template-rows: 1.9rem 2.2rem 1.9rem;
+        grid-template-areas:
+            '. . . . . . . . . . . . . . . . . . . . . . . .'
+            '. burger . . . . . . . logo logo logo logo logo logo . . . . . . actions actions .'
+            '. . . . . . . . . . . . . . . . . . . . . . . .';
+    }
 
+    &__line {
+        display: none;
+        @media (min-width: 1025px) {
+            display: block;
+            grid-area: line;
+            height: 100%;
+            background-color: #c1c1c1;
+        }
+    }
+
+    // .header__city
+
+    &__city {
+        @extend %text-16;
+        @media (min-width: 1025px) {
+            grid-area: city;
+        }
+        @media (max-width: 1366px) {
+            font-size: 1.2rem;
+            line-height: 1.8rem;
+        }
+    }
+
+    // .header__phone
+
+    &__phone {
+        @extend %text-16;
+        @media (min-width: 1025px) {
+            grid-area: phone;
+            justify-content: flex-end;
+        }
+        @media (max-width: 1366px) {
+            font-size: 1.2rem;
+            line-height: 1.8rem;
+        }
+    }
+
+    &__city,
+    &__phone {
+        display: none;
+        grid-template-columns: 2.4rem max-content;
+        grid-gap: 1.5rem;
+        align-items: center;
+        color: $gray;
+        @media (min-width: 1025px) {
+            display: grid;
+        }
+        @media (max-width: 1366px) {
+            grid-template-columns: 1.5rem max-content;
+            grid-gap: 1rem;
+        }
+    }
+
+    // .header__links
+
+    &__links {
+        @extend %grid-row;
+        display: none;
+        @media (min-width: 1025px) {
+            display: grid;
+            grid-area: links;
+            grid-gap: 6rem;
+            align-items: center;
+        }
+        @media (max-width: 1366px) {
+            grid-gap: 3.5rem;
+        }
+    }
+
+    // .header__link
+
+    &__link {
+        @extend %text-16;
+        @media (max-width: 1366px) {
+            font-size: 1.4rem;
+            line-height: 2.1rem;
+        }
+        &--bold {
+            @extend %grid-row;
+            align-items: center;
+            grid-gap: 1rem;
+            color: $accent;
+            font-weight: 600;
+            svg {
+                fill: #000;
+            }
+        }
+    }
+
+    // .header__logo
+
+    &__logo {
+        grid-area: logo;
+        @extend %grid-center;
+    }
+
+    &__menu {
+        display: none;
+        @media (min-width: 1025px) {
+            display: block;
+            grid-area: menu;
+        }
+    }
+
+    &__menu-list {
+        @extend %grid-row;
+        grid-gap: 5rem;
+        @media (max-width: 1366px) {
+            grid-gap: 3rem;
+        }
+    }
+
+    &__menu-link {
+        @extend %text-16;
+        transition: 0.3s color;
+        @media (max-width: 1366px) {
+            font-size: 1.2rem;
+            line-height: 1.8rem;
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                color: $accent;
+            }
+        }
+    }
+
+    &__icon {
+        width: 2.4rem;
+        height: 2.4rem;
+        fill: $gray;
+        @media (max-width: 1366px) {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+        @media (max-width: 1024px) {
+            width: 1.8rem;
+            height: 1.8rem;
+        }
+        @media (max-width: 767px) {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
+
+    &__actions {
+        grid-area: actions;
+        @extend %grid-row;
+        justify-content: flex-end;
+        align-items: center;
+        grid-gap: 2.5rem;
+        @media (max-width: 767px) {
+            grid-gap: 1.5rem;
+        }
+    }
+
+    &__action {
+        @extend %grid-center;
+        position: relative;
+        span {
+            position: absolute;
+            top: -1.5rem;
+            right: -1.4rem;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            background-color: $accent;
+            @extend %grid-center;
+            @extend %text-16;
+            color: #fff;
+            @media (max-width: 1366px) {
+                top: -1rem;
+                right: -1rem;
+                width: 1.5rem;
+                height: 1.5rem;
+                font-size: 1.2rem;
+                line-height: 1.4rem;
+            }
+        }
+        svg {
+            fill: $accent;
+        }
+    }
+
+    &__burger {
+        display: none;
+        @media (max-width: 1024px) {
+            display: grid;
+            grid-area: burger;
+        }
+    }
+}
+
+.menu-link {
+    color: $gray;
+    &--accent {
+        color: $accent;
+    }
+}
+
+.logo__img {
+    height: 3.2rem;
+    object-fit: contain;
+    @media (max-width: 1024px) {
+        width: 16rem;
+        height: 2.2rem;
+    }
+}
+
+.js {
+    &-enter,
+    &-favorite {
+        display: none;
+        @media (min-width: 1025px) {
+            display: block;
+        }
+    }
+}

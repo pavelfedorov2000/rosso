@@ -1,0 +1,267 @@
+.drop-catalog {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    top: -150%;
+    transition: 0.5s top;
+    width: 100vw;
+    height: calc(100vh - (6.2rem + 11.6rem));
+    overflow-y: auto;
+    display: grid;
+    grid-template-rows: 16rem 10rem 1fr 15rem max-content 6.7rem;
+    grid-template-areas:
+        'category-1 category-1 category-1 category-1 category-1 category-1 category-1 category-1 category-1 category-1 category-1 category-1 category-2 category-2 category-2 category-2 category-2 category-2 category-2 category-2 category-2 category-2 category-2 category-2'
+        '. . . . . . . . . . . . . . . . . . . . . . . .'
+        '. list list list list list list list list list list list list list list list list list list list list list list .'
+        '. . . . . . . . . . . . . . . . . . . . . . . .'
+        '. . download download download download . . . . . . . . . . . . . . . . . .'
+        '. . . . . . . . . . . . . . . . . . . . . . . .';
+    background-color: #fff;
+    @media (max-width: 1366px) {
+        grid-template-rows: 11.375rem 11rem 1fr 12rem max-content 2.4rem;
+    }
+    @media (max-width: 1024px) {
+        top: 6.2rem;
+        left: -100%;
+        transition: 0.5s left;
+        height: calc(100vh - 6.2rem);
+        grid-template-rows: repeat(2, 8rem) 4.2rem 1fr 12rem max-content 3rem;
+        grid-template-areas:
+            'category-1 category-1 category-1 category-1 category-1 category-1 category-1 category-1 category-1 category-1 category-1 category-1 category-1 category-1 category-1 category-1 category-1 category-1 category-1 category-1 category-1 category-1 category-1 category-1'
+            'category-2 category-2 category-2 category-2 category-2 category-2 category-2 category-2 category-2 category-2 category-2 category-2 category-2 category-2 category-2 category-2 category-2 category-2 category-2 category-2 category-2 category-2 category-2 category-2'
+            '. . . . . . . . . . . . . . . . . . . . . . . .'
+            '. list list list list list list list list list list list list list list list list list list list list list list .'
+            '. . . . . . . . . . . . . . . . . . . . . . . .'
+            '. . . download download download download download download download . . . . . . . . . . . . . .'
+            '. . . . . . . . . . . . . . . . . . . . . . . .';
+    }
+    @media (max-width: 767px) {
+        grid-template-rows: repeat(2, 6rem) 3rem 1fr 4rem max-content 3rem;
+        grid-template-areas:
+            'category-1 category-1 category-1 category-1 category-1 category-1 category-1 category-1 category-1 category-1 category-1 category-1 category-1 category-1 category-1 category-1 category-1 category-1 category-1 category-1 category-1 category-1 category-1 category-1'
+            'category-2 category-2 category-2 category-2 category-2 category-2 category-2 category-2 category-2 category-2 category-2 category-2 category-2 category-2 category-2 category-2 category-2 category-2 category-2 category-2 category-2 category-2 category-2 category-2'
+            '. . . . . . . . . . . . . . . . . . . . . . . .'
+            '. . list list list list list list list list list list list list list list list list . . . . . .'
+            '. . . . . . . . . . . . . . . . . . . . . . . .'
+            '. . . download download download download download download download download download download download download download download download . . . . . .'
+            '. . . . . . . . . . . . . . . . . . . . . . . .';
+    }
+    &::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 0;
+    }
+
+    &.active {
+        top: 6.2rem + 11.6rem;
+        @media (max-width: 1024px) {
+            top: 6.2rem;
+            left: 0;
+        }
+    }
+
+    &__view-more {
+        @extend %grid-center;
+        height: 6rem;
+        position: fixed;
+        display: none;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        @extend %text-12;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        background-color: #fff;
+        .btn__inner {
+            align-items: center;
+        }
+    }
+    // .drop-catalog__categories
+
+    // .drop-catalog__category
+
+    &__category {
+        @extend %grid-center;
+        background-image: url(../images/category-bg.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        @extend %text-24;
+        border: 0.1rem solid $light-gray;
+        transition: 0.3s color;
+        @media (any-hover: hover) {
+            &:hover {
+                color: $gray;
+            }
+        }
+        &--1 {
+            grid-area: category-1;
+        }
+        &--2 {
+            grid-area: category-2;
+            border-left: none;
+            @media (max-width: 1024px) {
+                border-top: none;
+                border-left: 0.1rem solid $light-gray;
+            }
+        }
+    }
+
+    // .drop-catalog__grid
+
+    &__grid {
+        grid-area: list;
+    }
+
+    // .drop-catalog__items
+
+    &__items {
+        grid-area: list;
+        display: grid;
+        align-content: flex-start;
+        //grid-template-columns: 37rem 1fr 1fr 43rem;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 3rem 5rem;
+        @media (max-width: 1366px) {
+            grid-gap: 1.5rem 6rem;
+        }
+        @media (max-width: 1024px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (max-width: 767px) {
+            grid-template-columns: 1fr;
+            grid-gap: 4rem;
+        }
+    }
+
+    &__item {
+        &:nth-child(1),
+        &:nth-child(2) {
+            display: grid;
+        }
+    }
+
+    // .drop-catalog__download
+
+    &__download {
+        grid-area: download;
+        display: inline-grid;
+        grid-gap: 1.3rem;
+        @media (max-width: 1366px) {
+            grid-gap: 1rem;
+        }
+        @media (max-width: 767px) {
+            display: none;
+        }
+    }
+
+    // .drop-catalog__download-item
+
+    &__download-item {
+        position: relative;
+        padding-right: 4rem;
+        @extend %text-16;
+        color: $gray;
+        transition: 0.3s color;
+        @media (max-width: 1366px) {
+            font-size: 1.2rem;
+            line-height: 1.8rem;
+            padding-right: 3rem;
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                color: $accent;
+            }
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            @extend %pos-center-y;
+            right: 0;
+            width: 2.4rem;
+            height: 2.4rem;
+            background-image: url(../images/icons/download.svg);
+            @extend %bg-contain;
+            @media (max-width: 1366px) {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+        }
+    }
+}
+
+.drop-catalog-item {
+    display: grid;
+    grid-template-columns: 6rem 1fr;
+    grid-template-rows: minmax(5rem, max-content) 2.5rem max-content;
+    grid-template-areas:
+        'img title'
+        '. .'
+        '. list';
+    column-gap: 2rem;
+    @media (max-width: 1366px) {
+        grid-template-columns: 4.2rem 1fr;
+        grid-template-rows: minmax(3.5rem, max-content) 2.5rem max-content;
+        column-gap: 1.4rem;
+    }
+    @media (max-width: 1024px) {
+        grid-template-rows: minmax(3.5rem, max-content) 2rem max-content;
+    }
+    @media (max-width: 767px) {
+        display: none;
+    }
+    // .drop-catalog-item__img
+
+    &__img {
+        grid-area: img;
+        height: 5rem;
+        @media (max-width: 1366px) {
+            height: 3.5rem;
+        }
+
+        img {
+            @extend %cover;
+        }
+    }
+
+    // .drop-catalog-item__title
+
+    &__title {
+        grid-area: title;
+        @extend %text-18;
+        line-height: 2.5rem;
+        @media (max-width: 1366px) {
+            line-height: 2rem;
+        }
+    }
+
+    // .drop-catalog-item__list
+
+    &__list {
+        grid-area: list;
+        display: grid;
+        grid-gap: 0.6rem;
+        @media (max-width: 1366px) {
+            grid-gap: 0.5rem;
+        }
+    }
+
+    // .drop-catalog-item__list-link
+
+    &__list-link {
+        @extend %text-16;
+        transition: 0.3s color;
+        @media (max-width: 1366px) {
+            font-size: 1.4rem;
+            line-height: 2.1rem;
+        }
+        @media (max-width: 767px) {
+            font-size: 1.2rem;
+            line-height: 1.8rem;
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                color: $light-gray;
+            }
+        }
+    }
+}

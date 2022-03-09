@@ -1,0 +1,93 @@
+.aside-filters {
+    display: grid;
+    grid-gap: 2rem;
+    // .aside-filters__top
+
+    &__top {
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 1.9rem;
+    }
+
+    // .aside-filters__title
+
+    &__title {
+        @extend %text-18;
+        line-height: 2.5rem;
+        font-weight: 600;
+    }
+
+    // .aside-filters__reset-btn
+
+    &__reset-btn {
+        @extend %text-16;
+        color: $gray;
+    }
+
+    // .aside-filters__items
+
+    &__items {
+        display: grid;
+        grid-gap: 4rem;
+    }
+
+    // .aside-filters__item
+
+    &__item {
+        display: grid;
+        grid-gap: 2.5rem;
+    }
+
+    // .aside-filters__item-title
+
+    &__item-title {
+        @extend %text-18;
+        line-height: 2.5rem;
+        font-weight: 600;
+    }
+
+    // .aside-filters__item-checks
+
+    &__item-checks {
+        display: grid;
+        grid-gap: 0.8rem;
+    }
+
+    // .aside-filters__check-item
+
+    &__check-item {
+        display: grid;
+        grid-template-columns: 2.4rem 3.3rem max-content 1fr max-content;
+        grid-template-areas: 'color . descr . num';
+        .check-style {
+            grid-area: color;
+        }
+        .check-text {
+            grid-area: descr;
+        }
+        .check-num {
+            grid-area: num;
+        }
+    }
+
+    // .aside-filters__all-btn
+
+    &__all-btn {
+    }
+
+    // .aside-filters__sizes
+
+    &__sizes {
+        width: 5.5rem * 4 + 2.7rem * 3;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 2.7rem;
+    }
+
+    // .aside-filters__size
+
+    &__size {
+    }
+}

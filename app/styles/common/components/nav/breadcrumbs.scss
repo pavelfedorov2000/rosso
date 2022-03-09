@@ -1,34 +1,46 @@
 .breadcrumbs {
-	padding-bottom: 2rem;
+    grid-column-start: 2;
+    &__list {
+        @extend %grid-row;
+        grid-gap: 2.5rem;
+        @media (max-width: 1366px) {
+            grid-gap: 1.5rem;
+        }
+    }
+    &__item {
+        @extend %text-16;
+        color: $gray;
+        transition: 0.3s color;
+        @media (max-width: 1366px) {
+            font-size: 1.2rem;
+            line-height: 1.8rem;
+        }
 
-	&__item {
-		position: relative;
-		display: inline-block;
-		@extend %text-12;
-		color: #828282;
-		padding-right: 1.6rem;
-		margin-right: 1rem;
-		transition: .3s color;
-
-		@media (any-hover: hover) {
-			&:hover {
-				color: $accent;
-			}
-		}
-
-		&:after {
-			content: '/';
-			position: absolute;
-			@extend %pos-center-y;
-			right: 0;
-		}
-
-		&:last-child {
-			color: $accent;
-
-			&:after {
-				content: '';
-			}
-		}
-	}
+        &:not(:last-child) {
+            position: relative;
+            padding-right: 5rem;
+            @media (max-width: 1366px) {
+                padding-right: 3rem;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                @extend %pos-center-y;
+                right: 0;
+                width: 2.4rem;
+                height: 2.4rem;
+                background-image: url(../images/icons/crumb-arrow.svg);
+                @extend %bg-contain;
+                @media (max-width: 1366px) {
+                    width: 1.5rem;
+                    height: 1.5rem;
+                }
+            }
+            @media (any-hover: hover) {
+                &:hover {
+                    color: $accent;
+                }
+            }
+        }
+    }
 }

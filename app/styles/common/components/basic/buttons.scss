@@ -1,13 +1,73 @@
 .btn {
-    text-align: center;
+    display: grid;
+    align-content: center;
+    background-color: $accent;
+    @extend %dewi;
+    @extend %text-24;
+    color: #fff;
     transition: 0.3s all;
+    @media (max-width: 1366px) {
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+    }
+    @media (max-width: 767px) {
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+    }
 
-    @media (any-hover: hover) {
-        &:hover {
+    &__inner {
+        display: grid;
+        grid-template-columns: max-content 2.4rem;
+        grid-gap: 2rem;
+        align-items: flex-end;
+        @media (max-width: 1366px) {
+            grid-template-columns: max-content 1.7rem;
+            grid-gap: 1.5rem;
+        }
+        @media (max-width: 767px) {
+            grid-template-columns: max-content 1.5rem;
+        }
+    }
+
+    &__arrow {
+        width: 2.4rem;
+        height: 2.4rem;
+        fill: #fff;
+        transition: 0.3s transform;
+        @media (max-width: 1366px) {
+            width: 1.7rem;
+            height: 1.7rem;
+        }
+        @media (max-width: 767px) {
+            width: 1.5rem;
+            height: 1.5rem;
         }
     }
 
     &--border {
+        background-color: transparent;
+        color: $accent;
+        border: 0.1rem solid $light-gray;
+        .btn__arrow {
+            fill: $accent;
+        }
         //border: 0.1rem solid #;
+    }
+
+    &--white {
+        background-color: #fff;
+        color: $accent;
+        border: 1px solid $light-gray;
+        .btn__arrow {
+            fill: $accent;
+        }
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            .btn__arrow {
+                transform: translateX(1.5rem);
+            }
+        }
     }
 }
