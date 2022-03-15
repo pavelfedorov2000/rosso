@@ -105,6 +105,8 @@
     "gulp-sass": "^5.0.0",
     "gulp-webp": "^4.0.1",
     "jquery": "^3.6.0",
+    "jquery-ui": "^1.13.1",
+    "jquery-ui-slider": "^1.12.1",
     "jquery-validation": "^1.19.3",
     "jquery.maskedinput": "^1.4.1",
     "sass": "^1.45.1",

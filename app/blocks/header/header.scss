@@ -182,6 +182,7 @@
         @extend %grid-row;
         justify-content: flex-end;
         align-items: center;
+        align-content: center;
         grid-gap: 2.5rem;
         @media (max-width: 767px) {
             grid-gap: 1.5rem;

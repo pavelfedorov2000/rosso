@@ -25,9 +25,85 @@
 			</nav>
 		</div>
 		@@include("blocks/promo-catalog/promo-catalog.html")
-
+		<div class="catalog-filters container">
+			<button class="catalog-filters__btn" type="button">Фильтры</button>
+			<div class="catalog-filters__sort catalog-sort">
+				Сортировка:
+				<select class="catalog-filters__select" name="catalog-sort">
+					<option value="">По цене</option>
+					<option value="">По цене</option>
+				</select>
+			</div>
+		</div>
 		<div class="catalog container">
-
+			@@include("blocks/aside-filters/aside-filters.html")
+			<div class="catalog__cards">
+				@@loop('blocks/catalog-card/catalog-card.html', [
+				{"element": "catalog__card", "label": "Sale", "img": "furniture-handles/catalog/01", "width": "300",
+				"height": "310",
+				"title":
+				"Ручка-кнопка", "oldprice": "160 ₽",
+				"price": "290 ₽"},
+				{"element": "catalog__card", "label": "Sale", "img": "furniture-handles/catalog/02", "width": "350",
+				"height":
+				"350",
+				"title":
+				"Ручка-скоба",
+				"oldprice": "532 ₽",
+				"price":
+				"290 ₽"},
+				{"element": "catalog__card", "label": "Sale", "img": "furniture-handles/catalog/03", "width": "300",
+				"height":
+				"310",
+				"title":
+				"Ручка-кнопка", "oldprice": "400 ₽",
+				"price": "225 ₽"},
+				{"element": "catalog__card", "label": "Sale", "img": "furniture-handles/catalog/04", "width": "300",
+				"height":
+				"310",
+				"title":
+				"Ручка-скоба", "oldprice": "729 ₽",
+				"price": "410 ₽"},
+				{"element": "catalog__card", "label": "Sale", "img": "furniture-handles/catalog/05", "width": "300",
+				"height":
+				"310",
+				"title":
+				"Ручка-кнопка", "oldprice": "269 ₽",
+				"price": "150 ₽"},
+				{"element": "catalog__card", "label": "New", "img": "furniture-handles/catalog/06", "width": "350",
+				"height": "350",
+				"title":
+				"Ручка-скоба с фарфоровой вставкой",
+				"price": "793 ₽"},
+				{"element": "catalog__card", "label": "New", "img": "furniture-handles/catalog/07", "width": "300",
+				"height": "310",
+				"title":
+				"Ручка-кнопка",
+				"price": "1039 ₽"},
+				{"element": "catalog__card", "label": "New", "img": "furniture-handles/catalog/08", "width": "300",
+				"height": "310",
+				"title":
+				"Ручка-скоба",
+				"price": "671 ₽"},
+				{"element": "catalog__card", "img": "furniture-handles/catalog/09", "width": "300", "height": "310",
+				"title":
+				"Ручка-скоба",
+				"price": "1212 ₽"},
+				{"element": "catalog__card", "label": "New", "img": "furniture-handles/catalog/10", "width": "300",
+				"height": "310",
+				"title":
+				"Ручка-скоба",
+				"price": "729 ₽"},
+				])
+			</div>
+			<button class="btn catalog__view-more btn--border" type="button">
+				<div class="btn__inner">
+					Смотреть дальше
+					<svg class="btn__arrow">
+						<use xlink:href="assets/images/sprite.svg#drop"></use>
+					</svg>
+				</div>
+			</button>
 		</div>
 	</main>
 	@@include("blocks/footer/footer.html")

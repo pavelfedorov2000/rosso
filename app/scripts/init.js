@@ -4,7 +4,7 @@ app.burger.init();
 app.dropCatalog.init();
 app.frameSystem.init();
 app.asideFilters.init();
-//app.popup.init();
+app.catalogCard.init();
 //app.validation.init();
 
 
