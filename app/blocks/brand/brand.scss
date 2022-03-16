@@ -1,3 +1,143 @@
 .brand {
-  // your code
+	grid-template-rows: 20.5rem max-content 2rem 0.1rem 4rem 1fr 4rem 8rem;
+	grid-template-areas:
+		'logo logo logo logo logo logo . . . . . . . . . . . . . . . . . .'
+		'logo logo logo logo logo logo . . title title title title title title title title title title title title title title . .'
+		'logo logo logo logo logo logo . . . . . . . . . . . . . . . . . .'
+		'logo logo logo logo logo logo line line line line line line line line line line line line line line line line line line'
+		'logo logo logo logo logo logo . . . . . . . . . . . . . . . . . .'
+		'logo logo logo logo logo logo . . . text text text text text text text text . . . . . . .'
+		'logo logo logo logo logo logo . . . . . . . . . . . . . . . . . .'
+		'logo logo logo logo logo logo btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn'
+	;
+
+	@media(min-width: 1025px) {
+		height: calc(100vh - 12.6rem - 4.3rem);
+	}
+
+	@media(min-width: 1367px) {
+		height: calc(100vh - 17.8rem - 6rem);
+	}
+
+	@media(max-width: 1366px) {
+		grid-template-rows: 1fr max-content 1.5rem 0.1rem 2.5rem 1fr 2.5rem 6rem;
+	}
+
+	@media(max-width: 1024px) {
+		grid-template-rows: 16rem max-content 2.5rem 0.1rem 3rem max-content 10rem 6rem;
+		grid-template-areas:
+			'logo logo logo logo logo logo logo logo . . . . . . . . . . . . . . . .'
+			'logo logo logo logo logo logo logo logo . . title title title title title title title title title title title title . .'
+			'logo logo logo logo logo logo logo logo . . . . . . . . . . . . . . . .'
+			'logo logo logo logo logo logo logo logo line line line line line line line line line line line line line line line line'
+			'logo logo logo logo logo logo logo logo . . . . . . . . . . . . . . . .'
+			'logo logo logo logo logo logo logo logo . . text text text text text text text text text text text text . .'
+			'logo logo logo logo logo logo logo logo . . . . . . . . . . . . . . . .'
+			'logo logo logo logo logo logo logo logo btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn'
+		;
+	}
+
+	@media(max-width: 767px) {
+		grid-template-rows: 14rem max-content 2rem 6rem 4rem max-content 4rem;
+		grid-template-areas:
+			'logo logo logo logo logo logo logo logo logo logo . . . . . . . . . . . . . .'
+			'logo logo logo logo logo logo logo logo logo logo . title title title title title title title title title title title title .'
+			'logo logo logo logo logo logo logo logo logo logo . . . . . . . . . . . . . .'
+			'btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn'
+			'. . . . . . . . . . . . . . . . . . . . . . . .'
+			'. . text text text text text text text text text text text text text text text text text text text . . .'
+			'. . . . . . . . . . . . . . . . . . . . . . . .'
+		;
+	}
+
+	// .brand__logo
+
+	&__logo {
+		grid-area: logo;
+		border-right: 0.1rem solid $light-gray;
+		@extend %grid-center;
+
+		img {
+			width: 32rem;
+			height: 11.4rem;
+
+			@media(max-width: 1366px) {
+				width: 22.8rem;
+				height: 8.1rem;
+			}
+
+			@media(max-width: 1024px) {
+				width: 18.4rem;
+				height: 6.6rem;
+			}
+
+			@media(max-width: 767px) {
+				width: 12rem;
+				height: 4.3rem;
+			}
+		}
+	}
+
+	// .brand__title
+
+	&__title {
+		grid-area: title;
+	}
+
+	&__line {
+		display: none;
+
+		@media(min-width: 768px) {
+			display: block;
+			grid-area: line;
+			background-color: $light-gray;
+		}
+	}
+
+	// .brand__text
+
+	&__text {
+		grid-area: text;
+		font-size: 1.6rem;
+		line-height: 2.4rem;
+
+		@media(max-width: 1366px) {
+			font-size: 1.2rem;
+			line-height: 1.8rem;
+		}
+	}
+
+	// .brand__btn
+
+	&__btn {
+		grid-area: btn;
+		display: grid;
+		grid-template-columns: repeat(16, 1fr);
+		font-size: 2rem;
+		line-height: 2.4rem;
+
+		@media(max-width: 1366px) {
+			font-size: 1.8rem;
+			line-height: 2.2rem;
+		}
+
+		@media(max-width: 767px) {
+			font-size: 1.2rem;
+			line-height: 1.6rem;
+			grid-template-columns: repeat(24, 1fr);
+		}
+
+		@media(max-width: 767px) {
+			border: 0.1rem solid $gray;
+		}
+	}
+
+	&__btn-inner {
+		grid-column: span 15;
+		justify-content: flex-end;
+
+		@media(max-width: 767px) {
+			grid-column: 3 / 23;
+		}
+	}
 }

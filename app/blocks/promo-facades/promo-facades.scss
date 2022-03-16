@@ -1,3 +1,147 @@
 .promo-facades {
-  // your code
+	grid-template-rows: 13.5rem max-content 3rem 0.1rem 6rem max-content 1fr 12rem;
+	grid-template-areas:
+		'leftImg leftImg leftImg leftImg leftImg leftImg . . . . . . . . . . . . . line1 . . . .'
+		'leftImg leftImg leftImg leftImg leftImg leftImg . title title title title title title title title . . . . line1 . . . .'
+		'leftImg leftImg leftImg leftImg leftImg leftImg . . . . . . . . . . . . . line1 . . . .'
+		'leftImg leftImg leftImg leftImg leftImg leftImg line2 line2 line2 line2 line2 line2 line2 line2 line2 line2 line2 line2 line2 line2 line2 line2 line2 line2'
+		'leftImg leftImg leftImg leftImg leftImg leftImg . . . . . . . . . . . . . rightImg rightImg rightImg rightImg rightImg'
+		'leftImg leftImg leftImg leftImg leftImg leftImg . . . text text text text text text text . . . rightImg rightImg rightImg rightImg rightImg'
+		'leftImg leftImg leftImg leftImg leftImg leftImg . . . . . . . . . . . . . rightImg rightImg rightImg rightImg rightImg'
+		'leftImg leftImg leftImg leftImg leftImg leftImg btn btn btn btn btn btn btn btn btn btn btn btn btn rightImg rightImg rightImg rightImg rightImg'
+	;
+
+	@media(max-width: 1366px) {
+		grid-template-rows: 9.5rem max-content 2.5rem 0.1rem 3rem max-content 1fr 8.5rem;
+	}
+
+	@media(max-width: 1024px) {
+		grid-template-rows: minmax(44rem, 1fr) max-content 2.5rem 5.5rem max-content 12.5rem 8.5rem;
+		grid-template-areas:
+			'leftImg leftImg leftImg leftImg leftImg leftImg leftImg leftImg leftImg leftImg leftImg leftImg leftImg . . . . . . . . . . .'
+			'leftImg leftImg leftImg leftImg leftImg leftImg leftImg leftImg leftImg leftImg leftImg leftImg leftImg . title title title title title title title title title .'
+			'leftImg leftImg leftImg leftImg leftImg leftImg leftImg leftImg leftImg leftImg leftImg leftImg leftImg . . . . . . . . . . .'
+			'. . . . . . . . . . . . . rightImg rightImg rightImg rightImg rightImg rightImg rightImg rightImg rightImg rightImg rightImg'
+			'. . text text text text text text text text . . . rightImg rightImg rightImg rightImg rightImg rightImg rightImg rightImg rightImg rightImg rightImg'
+			'. . . . . . . . . . . . . rightImg rightImg rightImg rightImg rightImg rightImg rightImg rightImg rightImg rightImg rightImg'
+			'btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn'
+		;
+	}
+
+	@media(max-width: 767px) {
+		grid-template-rows: minmax(11.5rem, 1fr) max-content 2rem 0.1rem 4rem max-content 9.5rem 6rem;
+		grid-template-areas:
+			'leftImg leftImg leftImg leftImg leftImg leftImg leftImg leftImg leftImg leftImg . . . . . . . . . . . . . .'
+			'leftImg leftImg leftImg leftImg leftImg leftImg leftImg leftImg leftImg leftImg . title title title title title title title title title title title title .'
+			'leftImg leftImg leftImg leftImg leftImg leftImg leftImg leftImg leftImg leftImg . . . . . . . . . . . . . .'
+			'leftImg leftImg leftImg leftImg leftImg leftImg leftImg leftImg leftImg leftImg line2 line2 line2 line2 line2 line2 line2 line2 line2 line2 line2 line2 line2 line2'
+			'. . . . . . . . . . . . . . . . . . . . . . . .'
+			'. . text text text text text text text text text text text text text text text text text text text . . .'
+			'. . . . . . . . . . . . . . . . . . . . . . . .'
+			'btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn'
+		;
+	}
+
+	@media(min-width: 1025px) {
+		//height: calc(100vh - 12.6rem - 4.3rem);
+		height: calc(100vh - 12.6rem - 4.3rem);
+	}
+
+	@media(min-width: 1367px) {
+		//height: calc(100vh - 17.8rem - 6rem);
+		height: calc(100vh - 17.8rem - 6rem);
+	}
+
+	// .promo-facades__img
+
+	&__img {
+		img {
+			@extend %cover;
+		}
+	}
+
+	// .promo-facades__img--left
+
+	&__img--left {
+		grid-area: leftImg;
+	}
+
+	// .promo-facades__title
+
+	&__title {
+		grid-area: title;
+
+		@media(max-width: 1024px) {
+			font-size: 2.4rem;
+			line-height: 2.9rem;
+		}
+
+		@media(max-width: 767px) {
+			font-size: 1.8rem;
+			line-height: 2.2rem;
+		}
+	}
+
+	&__line {
+		background-color: $light-gray;
+
+		&--vertical {
+			display: none;
+
+			@media(min-width: 768px) {
+				display: block;
+				grid-area: line1;
+				width: 0.1rem;
+			}
+		}
+
+		&--horizontal {
+			grid-area: line2;
+
+			@media(min-width: 768px) and (max-width: 1024px) {
+				display: none;
+				grid-area: unset;
+			}
+		}
+	}
+
+	// .promo-facades__text
+
+	&__text {
+		grid-area: text;
+		@extend %text-16;
+
+		@media(max-width: 1366px) {
+			font-size: 1.4rem;
+			line-height: 2.1rem;
+		}
+
+		@media(max-width: 1024px) {
+			font-size: 1.2rem;
+			line-height: 1.8rem;
+		}
+	}
+
+	// .promo-facades__btn
+
+	&__btn {
+		grid-area: btn;
+		grid-template-columns: repeat(13, 1fr);
+	}
+
+	&__btn-inner {
+		grid-column: 2 / 13;
+		justify-content: flex-end;
+	}
+
+	// .promo-facades__img--right
+
+	&__img--right {
+		display: none;
+
+		@media(min-width: 768px) {
+			display: block;
+			grid-area: rightImg;
+		}
+	}
 }

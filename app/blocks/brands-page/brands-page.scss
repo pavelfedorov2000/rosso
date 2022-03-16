@@ -1,3 +1,430 @@
-.brands-page {
-  // your code
+.brands-grid {
+	grid-template-rows: 20.5rem max-content 2rem 0.1rem 7rem max-content 20rem repeat(3, 28rem);
+	grid-template-areas:
+		'transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica . . . . . . . . . . . .'
+		'transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica . title title title title title title title title title title .'
+		'transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica . . . . . . . . . . . .'
+		'transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica divider divider divider divider divider divider divider divider divider divider divider divider'
+		'transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica . . . . . . . . . . . .'
+		'transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica . . text text text text text text . . . .'
+		'transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica . . . . . . . . . . . .'
+		'metacor metacor metacor metacor metacor metacor confurn confurn confurn confurn confurn confurn giusti giusti giusti giusti giusti giusti rejs rejs rejs rejs rejs rejs'
+		'gamet gamet gamet gamet gamet gamet stabilus stabilus stabilus stabilus stabilus stabilus salice salice salice salice salice salice lincos lincos lincos lincos lincos lincos'
+		'ozmf ozmf ozmf ozmf ozmf ozmf nomet nomet nomet nomet nomet nomet formenti formenti formenti formenti formenti formenti korner korner korner korner korner korner'
+	;
+
+	@media(max-width: 1366px) {
+		grid-template-rows: 14.5rem max-content 1.5rem 0.1rem 5rem max-content 11.5rem repeat(3, 20rem);
+		grid-template-areas: 'transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica . . . . . . . . . . . .'
+			'transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica . title title title title title title title title title title .'
+			'transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica . . . . . . . . . . . .'
+			'transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica divider divider divider divider divider divider divider divider divider divider divider divider'
+			'transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica . . . . . . . . . . . .'
+			'transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica . . text text text text text . . . . .'
+			'transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica . . . . . . . . . . . .'
+			'metacor metacor metacor metacor metacor metacor confurn confurn confurn confurn confurn confurn giusti giusti giusti giusti giusti giusti rejs rejs rejs rejs rejs rejs'
+			'gamet gamet gamet gamet gamet gamet stabilus stabilus stabilus stabilus stabilus stabilus salice salice salice salice salice salice lincos lincos lincos lincos lincos lincos'
+			'ozmf ozmf ozmf ozmf ozmf ozmf nomet nomet nomet nomet nomet nomet formenti formenti formenti formenti formenti formenti korner korner korner korner korner korner'
+		;
+	}
+
+	@media(max-width: 1024px) {
+		grid-template-rows: 24.5rem max-content 2.5rem 0.1rem 3.5rem max-content 8.5rem repeat(4, 15rem);
+		grid-template-areas:
+			'transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica . . . . . . . . . . .'
+			'transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica . title title title title title title title title title .'
+			'transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica . . . . . . . . . . .'
+			'transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica divider divider divider divider divider divider divider divider divider divider divider'
+			'transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica . . . . . . . . . . .'
+			'transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica . text text text text text text text text . .'
+			'transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica . . . . . . . . . . .'
+			'metacor metacor metacor metacor metacor metacor metacor metacor confurn confurn confurn confurn confurn confurn confurn confurn giusti giusti giusti giusti giusti giusti giusti giusti'
+			'rejs rejs rejs rejs rejs rejs rejs rejs gamet gamet gamet gamet gamet gamet gamet gamet stabilus stabilus stabilus stabilus stabilus stabilus stabilus stabilus'
+			'salice salice salice salice salice salice salice salice lincos lincos lincos lincos lincos lincos lincos lincos ozmf ozmf ozmf ozmf ozmf ozmf ozmf ozmf'
+			'nomet nomet nomet nomet nomet nomet nomet nomet formenti formenti formenti formenti formenti formenti formenti formenti korner korner korner korner korner korner korner korner'
+		;
+	}
+
+	@media(max-width: 767px) {
+		grid-template-rows: 11.5rem max-content 2rem 0.1rem 4rem max-content 4rem repeat(6, 16rem);
+		grid-template-areas:
+			'transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica . . . . . . . . . . . . . .'
+			'transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica . title title title title title title title title title title title title .'
+			'transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica . . . . . . . . . . . . . .'
+			'transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica divider divider divider divider divider divider divider divider divider divider divider divider divider divider'
+			'. . . . . . . . . . . . . . . . . . . . . . . .'
+			'. . text text text text text text text text text text text text text text text text . . . . . .'
+			'. . . . . . . . . . . . . . . . . . . . . . . .'
+			'metacor metacor metacor metacor metacor metacor metacor metacor metacor metacor metacor metacor confurn confurn confurn confurn confurn confurn confurn confurn confurn confurn confurn confurn'
+			'giusti giusti giusti giusti giusti giusti giusti giusti giusti giusti giusti giusti rejs rejs rejs rejs rejs rejs rejs rejs rejs rejs rejs rejs'
+			'gamet gamet gamet gamet gamet gamet gamet gamet gamet gamet gamet gamet stabilus stabilus stabilus stabilus stabilus stabilus stabilus stabilus stabilus stabilus stabilus stabilus'
+			'salice salice salice salice salice salice salice salice salice salice salice salice lincos lincos lincos lincos lincos lincos lincos lincos lincos lincos lincos lincos'
+			'ozmf ozmf ozmf ozmf ozmf ozmf ozmf ozmf ozmf ozmf ozmf ozmf nomet nomet nomet nomet nomet nomet nomet nomet nomet nomet nomet nomet'
+			'formenti formenti formenti formenti formenti formenti formenti formenti formenti formenti formenti formenti korner korner korner korner korner korner korner korner korner korner korner korner'
+		;
+	}
+
+	// .brands-grid__item
+
+	&__item {
+		@extend %grid-center;
+		border: 0.05rem solid $light-gray;
+	}
+
+	// .brands-grid__title
+
+	&__title {
+		grid-area: title;
+	}
+
+	&__divider {
+		grid-area: divider;
+		background-color: $light-gray;
+	}
+
+	// .brands-grid__text
+
+	&__text {
+		grid-area: text;
+	}
+
+	// .brands-grid__item--transformica
+
+	&__item--transformica {
+		grid-area: transformica;
+		border-top: none;
+		border-right-width: 0.1rem;
+
+		img {
+			width: 72rem;
+			height: 9rem;
+
+			@media(max-width: 1366px) {
+				width: 51.2rem;
+				height: 6.4rem;
+			}
+
+			@media(max-width: 1024px) {
+				width: 33.7rem;
+				height: 4.2rem;
+			}
+
+			@media(max-width: 767px) {
+				width: 12rem;
+				height: 1.6rem;
+			}
+		}
+	}
+
+	// .brands-grid__item--metacor
+
+	&__item--metakor {
+		grid-area: metacor;
+
+		img {
+			width: 24rem;
+			height: 14rem;
+
+			@media(max-width: 1366px) {
+				width: 17.1rem;
+				height: 10rem;
+			}
+
+			@media(max-width: 1024px) {
+				width: 12.8rem;
+				height: 7.5rem;
+			}
+
+			@media(max-width: 767px) {
+				width: 12rem;
+				height: 7rem;
+			}
+		}
+	}
+
+	// .brands-grid__item--confurn
+
+	&__item--confurn {
+		grid-area: confurn;
+
+		img {
+			width: 32rem;
+			height: 11.2rem;
+
+			@media(max-width: 1366px) {
+				width: 22.8rem;
+				height: 7.9rem;
+			}
+
+			@media(max-width: 1024px) {
+				width: 17.1rem;
+				height: 6rem;
+			}
+
+			@media(max-width: 767px) {
+				width: 12rem;
+				height: 4.3rem;
+			}
+		}
+	}
+
+	// .brands-grid__item--giusti
+
+	&__item--giusti {
+		grid-area: giusti;
+
+		img {
+			width: 24rem;
+			height: 20.3rem;
+
+			@media(max-width: 1366px) {
+				width: 17.1rem;
+				height: 14.4rem;
+			}
+
+			@media(max-width: 1024px) {
+				width: 12.8rem;
+				height: 10.9rem;
+			}
+
+			@media(max-width: 767px) {
+				width: 12rem;
+				height: 10rem;
+			}
+		}
+	}
+
+	// .brands-grid__item--rejs
+
+	&__item--rejs {
+		grid-area: rejs;
+
+		img {
+			width: 24rem;
+			height: 8.6rem;
+
+			@media(max-width: 1366px) {
+				width: 17.1rem;
+				height: 6.1rem;
+			}
+
+			@media(max-width: 1024px) {
+				width: 12.8rem;
+				height: 4.6rem;
+			}
+
+			@media(max-width: 767px) {
+				width: 12rem;
+				height: 4rem;
+			}
+		}
+	}
+
+	// .brands-grid__item--gamet
+
+	&__item--gamet {
+		grid-area: gamet;
+
+		img {
+			width: 32rem;
+			height: 6.2rem;
+
+			@media(max-width: 1366px) {
+				width: 22.8rem;
+				height: 4.4rem;
+			}
+
+			@media(max-width: 1024px) {
+				width: 17.1rem;
+				height: 3.3rem;
+			}
+
+			@media(max-width: 767px) {
+				width: 12rem;
+				height: 2.3rem;
+			}
+		}
+	}
+
+	// .brands-grid__item--stabilus
+
+	&__item--stabilus {
+		grid-area: stabilus;
+
+		img {
+			width: 32rem;
+			height: 7.9rem;
+
+			@media(max-width: 1366px) {
+				width: 22.8rem;
+				height: 5.6rem;
+			}
+
+			@media(max-width: 1024px) {
+				width: 17.1rem;
+				height: 4.2rem;
+			}
+
+			@media(max-width: 767px) {
+				width: 12rem;
+				height: 2.8rem;
+			}
+		}
+	}
+
+	// .brands-grid__item--salice
+
+	&__item--salice {
+		grid-area: salice;
+
+		img {
+			width: 24rem;
+			height: 4.4rem;
+
+			@media(max-width: 1366px) {
+				width: 17.1rem;
+				height: 3.1rem;
+			}
+
+			@media(max-width: 1024px) {
+				width: 12.8rem;
+				height: 2.4rem;
+			}
+
+			@media(max-width: 767px) {
+				width: 12rem;
+				height: 2.2rem;
+			}
+		}
+	}
+
+	// .brands-grid__item--lincos
+
+	&__item--lincos {
+		grid-area: lincos;
+
+		img {
+			width: 32rem;
+			height: 8.1rem;
+
+			@media(max-width: 1366px) {
+				width: 22.8rem;
+				height: 5.8rem;
+			}
+
+			@media(max-width: 1024px) {
+				width: 17.1rem;
+				height: 4.4rem;
+			}
+
+			@media(max-width: 767px) {
+				width: 12rem;
+				height: 3.1rem;
+			}
+		}
+	}
+
+	// .brands-grid__item--ozmf
+
+	&__item--ozmf {
+		grid-area: ozmf;
+
+		img {
+			width: 24rem;
+			height: 11.8rem;
+
+			@media(max-width: 1366px) {
+				width: 17.1rem;
+				height: 8.4rem;
+			}
+
+			@media(max-width: 1024px) {
+				width: 12.8rem;
+				height: 6.3rem;
+			}
+
+			@media(max-width: 767px) {
+				width: 12rem;
+				height: 5.8rem;
+			}
+		}
+	}
+
+	// .brands-grid__item--nomet
+
+	&__item--nomet {
+		grid-area: nomet;
+
+		img {
+			width: 24rem;
+			height: 7.1rem;
+
+			@media(max-width: 1366px) {
+				width: 17.1rem;
+				height: 5rem;
+			}
+
+			@media(max-width: 1024px) {
+				width: 12.8rem;
+				height: 3.8rem;
+			}
+
+			@media(max-width: 767px) {
+				width: 12rem;
+				height: 3.5rem;
+			}
+		}
+	}
+
+	// .brands-grid__item--formenti
+
+	&__item--formenti {
+		grid-area: formenti;
+
+		img {
+			width: 24rem;
+			height: 11.6rem;
+
+			@media(max-width: 1366px) {
+				width: 17.1rem;
+				height: 8.3rem;
+			}
+
+			@media(max-width: 1024px) {
+				width: 12.8rem;
+				height: 6.2rem;
+			}
+
+			@media(max-width: 767px) {
+				width: 12rem;
+				height: 5.8rem;
+			}
+		}
+	}
+
+	// .brands-grid__item--korner
+
+	&__item--korner {
+		grid-area: korner;
+
+		img {
+			width: 24rem;
+			height: 6.5rem;
+
+			@media(max-width: 1366px) {
+				width: 17.1rem;
+				height: 4.6rem;
+			}
+
+			@media(max-width: 1024px) {
+				width: 12.8rem;
+				height: 3.5rem;
+			}
+
+			@media(max-width: 767px) {
+				width: 12rem;
+				height: 3.3rem;
+			}
+		}
+	}
 }

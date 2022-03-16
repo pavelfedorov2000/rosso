@@ -1,0 +1,33 @@
+@@include("blocks/head/head.html", {"title": "Бренд / REJS"})
+<div class="wrapper">
+	@@include("blocks/header/header.html")
+	@@include("blocks/burger/burger.html")
+	@@include("blocks/drop-catalog/drop-catalog.html")
+	<main class="page">
+		<div class="page__top container">
+			<nav class="breadcrumbs" aria-label="breadcrumbs">
+				<ol class="breadcrumbs__list">
+					<li class="breadcrumbs__item">
+						<a href="#">
+							Главная
+						</a>
+					</li>
+					<li class="breadcrumbs__item">
+						<a href="#">
+							Бренды
+						</a>
+					</li>
+					<li class="breadcrumbs__item">
+						<span>
+							REJS
+						</span>
+					</li>
+				</ol>
+			</nav>
+		</div>
+		@@include("blocks/brand/brand.html")
+	</main>
+	@@include("blocks/footer/footer.html")
+	<!-- @@include("blocks/popups/popups.html") -->
+</div>
+@@include("blocks/link/link.html")
