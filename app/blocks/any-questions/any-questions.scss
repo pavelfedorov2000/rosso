@@ -1,3 +1,48 @@
 .any-questions {
-  // your code
+
+	border-top: 0.1rem solid $light-gray;
+	grid-template-rows: 9rem max-content 8rem;
+	grid-template-areas:
+		'. . . . . . . . . form form form form form form form form form form form form form form form'
+		'. title title title title title title title . form form form form form form form form form form form form form form form'
+		'. . . . . . . . . form form form form form form form form form form form form form form form'
+	;
+
+	@media(max-width: 1366px) {
+		grid-template-rows: 9rem max-content 8rem;
+	}
+
+	@media(max-width: 1024px) {
+		grid-template-rows: 5.5rem max-content 2.5rem max-content;
+		grid-template-areas:
+			'. . . . . . . . . . . . . . . . . . . . . . . .'
+			'. . title title title title title title title title title title title title title title title title title title title title . .'
+			'. . . . . . . . . . . . . . . . . . . . . . . .'
+			'form form form form form form form form form form form form form form form form form form form form form form form form'
+		;
+	}
+
+	@media(max-width: 767px) {
+		grid-template-rows: 6rem max-content 2rem max-content;
+	}
+
+	// .any-questions__title
+
+	&__title {
+		grid-area: title;
+		@extend %dewi;
+		@extend %text-32;
+	}
+
+	&__form {
+		grid-area: form;
+
+		@media(min-width: 1025px) {
+			border-left: 0.1rem solid $light-gray;
+		}
+
+		@media(max-width: 1024px) {
+			border-top: 0.1rem solid $light-gray;
+		}
+	}
 }

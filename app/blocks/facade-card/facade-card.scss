@@ -67,7 +67,6 @@
 	&__title {
 		grid-area: title;
 		@extend %text-24;
-		@extend %dewi;
 
 		@media(max-width: 1366px) {
 			font-size: 2rem;

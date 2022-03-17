@@ -1,3 +1,404 @@
 .product-card {
-  // your code
+
+	@media(min-width: 1025px) {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	&__gallery,
+	&__content {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		border: 0.05rem solid $light-gray;
+		border-bottom-width: 0.1rem;
+
+		@media(max-width: 1024px) {
+			grid-template-columns: repeat(24, 1fr);
+		}
+	}
+
+	&__gallery {
+		grid-template-rows: 4rem max-content 7.7rem 16.6rem - 14.5rem 50rem 16.6rem - 14.5rem 2.3rem 8.2rem 4rem;
+		grid-template-areas:
+			'. . . . . . . . . . . .'
+			'. . . . . . . . . . label label'
+			'. . . . . . . . . . . .'
+			'. . slider slider slider slider slider slider slider slider . .'
+			'. thumbs slider slider slider slider slider slider slider slider . .'
+			'. . slider slider slider slider slider slider slider slider . .'
+			'. . . . . . . . . . . .'
+			'. . . . . . . . . logo logo logo'
+			'. . . . . . . . . . . .'
+		;
+		border-left-width: 0.1rem;
+
+		@media(max-width: 1366px) {
+			grid-template-rows: 2.8rem max-content 5.5rem 12.2rem - 10.3rem 34.8rem 12.1rem - 10.2rem 1.5rem 5.9rem 2.8rem;
+		}
+
+		@media(max-width: 1024px) {
+			grid-template-rows: 2.2rem max-content 4.4rem 1.5rem 27.6rem 1.5rem 5.9rem 2.2rem;
+			grid-template-areas:
+				'. . . . . . . . . . . . . . . . . . . . . . . .'
+				'. . . . . . . . . . . . . . . . . . . . label label label .'
+				'. . . . . . . . . . . . . . . . . . . . . . . .'
+				'. . . . . . . slider slider slider slider slider slider slider slider slider slider . . . . . . .'
+				'. thumbs thumbs . . . . slider slider slider slider slider slider slider slider slider slider . . . . . . .'
+				'. . . . . . . slider slider slider slider slider slider slider slider slider slider . . . . . . .'
+				'. . . . . . . . . . . . . . . . . . . logo logo logo logo .'
+				'. . . . . . . . . . . . . . . . . . . . . . . .'
+			;
+		}
+
+		@media(max-width: 767px) {
+			grid-template-rows: 1.5rem max-content 0.3rem 1.5rem 25.5rem - 3rem 1.5rem 3.7rem - 1.5rem 1.9rem;
+			grid-template-areas:
+				'. . . . . . . . . . . . . . . . . . . . . . . .'
+				'. . . . . . . . . . . . . . . . . . . . label label label .'
+				'. . . . . . . . . . . . . . . . . . . . . . . .'
+				'. thumbs thumbs thumbs . . . . . . . . . . . . . . . . . . . .'
+				'. thumbs thumbs thumbs slider slider slider slider slider slider slider slider slider slider slider slider slider slider slider slider . . . .'
+				'. thumbs thumbs thumbs . . . . . . . . . . . . . . . logo logo logo logo .'
+				'. . . . . . . . . . . . . . . . . . . logo logo logo logo .'
+				'. . . . . . . . . . . . . . . . . . . . . . . .'
+			;
+		}
+	}
+
+	&__content {
+		grid-template-rows: 11.7rem max-content 3rem 1fr 11rem;
+		grid-template-areas:
+			'. . . . . . . . . . . .'
+			'. title title title title title title . actions actions actions .'
+			'. . . . . . . . actions actions actions .'
+			'. info info info info info info . actions actions actions .'
+			'. . . . . . . . . . . .'
+		;
+		border-right-width: 0.1rem;
+
+		@media(max-width: 1366px) {
+			grid-template-rows: 8.3rem max-content 2rem 1fr 8rem;
+		}
+
+		@media(max-width: 1024px) {
+			grid-template-rows: 4.3rem max-content 1rem max-content 8.2rem;
+			grid-template-areas:
+				'. . . . . . . . . . . . . . . . . . . . . . . .'
+				'. . . title title title title title title title title title title title . actions actions actions actions actions actions . . .'
+				'. . . . . . . . . . . . . . . actions actions actions actions actions actions . . .'
+				'. . . info info info info info info info info info info info . actions actions actions actions actions actions . . .'
+				'. . . . . . . . . . . . . . . . . . . . . . . .'
+			;
+		}
+
+		@media(max-width: 767px) {
+			border-top: none;
+			grid-template-rows: 4rem 1.5rem max-content 1.5rem max-content 1.5rem;
+			grid-template-areas:
+				'title title title title title title title title title title title title title title title title title title favoriteBtn favoriteBtn favoriteBtn cart cart cart'
+				'. . . . . . . . . . . . . . . . . . . . . . . .'
+				'. actions actions actions actions actions actions actions actions actions actions actions actions actions actions actions actions actions actions actions actions actions actions .'
+				'. . . . . . . . . . . . . . . . . . . . . . . .'
+				'. info info info info info info info info info info info info info info info info info info info info info info .'
+				'. . . . . . . . . . . . . . . . . . . . . . . .'
+			;
+		}
+	}
+
+	// .product-card__label
+
+	&__label {
+		grid-area: label;
+
+		@media(max-width: 1024px) {
+			justify-self: end;
+		}
+	}
+
+	&__slider {
+		grid-area: slider;
+	}
+
+	&__thumbs {
+		grid-area: thumbs;
+		display: grid;
+		grid-template-rows: 2.4rem 50rem - 4.8rem - 4rem 2.4rem;
+		row-gap: 2rem;
+		justify-items: center;
+
+		@media(max-width: 1366px) {
+			grid-template-rows: 1.5rem 34.8rem - 3rem - 3rem 1.5rem;
+			row-gap: 1.5rem;
+		}
+
+		@media(max-width: 1024px) {
+			grid-template-rows: 1.2rem calc(27.6rem - 2.4rem - 2.4rem) 1.2rem;
+			row-gap: 1.2rem;
+		}
+
+		@media(max-width: 767px) {
+			grid-template-rows: 1.5rem calc(25.5rem - 3rem - 2rem) 1.5rem;
+			row-gap: 1rem;
+		}
+	}
+
+	&__thumbs-arrow {
+		width: 2.4rem;
+		height: 2.4rem;
+		background-image: url(../images/icons/drop.svg);
+		@extend %bg-contain;
+
+		@media(max-width: 1366px) {
+			width: 1.5rem;
+			height: 1.5rem;
+		}
+
+		@media(max-width: 1024px) {
+			width: 1.2rem;
+			height: 1.2rem;
+		}
+
+		@media(max-width: 767px) {
+			width: 1.5rem;
+			height: 1.5rem;
+		}
+
+		&--prev {
+			transform: rotate(180deg);
+		}
+	}
+
+	// .product-card__logo
+
+	&__logo {
+		grid-area: logo;
+		width: 14rem;
+
+		@media(max-width: 1366px) {
+			width: 10rem;
+		}
+
+		@media(max-width: 1024px) {
+			justify-self: end;
+		}
+
+		@media(max-width: 767px) {
+			width: 6.1rem;
+		}
+	}
+
+	// .product-card__title
+
+	&__title {
+		grid-area: title;
+
+		@media(max-width: 1024px) {
+			font-size: 1.4rem;
+			line-height: 1.8rem;
+		}
+
+		@media(max-width: 767px) {
+			padding-left: 1.6rem;
+			display: grid;
+			align-content: center;
+			border-bottom: 0.1rem solid $light-gray;
+		}
+	}
+
+	// .product-card__actions
+
+	&__actions {
+		grid-area: actions;
+		display: grid;
+
+		@media(min-width: 768px) {
+			grid-template-columns: 4.3rem 1.3rem 1fr max-content;
+			grid-template-rows: max-content 1rem 4.3rem 1rem 4.3rem;
+			grid-template-areas: 'price price price status'
+				'. . . .'
+				'basketBtn basketBtn basketBtn basketBtn'
+				'. . . .'
+				'favoriteBtn . oneClickBtn oneClickBtn'
+			;
+		}
+
+		@media(min-width: 1025px) {
+			grid-template-rows: max-content 2rem 4.3rem 1rem 4.3rem;
+		}
+
+		@media(min-width: 1367px) {
+			grid-template-columns: 6rem 2rem 1fr max-content;
+			grid-template-rows: max-content 3rem 6rem 1.5rem 6rem;
+		}
+
+		@media(max-width: 767px) {
+			grid-auto-flow: column;
+			justify-content: space-between;
+			align-items: center;
+		}
+	}
+
+	// .product-card__price
+
+	&__price {
+		@extend %text-24;
+
+		@media(min-width: 768px) {
+			grid-area: price;
+		}
+
+		@media(max-width: 1024px) {
+			font-size: 1.4rem;
+			line-height: 1.8rem;
+		}
+	}
+
+	// .product-card__status
+
+	&__status {
+		@extend %text-16;
+		color: $gray;
+
+		@media(min-width: 768px) {
+			grid-area: status;
+			align-self: flex-end;
+		}
+
+		@media(max-width: 1366px) {
+			font-size: 1.2rem;
+			line-height: 1.8rem;
+		}
+	}
+
+	&__basket-btn,
+	&__one-click-btn {
+		font-size: 1.6rem;
+		line-height: 2.4rem;
+		font-family: Montserrat, sans-serif;
+		font-weight: 400;
+
+		@media(max-width: 1366px) {
+			font-size: 1.2rem;
+			line-height: 1.8rem;
+		}
+	}
+
+	// .product-card__basket-btn
+
+	&__basket-btn {
+		grid-area: basketBtn;
+
+		@media(max-width: 767px) {
+			display: none;
+		}
+	}
+
+	&__mobile-cart {
+		display: none;
+
+		@media(max-width: 767px) {
+			display: grid;
+			place-items: center;
+			grid-area: cart;
+
+			svg {
+				width: 1.5rem;
+				height: 1.5rem;
+				fill: #fff;
+			}
+		}
+	}
+
+	// .product-card__favorite-btn
+
+	&__favorite-btn {
+		grid-area: favoriteBtn;
+
+		@media(max-width: 767px) {
+			display: none;
+		}
+
+		&.mob-visible {
+			display: none;
+
+			@media(max-width: 767px) {
+				display: grid;
+				border-top: none;
+
+				svg {
+					width: 1.5rem;
+					height: 1.5rem;
+				}
+			}
+		}
+	}
+
+	// .product-card__one-click-btn
+
+	&__one-click-btn {
+		display: none;
+
+		@media(min-width: 768px) {
+			display: grid;
+			grid-area: oneClickBtn;
+		}
+	}
+}
+
+.product-thumbs-slider {
+	@media(max-width: 1024px) {
+		width: 4.523rem;
+	}
+
+	@media(max-width: 767px) {
+		width: 4rem;
+	}
+
+	// .product-thumbs-slider__img
+
+	&__img {
+		display: block;
+
+		@media(max-width: 1024px) {
+			height: 4.522rem;
+		}
+
+		@media(max-width: 767px) {
+			height: 4rem;
+		}
+
+		img {
+
+			&.loaded {
+				@extend %cover;
+			}
+		}
+	}
+}
+
+.product-card-slider {
+	width: 54.2rem;
+
+	@media(max-width: 1366px) {
+		width: 38.6rem;
+	}
+
+	@media(max-width: 1024px) {
+		width: 30.6rem;
+	}
+
+	@media(max-width: 767px) {
+		width: 22.6rem;
+	}
+
+	// .product-card-slider__img
+
+	&__img {
+
+		img {
+			&.loaded {
+				@extend %cover;
+			}
+		}
+	}
 }

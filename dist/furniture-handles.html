@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<!--Page Title-->
-	<title>Главная</title>
+	<title>Мебельные ручки</title>
 	<!--SEO-->
 	<meta name="description" content="Description">
 	<meta name="keywords" content="keyword1, keyword2">
@@ -90,6 +90,9 @@
 		</symbol>
 		<symbol viewBox="0 0 24 24" id="user" xmlns="http://www.w3.org/2000/svg">
 			<path d="M12 11a4 4 0 100-8 4 4 0 000 8zm0-6a2 2 0 110 4 2 2 0 010-4zm0 8a7 7 0 00-7 7 1 1 0 102 0 5 5 0 1110 0 1 1 0 002 0 7 7 0 00-7-7z" />
+		</symbol>
+		<symbol viewBox="0 0 15 15" id="white-cart" xmlns="http://www.w3.org/2000/svg">
+			<path d="M13.175 4.375a1.25 1.25 0 00-1.062-.625h-8L3.75 2.338a.625.625 0 00-.625-.463h-1.25a.625.625 0 100 1.25h.775l1.725 6.413A.625.625 0 005 10h5.625a.625.625 0 00.556-.343l2.05-4.1a1.25 1.25 0 00-.056-1.182zM10.238 8.75H5.475L4.456 5h7.657l-1.875 3.75zm-5.55 4.375a.937.937 0 100-1.875.937.937 0 000 1.875zm6.25 0a.938.938 0 100-1.875.938.938 0 000 1.875z" />
 		</symbol>
 	</svg>
 	<div class="wrapper">
@@ -631,180 +634,200 @@
 					</div>
 				</form>
 				<div class="catalog__cards">
-					<div class="catalog-card catalog__card">
+					<article class="catalog-card catalog__card">
 						<span class="label catalog-card__label">Sale</span>
-						<picture class="catalog-card__img">
-							<source type="image/webp" data-srcset="assets/images/content/furniture-handles/catalog/01.webp" srcset="assets/images/src.webp">
-							<img class="lazy" data-src="assets/images/content/furniture-handles/catalog/01.jpg" src="assets/images/src.jpg" alt="фото товара" width="300" height="310">
-						</picture>
+						<a class="catalog-card__img" href="#">
+							<picture>
+								<source type="image/webp" data-srcset="assets/images/content/furniture-handles/catalog/01.webp" srcset="assets/images/src.webp">
+								<img class="lazy" data-src="assets/images/content/furniture-handles/catalog/01.jpg" src="assets/images/src.jpg" alt="фото товара" width="300" height="310">
+							</picture>
+						</a>
 						<div class="catalog-card__prices">
 							<div class="catalog-card__old-price">160 ₽</div>
 							<div class="catalog-card__price">290 ₽</div>
 						</div>
-						<div class="catalog-card__title">Ручка-кнопка</div>
-						<button class="catalog-card__favorite-btn" type="button" aria-label="Добавить в избранное">
+						<a href="#" class="catalog-card__title">Ручка-кнопка</a>
+						<button class="catalog-card__favorite-btn js-favorite-btn" type="button" aria-label="Добавить в избранное">
 							<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 								<path d="M11.9999 21C11.8683 21.0008 11.7378 20.9756 11.616 20.9258C11.4941 20.876 11.3833 20.8027 11.2899 20.71L3.51987 12.93C2.54523 11.9452 1.99854 10.6156 1.99854 9.23002C1.99854 7.84445 2.54523 6.51484 3.51987 5.53002C4.50213 4.55053 5.8327 4.00049 7.21987 4.00049C8.60704 4.00049 9.93761 4.55053 10.9199 5.53002L11.9999 6.61002L13.0799 5.53002C14.0621 4.55053 15.3927 4.00049 16.7799 4.00049C18.167 4.00049 19.4976 4.55053 20.4799 5.53002C21.4545 6.51484 22.0012 7.84445 22.0012 9.23002C22.0012 10.6156 21.4545 11.9452 20.4799 12.93L12.7099 20.71C12.6164 20.8027 12.5056 20.876 12.3838 20.9258C12.2619 20.9756 12.1315 21.0008 11.9999 21ZM7.21987 6.00002C6.79655 5.9981 6.37705 6.0802 5.98568 6.24155C5.59431 6.40291 5.23884 6.64031 4.93987 6.94002C4.33593 7.54714 3.99691 8.36866 3.99691 9.22502C3.99691 10.0814 4.33593 10.9029 4.93987 11.51L11.9999 18.58L19.0599 11.51C19.6638 10.9029 20.0028 10.0814 20.0028 9.22502C20.0028 8.36866 19.6638 7.54714 19.0599 6.94002C18.4435 6.35773 17.6278 6.03331 16.7799 6.03331C15.932 6.03331 15.1162 6.35773 14.4999 6.94002L12.7099 8.74002C12.6169 8.83375 12.5063 8.90814 12.3844 8.95891C12.2626 9.00968 12.1319 9.03581 11.9999 9.03581C11.8679 9.03581 11.7372 9.00968 11.6153 8.95891C11.4934 8.90814 11.3828 8.83375 11.2899 8.74002L9.49987 6.94002C9.2009 6.64031 8.84544 6.40291 8.45406 6.24155C8.06269 6.0802 7.6432 5.9981 7.21987 6.00002Z" fill="#444444" />
 							</svg>
 						</button>
 						<button class="btn catalog-card__cart-btn" type="button">В корзину</button>
-					</div>
-					<div class="catalog-card catalog__card">
+					</article>
+					<article class="catalog-card catalog__card">
 						<span class="label catalog-card__label">Sale</span>
-						<picture class="catalog-card__img">
-							<source type="image/webp" data-srcset="assets/images/content/furniture-handles/catalog/02.webp" srcset="assets/images/src.webp">
-							<img class="lazy" data-src="assets/images/content/furniture-handles/catalog/02.jpg" src="assets/images/src.jpg" alt="фото товара" width="350" height="350">
-						</picture>
+						<a class="catalog-card__img" href="#">
+							<picture>
+								<source type="image/webp" data-srcset="assets/images/content/furniture-handles/catalog/02.webp" srcset="assets/images/src.webp">
+								<img class="lazy" data-src="assets/images/content/furniture-handles/catalog/02.jpg" src="assets/images/src.jpg" alt="фото товара" width="350" height="350">
+							</picture>
+						</a>
 						<div class="catalog-card__prices">
 							<div class="catalog-card__old-price">532 ₽</div>
 							<div class="catalog-card__price">290 ₽</div>
 						</div>
-						<div class="catalog-card__title">Ручка-скоба</div>
-						<button class="catalog-card__favorite-btn" type="button" aria-label="Добавить в избранное">
+						<a href="#" class="catalog-card__title">Ручка-скоба</a>
+						<button class="catalog-card__favorite-btn js-favorite-btn" type="button" aria-label="Добавить в избранное">
 							<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 								<path d="M11.9999 21C11.8683 21.0008 11.7378 20.9756 11.616 20.9258C11.4941 20.876 11.3833 20.8027 11.2899 20.71L3.51987 12.93C2.54523 11.9452 1.99854 10.6156 1.99854 9.23002C1.99854 7.84445 2.54523 6.51484 3.51987 5.53002C4.50213 4.55053 5.8327 4.00049 7.21987 4.00049C8.60704 4.00049 9.93761 4.55053 10.9199 5.53002L11.9999 6.61002L13.0799 5.53002C14.0621 4.55053 15.3927 4.00049 16.7799 4.00049C18.167 4.00049 19.4976 4.55053 20.4799 5.53002C21.4545 6.51484 22.0012 7.84445 22.0012 9.23002C22.0012 10.6156 21.4545 11.9452 20.4799 12.93L12.7099 20.71C12.6164 20.8027 12.5056 20.876 12.3838 20.9258C12.2619 20.9756 12.1315 21.0008 11.9999 21ZM7.21987 6.00002C6.79655 5.9981 6.37705 6.0802 5.98568 6.24155C5.59431 6.40291 5.23884 6.64031 4.93987 6.94002C4.33593 7.54714 3.99691 8.36866 3.99691 9.22502C3.99691 10.0814 4.33593 10.9029 4.93987 11.51L11.9999 18.58L19.0599 11.51C19.6638 10.9029 20.0028 10.0814 20.0028 9.22502C20.0028 8.36866 19.6638 7.54714 19.0599 6.94002C18.4435 6.35773 17.6278 6.03331 16.7799 6.03331C15.932 6.03331 15.1162 6.35773 14.4999 6.94002L12.7099 8.74002C12.6169 8.83375 12.5063 8.90814 12.3844 8.95891C12.2626 9.00968 12.1319 9.03581 11.9999 9.03581C11.8679 9.03581 11.7372 9.00968 11.6153 8.95891C11.4934 8.90814 11.3828 8.83375 11.2899 8.74002L9.49987 6.94002C9.2009 6.64031 8.84544 6.40291 8.45406 6.24155C8.06269 6.0802 7.6432 5.9981 7.21987 6.00002Z" fill="#444444" />
 							</svg>
 						</button>
 						<button class="btn catalog-card__cart-btn" type="button">В корзину</button>
-					</div>
-					<div class="catalog-card catalog__card">
+					</article>
+					<article class="catalog-card catalog__card">
 						<span class="label catalog-card__label">Sale</span>
-						<picture class="catalog-card__img">
-							<source type="image/webp" data-srcset="assets/images/content/furniture-handles/catalog/03.webp" srcset="assets/images/src.webp">
-							<img class="lazy" data-src="assets/images/content/furniture-handles/catalog/03.jpg" src="assets/images/src.jpg" alt="фото товара" width="300" height="310">
-						</picture>
+						<a class="catalog-card__img" href="#">
+							<picture>
+								<source type="image/webp" data-srcset="assets/images/content/furniture-handles/catalog/03.webp" srcset="assets/images/src.webp">
+								<img class="lazy" data-src="assets/images/content/furniture-handles/catalog/03.jpg" src="assets/images/src.jpg" alt="фото товара" width="300" height="310">
+							</picture>
+						</a>
 						<div class="catalog-card__prices">
 							<div class="catalog-card__old-price">400 ₽</div>
 							<div class="catalog-card__price">225 ₽</div>
 						</div>
-						<div class="catalog-card__title">Ручка-кнопка</div>
-						<button class="catalog-card__favorite-btn" type="button" aria-label="Добавить в избранное">
+						<a href="#" class="catalog-card__title">Ручка-кнопка</a>
+						<button class="catalog-card__favorite-btn js-favorite-btn" type="button" aria-label="Добавить в избранное">
 							<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 								<path d="M11.9999 21C11.8683 21.0008 11.7378 20.9756 11.616 20.9258C11.4941 20.876 11.3833 20.8027 11.2899 20.71L3.51987 12.93C2.54523 11.9452 1.99854 10.6156 1.99854 9.23002C1.99854 7.84445 2.54523 6.51484 3.51987 5.53002C4.50213 4.55053 5.8327 4.00049 7.21987 4.00049C8.60704 4.00049 9.93761 4.55053 10.9199 5.53002L11.9999 6.61002L13.0799 5.53002C14.0621 4.55053 15.3927 4.00049 16.7799 4.00049C18.167 4.00049 19.4976 4.55053 20.4799 5.53002C21.4545 6.51484 22.0012 7.84445 22.0012 9.23002C22.0012 10.6156 21.4545 11.9452 20.4799 12.93L12.7099 20.71C12.6164 20.8027 12.5056 20.876 12.3838 20.9258C12.2619 20.9756 12.1315 21.0008 11.9999 21ZM7.21987 6.00002C6.79655 5.9981 6.37705 6.0802 5.98568 6.24155C5.59431 6.40291 5.23884 6.64031 4.93987 6.94002C4.33593 7.54714 3.99691 8.36866 3.99691 9.22502C3.99691 10.0814 4.33593 10.9029 4.93987 11.51L11.9999 18.58L19.0599 11.51C19.6638 10.9029 20.0028 10.0814 20.0028 9.22502C20.0028 8.36866 19.6638 7.54714 19.0599 6.94002C18.4435 6.35773 17.6278 6.03331 16.7799 6.03331C15.932 6.03331 15.1162 6.35773 14.4999 6.94002L12.7099 8.74002C12.6169 8.83375 12.5063 8.90814 12.3844 8.95891C12.2626 9.00968 12.1319 9.03581 11.9999 9.03581C11.8679 9.03581 11.7372 9.00968 11.6153 8.95891C11.4934 8.90814 11.3828 8.83375 11.2899 8.74002L9.49987 6.94002C9.2009 6.64031 8.84544 6.40291 8.45406 6.24155C8.06269 6.0802 7.6432 5.9981 7.21987 6.00002Z" fill="#444444" />
 							</svg>
 						</button>
 						<button class="btn catalog-card__cart-btn" type="button">В корзину</button>
-					</div>
-					<div class="catalog-card catalog__card">
+					</article>
+					<article class="catalog-card catalog__card">
 						<span class="label catalog-card__label">Sale</span>
-						<picture class="catalog-card__img">
-							<source type="image/webp" data-srcset="assets/images/content/furniture-handles/catalog/04.webp" srcset="assets/images/src.webp">
-							<img class="lazy" data-src="assets/images/content/furniture-handles/catalog/04.jpg" src="assets/images/src.jpg" alt="фото товара" width="300" height="310">
-						</picture>
+						<a class="catalog-card__img" href="#">
+							<picture>
+								<source type="image/webp" data-srcset="assets/images/content/furniture-handles/catalog/04.webp" srcset="assets/images/src.webp">
+								<img class="lazy" data-src="assets/images/content/furniture-handles/catalog/04.jpg" src="assets/images/src.jpg" alt="фото товара" width="300" height="310">
+							</picture>
+						</a>
 						<div class="catalog-card__prices">
 							<div class="catalog-card__old-price">729 ₽</div>
 							<div class="catalog-card__price">410 ₽</div>
 						</div>
-						<div class="catalog-card__title">Ручка-скоба</div>
-						<button class="catalog-card__favorite-btn" type="button" aria-label="Добавить в избранное">
+						<a href="#" class="catalog-card__title">Ручка-скоба</a>
+						<button class="catalog-card__favorite-btn js-favorite-btn" type="button" aria-label="Добавить в избранное">
 							<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 								<path d="M11.9999 21C11.8683 21.0008 11.7378 20.9756 11.616 20.9258C11.4941 20.876 11.3833 20.8027 11.2899 20.71L3.51987 12.93C2.54523 11.9452 1.99854 10.6156 1.99854 9.23002C1.99854 7.84445 2.54523 6.51484 3.51987 5.53002C4.50213 4.55053 5.8327 4.00049 7.21987 4.00049C8.60704 4.00049 9.93761 4.55053 10.9199 5.53002L11.9999 6.61002L13.0799 5.53002C14.0621 4.55053 15.3927 4.00049 16.7799 4.00049C18.167 4.00049 19.4976 4.55053 20.4799 5.53002C21.4545 6.51484 22.0012 7.84445 22.0012 9.23002C22.0012 10.6156 21.4545 11.9452 20.4799 12.93L12.7099 20.71C12.6164 20.8027 12.5056 20.876 12.3838 20.9258C12.2619 20.9756 12.1315 21.0008 11.9999 21ZM7.21987 6.00002C6.79655 5.9981 6.37705 6.0802 5.98568 6.24155C5.59431 6.40291 5.23884 6.64031 4.93987 6.94002C4.33593 7.54714 3.99691 8.36866 3.99691 9.22502C3.99691 10.0814 4.33593 10.9029 4.93987 11.51L11.9999 18.58L19.0599 11.51C19.6638 10.9029 20.0028 10.0814 20.0028 9.22502C20.0028 8.36866 19.6638 7.54714 19.0599 6.94002C18.4435 6.35773 17.6278 6.03331 16.7799 6.03331C15.932 6.03331 15.1162 6.35773 14.4999 6.94002L12.7099 8.74002C12.6169 8.83375 12.5063 8.90814 12.3844 8.95891C12.2626 9.00968 12.1319 9.03581 11.9999 9.03581C11.8679 9.03581 11.7372 9.00968 11.6153 8.95891C11.4934 8.90814 11.3828 8.83375 11.2899 8.74002L9.49987 6.94002C9.2009 6.64031 8.84544 6.40291 8.45406 6.24155C8.06269 6.0802 7.6432 5.9981 7.21987 6.00002Z" fill="#444444" />
 							</svg>
 						</button>
 						<button class="btn catalog-card__cart-btn" type="button">В корзину</button>
-					</div>
-					<div class="catalog-card catalog__card">
+					</article>
+					<article class="catalog-card catalog__card">
 						<span class="label catalog-card__label">Sale</span>
-						<picture class="catalog-card__img">
-							<source type="image/webp" data-srcset="assets/images/content/furniture-handles/catalog/05.webp" srcset="assets/images/src.webp">
-							<img class="lazy" data-src="assets/images/content/furniture-handles/catalog/05.jpg" src="assets/images/src.jpg" alt="фото товара" width="300" height="310">
-						</picture>
+						<a class="catalog-card__img" href="#">
+							<picture>
+								<source type="image/webp" data-srcset="assets/images/content/furniture-handles/catalog/05.webp" srcset="assets/images/src.webp">
+								<img class="lazy" data-src="assets/images/content/furniture-handles/catalog/05.jpg" src="assets/images/src.jpg" alt="фото товара" width="300" height="310">
+							</picture>
+						</a>
 						<div class="catalog-card__prices">
 							<div class="catalog-card__old-price">269 ₽</div>
 							<div class="catalog-card__price">150 ₽</div>
 						</div>
-						<div class="catalog-card__title">Ручка-кнопка</div>
-						<button class="catalog-card__favorite-btn" type="button" aria-label="Добавить в избранное">
+						<a href="#" class="catalog-card__title">Ручка-кнопка</a>
+						<button class="catalog-card__favorite-btn js-favorite-btn" type="button" aria-label="Добавить в избранное">
 							<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 								<path d="M11.9999 21C11.8683 21.0008 11.7378 20.9756 11.616 20.9258C11.4941 20.876 11.3833 20.8027 11.2899 20.71L3.51987 12.93C2.54523 11.9452 1.99854 10.6156 1.99854 9.23002C1.99854 7.84445 2.54523 6.51484 3.51987 5.53002C4.50213 4.55053 5.8327 4.00049 7.21987 4.00049C8.60704 4.00049 9.93761 4.55053 10.9199 5.53002L11.9999 6.61002L13.0799 5.53002C14.0621 4.55053 15.3927 4.00049 16.7799 4.00049C18.167 4.00049 19.4976 4.55053 20.4799 5.53002C21.4545 6.51484 22.0012 7.84445 22.0012 9.23002C22.0012 10.6156 21.4545 11.9452 20.4799 12.93L12.7099 20.71C12.6164 20.8027 12.5056 20.876 12.3838 20.9258C12.2619 20.9756 12.1315 21.0008 11.9999 21ZM7.21987 6.00002C6.79655 5.9981 6.37705 6.0802 5.98568 6.24155C5.59431 6.40291 5.23884 6.64031 4.93987 6.94002C4.33593 7.54714 3.99691 8.36866 3.99691 9.22502C3.99691 10.0814 4.33593 10.9029 4.93987 11.51L11.9999 18.58L19.0599 11.51C19.6638 10.9029 20.0028 10.0814 20.0028 9.22502C20.0028 8.36866 19.6638 7.54714 19.0599 6.94002C18.4435 6.35773 17.6278 6.03331 16.7799 6.03331C15.932 6.03331 15.1162 6.35773 14.4999 6.94002L12.7099 8.74002C12.6169 8.83375 12.5063 8.90814 12.3844 8.95891C12.2626 9.00968 12.1319 9.03581 11.9999 9.03581C11.8679 9.03581 11.7372 9.00968 11.6153 8.95891C11.4934 8.90814 11.3828 8.83375 11.2899 8.74002L9.49987 6.94002C9.2009 6.64031 8.84544 6.40291 8.45406 6.24155C8.06269 6.0802 7.6432 5.9981 7.21987 6.00002Z" fill="#444444" />
 							</svg>
 						</button>
 						<button class="btn catalog-card__cart-btn" type="button">В корзину</button>
-					</div>
-					<div class="catalog-card catalog__card">
+					</article>
+					<article class="catalog-card catalog__card">
 						<span class="label catalog-card__label">New</span>
-						<picture class="catalog-card__img">
-							<source type="image/webp" data-srcset="assets/images/content/furniture-handles/catalog/06.webp" srcset="assets/images/src.webp">
-							<img class="lazy" data-src="assets/images/content/furniture-handles/catalog/06.jpg" src="assets/images/src.jpg" alt="фото товара" width="350" height="350">
-						</picture>
+						<a class="catalog-card__img" href="#">
+							<picture>
+								<source type="image/webp" data-srcset="assets/images/content/furniture-handles/catalog/06.webp" srcset="assets/images/src.webp">
+								<img class="lazy" data-src="assets/images/content/furniture-handles/catalog/06.jpg" src="assets/images/src.jpg" alt="фото товара" width="350" height="350">
+							</picture>
+						</a>
 						<div class="catalog-card__prices">
 							<div class="catalog-card__price">793 ₽</div>
 						</div>
-						<div class="catalog-card__title">Ручка-скоба с фарфоровой вставкой</div>
-						<button class="catalog-card__favorite-btn" type="button" aria-label="Добавить в избранное">
+						<a href="#" class="catalog-card__title">Ручка-скоба с фарфоровой вставкой</a>
+						<button class="catalog-card__favorite-btn js-favorite-btn" type="button" aria-label="Добавить в избранное">
 							<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 								<path d="M11.9999 21C11.8683 21.0008 11.7378 20.9756 11.616 20.9258C11.4941 20.876 11.3833 20.8027 11.2899 20.71L3.51987 12.93C2.54523 11.9452 1.99854 10.6156 1.99854 9.23002C1.99854 7.84445 2.54523 6.51484 3.51987 5.53002C4.50213 4.55053 5.8327 4.00049 7.21987 4.00049C8.60704 4.00049 9.93761 4.55053 10.9199 5.53002L11.9999 6.61002L13.0799 5.53002C14.0621 4.55053 15.3927 4.00049 16.7799 4.00049C18.167 4.00049 19.4976 4.55053 20.4799 5.53002C21.4545 6.51484 22.0012 7.84445 22.0012 9.23002C22.0012 10.6156 21.4545 11.9452 20.4799 12.93L12.7099 20.71C12.6164 20.8027 12.5056 20.876 12.3838 20.9258C12.2619 20.9756 12.1315 21.0008 11.9999 21ZM7.21987 6.00002C6.79655 5.9981 6.37705 6.0802 5.98568 6.24155C5.59431 6.40291 5.23884 6.64031 4.93987 6.94002C4.33593 7.54714 3.99691 8.36866 3.99691 9.22502C3.99691 10.0814 4.33593 10.9029 4.93987 11.51L11.9999 18.58L19.0599 11.51C19.6638 10.9029 20.0028 10.0814 20.0028 9.22502C20.0028 8.36866 19.6638 7.54714 19.0599 6.94002C18.4435 6.35773 17.6278 6.03331 16.7799 6.03331C15.932 6.03331 15.1162 6.35773 14.4999 6.94002L12.7099 8.74002C12.6169 8.83375 12.5063 8.90814 12.3844 8.95891C12.2626 9.00968 12.1319 9.03581 11.9999 9.03581C11.8679 9.03581 11.7372 9.00968 11.6153 8.95891C11.4934 8.90814 11.3828 8.83375 11.2899 8.74002L9.49987 6.94002C9.2009 6.64031 8.84544 6.40291 8.45406 6.24155C8.06269 6.0802 7.6432 5.9981 7.21987 6.00002Z" fill="#444444" />
 							</svg>
 						</button>
 						<button class="btn catalog-card__cart-btn" type="button">В корзину</button>
-					</div>
-					<div class="catalog-card catalog__card">
+					</article>
+					<article class="catalog-card catalog__card">
 						<span class="label catalog-card__label">New</span>
-						<picture class="catalog-card__img">
-							<source type="image/webp" data-srcset="assets/images/content/furniture-handles/catalog/07.webp" srcset="assets/images/src.webp">
-							<img class="lazy" data-src="assets/images/content/furniture-handles/catalog/07.jpg" src="assets/images/src.jpg" alt="фото товара" width="300" height="310">
-						</picture>
+						<a class="catalog-card__img" href="#">
+							<picture>
+								<source type="image/webp" data-srcset="assets/images/content/furniture-handles/catalog/07.webp" srcset="assets/images/src.webp">
+								<img class="lazy" data-src="assets/images/content/furniture-handles/catalog/07.jpg" src="assets/images/src.jpg" alt="фото товара" width="300" height="310">
+							</picture>
+						</a>
 						<div class="catalog-card__prices">
 							<div class="catalog-card__price">1039 ₽</div>
 						</div>
-						<div class="catalog-card__title">Ручка-кнопка</div>
-						<button class="catalog-card__favorite-btn" type="button" aria-label="Добавить в избранное">
+						<a href="#" class="catalog-card__title">Ручка-кнопка</a>
+						<button class="catalog-card__favorite-btn js-favorite-btn" type="button" aria-label="Добавить в избранное">
 							<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 								<path d="M11.9999 21C11.8683 21.0008 11.7378 20.9756 11.616 20.9258C11.4941 20.876 11.3833 20.8027 11.2899 20.71L3.51987 12.93C2.54523 11.9452 1.99854 10.6156 1.99854 9.23002C1.99854 7.84445 2.54523 6.51484 3.51987 5.53002C4.50213 4.55053 5.8327 4.00049 7.21987 4.00049C8.60704 4.00049 9.93761 4.55053 10.9199 5.53002L11.9999 6.61002L13.0799 5.53002C14.0621 4.55053 15.3927 4.00049 16.7799 4.00049C18.167 4.00049 19.4976 4.55053 20.4799 5.53002C21.4545 6.51484 22.0012 7.84445 22.0012 9.23002C22.0012 10.6156 21.4545 11.9452 20.4799 12.93L12.7099 20.71C12.6164 20.8027 12.5056 20.876 12.3838 20.9258C12.2619 20.9756 12.1315 21.0008 11.9999 21ZM7.21987 6.00002C6.79655 5.9981 6.37705 6.0802 5.98568 6.24155C5.59431 6.40291 5.23884 6.64031 4.93987 6.94002C4.33593 7.54714 3.99691 8.36866 3.99691 9.22502C3.99691 10.0814 4.33593 10.9029 4.93987 11.51L11.9999 18.58L19.0599 11.51C19.6638 10.9029 20.0028 10.0814 20.0028 9.22502C20.0028 8.36866 19.6638 7.54714 19.0599 6.94002C18.4435 6.35773 17.6278 6.03331 16.7799 6.03331C15.932 6.03331 15.1162 6.35773 14.4999 6.94002L12.7099 8.74002C12.6169 8.83375 12.5063 8.90814 12.3844 8.95891C12.2626 9.00968 12.1319 9.03581 11.9999 9.03581C11.8679 9.03581 11.7372 9.00968 11.6153 8.95891C11.4934 8.90814 11.3828 8.83375 11.2899 8.74002L9.49987 6.94002C9.2009 6.64031 8.84544 6.40291 8.45406 6.24155C8.06269 6.0802 7.6432 5.9981 7.21987 6.00002Z" fill="#444444" />
 							</svg>
 						</button>
 						<button class="btn catalog-card__cart-btn" type="button">В корзину</button>
-					</div>
-					<div class="catalog-card catalog__card">
+					</article>
+					<article class="catalog-card catalog__card">
 						<span class="label catalog-card__label">New</span>
-						<picture class="catalog-card__img">
-							<source type="image/webp" data-srcset="assets/images/content/furniture-handles/catalog/08.webp" srcset="assets/images/src.webp">
-							<img class="lazy" data-src="assets/images/content/furniture-handles/catalog/08.jpg" src="assets/images/src.jpg" alt="фото товара" width="300" height="310">
-						</picture>
+						<a class="catalog-card__img" href="#">
+							<picture>
+								<source type="image/webp" data-srcset="assets/images/content/furniture-handles/catalog/08.webp" srcset="assets/images/src.webp">
+								<img class="lazy" data-src="assets/images/content/furniture-handles/catalog/08.jpg" src="assets/images/src.jpg" alt="фото товара" width="300" height="310">
+							</picture>
+						</a>
 						<div class="catalog-card__prices">
 							<div class="catalog-card__price">671 ₽</div>
 						</div>
-						<div class="catalog-card__title">Ручка-скоба</div>
-						<button class="catalog-card__favorite-btn" type="button" aria-label="Добавить в избранное">
+						<a href="#" class="catalog-card__title">Ручка-скоба</a>
+						<button class="catalog-card__favorite-btn js-favorite-btn" type="button" aria-label="Добавить в избранное">
 							<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 								<path d="M11.9999 21C11.8683 21.0008 11.7378 20.9756 11.616 20.9258C11.4941 20.876 11.3833 20.8027 11.2899 20.71L3.51987 12.93C2.54523 11.9452 1.99854 10.6156 1.99854 9.23002C1.99854 7.84445 2.54523 6.51484 3.51987 5.53002C4.50213 4.55053 5.8327 4.00049 7.21987 4.00049C8.60704 4.00049 9.93761 4.55053 10.9199 5.53002L11.9999 6.61002L13.0799 5.53002C14.0621 4.55053 15.3927 4.00049 16.7799 4.00049C18.167 4.00049 19.4976 4.55053 20.4799 5.53002C21.4545 6.51484 22.0012 7.84445 22.0012 9.23002C22.0012 10.6156 21.4545 11.9452 20.4799 12.93L12.7099 20.71C12.6164 20.8027 12.5056 20.876 12.3838 20.9258C12.2619 20.9756 12.1315 21.0008 11.9999 21ZM7.21987 6.00002C6.79655 5.9981 6.37705 6.0802 5.98568 6.24155C5.59431 6.40291 5.23884 6.64031 4.93987 6.94002C4.33593 7.54714 3.99691 8.36866 3.99691 9.22502C3.99691 10.0814 4.33593 10.9029 4.93987 11.51L11.9999 18.58L19.0599 11.51C19.6638 10.9029 20.0028 10.0814 20.0028 9.22502C20.0028 8.36866 19.6638 7.54714 19.0599 6.94002C18.4435 6.35773 17.6278 6.03331 16.7799 6.03331C15.932 6.03331 15.1162 6.35773 14.4999 6.94002L12.7099 8.74002C12.6169 8.83375 12.5063 8.90814 12.3844 8.95891C12.2626 9.00968 12.1319 9.03581 11.9999 9.03581C11.8679 9.03581 11.7372 9.00968 11.6153 8.95891C11.4934 8.90814 11.3828 8.83375 11.2899 8.74002L9.49987 6.94002C9.2009 6.64031 8.84544 6.40291 8.45406 6.24155C8.06269 6.0802 7.6432 5.9981 7.21987 6.00002Z" fill="#444444" />
 							</svg>
 						</button>
 						<button class="btn catalog-card__cart-btn" type="button">В корзину</button>
-					</div>
-					<div class="catalog-card catalog__card">
-						<picture class="catalog-card__img">
-							<source type="image/webp" data-srcset="assets/images/content/furniture-handles/catalog/09.webp" srcset="assets/images/src.webp">
-							<img class="lazy" data-src="assets/images/content/furniture-handles/catalog/09.jpg" src="assets/images/src.jpg" alt="фото товара" width="300" height="310">
-						</picture>
+					</article>
+					<article class="catalog-card catalog__card">
+						<a class="catalog-card__img" href="#">
+							<picture>
+								<source type="image/webp" data-srcset="assets/images/content/furniture-handles/catalog/09.webp" srcset="assets/images/src.webp">
+								<img class="lazy" data-src="assets/images/content/furniture-handles/catalog/09.jpg" src="assets/images/src.jpg" alt="фото товара" width="300" height="310">
+							</picture>
+						</a>
 						<div class="catalog-card__prices">
 							<div class="catalog-card__price">1212 ₽</div>
 						</div>
-						<div class="catalog-card__title">Ручка-скоба</div>
-						<button class="catalog-card__favorite-btn" type="button" aria-label="Добавить в избранное">
+						<a href="#" class="catalog-card__title">Ручка-скоба</a>
+						<button class="catalog-card__favorite-btn js-favorite-btn" type="button" aria-label="Добавить в избранное">
 							<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 								<path d="M11.9999 21C11.8683 21.0008 11.7378 20.9756 11.616 20.9258C11.4941 20.876 11.3833 20.8027 11.2899 20.71L3.51987 12.93C2.54523 11.9452 1.99854 10.6156 1.99854 9.23002C1.99854 7.84445 2.54523 6.51484 3.51987 5.53002C4.50213 4.55053 5.8327 4.00049 7.21987 4.00049C8.60704 4.00049 9.93761 4.55053 10.9199 5.53002L11.9999 6.61002L13.0799 5.53002C14.0621 4.55053 15.3927 4.00049 16.7799 4.00049C18.167 4.00049 19.4976 4.55053 20.4799 5.53002C21.4545 6.51484 22.0012 7.84445 22.0012 9.23002C22.0012 10.6156 21.4545 11.9452 20.4799 12.93L12.7099 20.71C12.6164 20.8027 12.5056 20.876 12.3838 20.9258C12.2619 20.9756 12.1315 21.0008 11.9999 21ZM7.21987 6.00002C6.79655 5.9981 6.37705 6.0802 5.98568 6.24155C5.59431 6.40291 5.23884 6.64031 4.93987 6.94002C4.33593 7.54714 3.99691 8.36866 3.99691 9.22502C3.99691 10.0814 4.33593 10.9029 4.93987 11.51L11.9999 18.58L19.0599 11.51C19.6638 10.9029 20.0028 10.0814 20.0028 9.22502C20.0028 8.36866 19.6638 7.54714 19.0599 6.94002C18.4435 6.35773 17.6278 6.03331 16.7799 6.03331C15.932 6.03331 15.1162 6.35773 14.4999 6.94002L12.7099 8.74002C12.6169 8.83375 12.5063 8.90814 12.3844 8.95891C12.2626 9.00968 12.1319 9.03581 11.9999 9.03581C11.8679 9.03581 11.7372 9.00968 11.6153 8.95891C11.4934 8.90814 11.3828 8.83375 11.2899 8.74002L9.49987 6.94002C9.2009 6.64031 8.84544 6.40291 8.45406 6.24155C8.06269 6.0802 7.6432 5.9981 7.21987 6.00002Z" fill="#444444" />
 							</svg>
 						</button>
 						<button class="btn catalog-card__cart-btn" type="button">В корзину</button>
-					</div>
-					<div class="catalog-card catalog__card">
+					</article>
+					<article class="catalog-card catalog__card">
 						<span class="label catalog-card__label">New</span>
-						<picture class="catalog-card__img">
-							<source type="image/webp" data-srcset="assets/images/content/furniture-handles/catalog/10.webp" srcset="assets/images/src.webp">
-							<img class="lazy" data-src="assets/images/content/furniture-handles/catalog/10.jpg" src="assets/images/src.jpg" alt="фото товара" width="300" height="310">
-						</picture>
+						<a class="catalog-card__img" href="#">
+							<picture>
+								<source type="image/webp" data-srcset="assets/images/content/furniture-handles/catalog/10.webp" srcset="assets/images/src.webp">
+								<img class="lazy" data-src="assets/images/content/furniture-handles/catalog/10.jpg" src="assets/images/src.jpg" alt="фото товара" width="300" height="310">
+							</picture>
+						</a>
 						<div class="catalog-card__prices">
 							<div class="catalog-card__price">729 ₽</div>
 						</div>
-						<div class="catalog-card__title">Ручка-скоба</div>
-						<button class="catalog-card__favorite-btn" type="button" aria-label="Добавить в избранное">
+						<a href="#" class="catalog-card__title">Ручка-скоба</a>
+						<button class="catalog-card__favorite-btn js-favorite-btn" type="button" aria-label="Добавить в избранное">
 							<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 								<path d="M11.9999 21C11.8683 21.0008 11.7378 20.9756 11.616 20.9258C11.4941 20.876 11.3833 20.8027 11.2899 20.71L3.51987 12.93C2.54523 11.9452 1.99854 10.6156 1.99854 9.23002C1.99854 7.84445 2.54523 6.51484 3.51987 5.53002C4.50213 4.55053 5.8327 4.00049 7.21987 4.00049C8.60704 4.00049 9.93761 4.55053 10.9199 5.53002L11.9999 6.61002L13.0799 5.53002C14.0621 4.55053 15.3927 4.00049 16.7799 4.00049C18.167 4.00049 19.4976 4.55053 20.4799 5.53002C21.4545 6.51484 22.0012 7.84445 22.0012 9.23002C22.0012 10.6156 21.4545 11.9452 20.4799 12.93L12.7099 20.71C12.6164 20.8027 12.5056 20.876 12.3838 20.9258C12.2619 20.9756 12.1315 21.0008 11.9999 21ZM7.21987 6.00002C6.79655 5.9981 6.37705 6.0802 5.98568 6.24155C5.59431 6.40291 5.23884 6.64031 4.93987 6.94002C4.33593 7.54714 3.99691 8.36866 3.99691 9.22502C3.99691 10.0814 4.33593 10.9029 4.93987 11.51L11.9999 18.58L19.0599 11.51C19.6638 10.9029 20.0028 10.0814 20.0028 9.22502C20.0028 8.36866 19.6638 7.54714 19.0599 6.94002C18.4435 6.35773 17.6278 6.03331 16.7799 6.03331C15.932 6.03331 15.1162 6.35773 14.4999 6.94002L12.7099 8.74002C12.6169 8.83375 12.5063 8.90814 12.3844 8.95891C12.2626 9.00968 12.1319 9.03581 11.9999 9.03581C11.8679 9.03581 11.7372 9.00968 11.6153 8.95891C11.4934 8.90814 11.3828 8.83375 11.2899 8.74002L9.49987 6.94002C9.2009 6.64031 8.84544 6.40291 8.45406 6.24155C8.06269 6.0802 7.6432 5.9981 7.21987 6.00002Z" fill="#444444" />
 							</svg>
 						</button>
 						<button class="btn catalog-card__cart-btn" type="button">В корзину</button>
-					</div>
+					</article>
 				</div>
 				<button class="btn catalog__view-more btn--border" type="button">
 					<div class="btn__inner">

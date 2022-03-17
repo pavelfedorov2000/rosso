@@ -1,7 +1,10 @@
-app.yourScriptName = {
-  name: 'yourScriptName',
+app.productDescr = {
+  name: 'productDescr',
   description: 'your script description',
   init() {
-    // your code
+    $('.product-description__item-title').on('click', function () {
+      $(this).toggleClass('active');
+      $(this).next().slideToggle();
+    });
   },
 };

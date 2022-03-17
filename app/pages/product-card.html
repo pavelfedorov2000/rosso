@@ -1,0 +1,114 @@
+@@include("blocks/head/head.html", {"title": "Карточка товара / стандарт"})
+<div class="wrapper">
+	@@include("blocks/header/header.html")
+	@@include("blocks/burger/burger.html")
+	@@include("blocks/drop-catalog/drop-catalog.html")
+	<main class="page">
+		<div class="page__top container">
+			<nav class="breadcrumbs" aria-label="breadcrumbs">
+				<ol class="breadcrumbs__list">
+					<li class="breadcrumbs__item">
+						<a href="#">
+							Главная
+						</a>
+					</li>
+					<li class="breadcrumbs__item">
+						<span>
+							Смесители
+						</span>
+					</li>
+				</ol>
+			</nav>
+		</div>
+		<div class="product-card">
+			@@include("blocks/product-card-slider/product-card-slider.html")
+			<div class="product-card__content">
+				<h1 class="title-24 product-card__title">Смеситель</h1>
+				<button class="js-favorite-btn product-card__favorite-btn mob-visible" type="button">
+					<svg>
+						<use xlink:href="assets/images/sprite.svg#favorite"></use>
+					</svg>
+				</button>
+				<button class="btn js-cart-btn product-card__mobile-cart" type="button">
+					<svg>
+						<use xlink:href="assets/images/sprite.svg#white-cart"></use>
+					</svg>
+				</button>
+				@@include("blocks/product-description/product-description.html")
+				@@include("blocks/product-card-actions/product-card-actions.html")
+			</div>
+		</div>
+		<section class="slider-section container">
+			<h2 class="title-24 slider-section__title">Дополнить образ</h2>
+			<span class="slider-section__border"></span>
+			<div class="slider-section__slider swiper">
+				<div class="swiper-wrapper">
+					@@include("blocks/catalog-card/catalog-card.html", {
+					"element": "swiper-slide",
+					"title": "Смеситель Shinagawa",
+					"price": "9877 ₽",
+					"img": "water-taps/01",
+					"width": "300",
+					"height": "310"
+					})
+					@@include("blocks/catalog-card/catalog-card.html", {
+					"element": "swiper-slide",
+					"title": "Смеситель Yatomi-BN",
+					"price": "9876 ₽",
+					"img": "water-taps/02",
+					"width": "300",
+					"height": "310"
+					})
+					@@include("blocks/catalog-card/catalog-card.html", {
+					"element": "swiper-slide",
+					"title": "Смеситель Shinagawa",
+					"price": "6745 ₽",
+					"img": "water-taps/03",
+					"width": "300",
+					"height": "310"
+					})
+					@@include("blocks/catalog-card/catalog-card.html", {
+					"element": "swiper-slide",
+					"title": "Смеситель Shinagawa",
+					"price": "9877 ₽",
+					"img": "water-taps/01",
+					"width": "300",
+					"height": "310"
+					})
+					@@include("blocks/catalog-card/catalog-card.html", {
+					"element": "swiper-slide",
+					"title": "Смеситель Yatomi-BN",
+					"price": "9876 ₽",
+					"img": "water-taps/02",
+					"width": "300",
+					"height": "310"
+					})
+					@@include("blocks/catalog-card/catalog-card.html", {
+					"element": "swiper-slide",
+					"title": "Смеситель Shinagawa",
+					"price": "6745 ₽",
+					"img": "water-taps/03",
+					"width": "300",
+					"height": "310"
+					})
+				</div>
+			</div>
+			<div class="slider-section__slider-controls">
+				<div class="slider-section__slider-arrow swiper-button-prev slider-section__slider-arrow--prev">
+					<svg>
+						<use xlink:href="assets/images/sprite.svg#btn-arrow-black"></use>
+					</svg>
+				</div>
+				<div class="slider-section__slider-arrow swiper-button-next slider-section__slider-arrow--next">
+					<svg>
+						<use xlink:href="assets/images/sprite.svg#btn-arrow-black"></use>
+					</svg>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+		</section>
+	</main>
+	@@include("blocks/footer/footer.html")
+	<!-- @@include("blocks/popups/popups.html") -->
+</div>
+@@include("blocks/link/link.html")

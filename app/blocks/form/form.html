@@ -1,0 +1,35 @@
+<form action="#" class="form @@element">
+	<label class="form__field form__field--name">
+		<div class="form-label form__label">Ваше имя *</div>
+		<input class="input" name="name" placeholder="Иван" required>
+	</label>
+	<label class="form__field form__field--email">
+		<div class="form-label form__label">Email *</div>
+		<input class="input" name="email" placeholder="example@example.ru" required>
+	</label>
+	<label class="form__field form__field--text">
+		<div class="form-label form__label">Ваш вопрос *</div>
+		<textarea class="input form__textarea" name="question" required></textarea>
+	</label>
+	<div class="form__field attach-file form__field--file">
+		<label class="attach-file__wrap">
+			<input type="file" name="file">
+			<svg class="attach-file__icon">
+				<use xlink:href="assets/images/sprite.svg#attach"></use>
+			</svg>
+			<span class="attach-file__text">Прикрепить файл</span>
+		</label>
+		<div class="attach-file__file-data">
+			<span class="file-name"></span>
+			<span class="file-size"></span>
+		</div>
+	</div>
+	<button class="btn form__btn btn--border" type="submit">
+		<div class="btn__inner">
+			Отправить
+			<svg class="btn__arrow">
+				<use xlink:href="assets/images/sprite.svg#btn-arrow-black"></use>
+			</svg>
+		</div>
+	</button>
+</form>

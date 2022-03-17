@@ -80,3 +80,31 @@
 		}
 	}
 }
+
+.js-favorite-btn {
+	@extend %grid-center;
+	border: 0.1rem solid $light-gray;
+	transition: 0.3s background-color;
+
+	svg {
+		width: 2.4rem;
+		height: 2.4rem;
+
+		@media (max-width: 1366px) {
+			width: 1.7rem;
+			height: 1.7rem;
+		}
+
+		path {
+			transition: 0.3s fill;
+		}
+	}
+
+	&.active {
+		background-color: $accent;
+
+		svg path {
+			fill: #fff;
+		}
+	}
+}

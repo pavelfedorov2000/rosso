@@ -22,6 +22,20 @@
 		grid-template-rows: 1.7rem minmax(2.2rem, max-content) 0.8rem 22.1rem 0.9rem minmax(2.2rem, max-content) 1.7rem 5.7rem;
 	}
 
+	@media(max-width: 1024px) {
+		grid-template-columns: repeat(8, 1fr);
+		grid-template-rows: 1.3rem minmax(1.8rem, max-content) 0.5rem 16.6rem 0.7rem minmax(1.8rem, max-content) 1rem 4.3rem;
+		grid-template-areas:
+			'. . . . . . . .'
+			'. . . . label label'
+			'. . . . . . . .'
+			'. img img img img .'
+			'. . . . . . . .'
+			'. . . prices prices prices'
+			'. . . . . . . .'
+			'title title title title favorite cart cart';
+	}
+
 	&__label {
 		grid-area: label;
 		text-align: right;
@@ -29,6 +43,10 @@
 
 		@media (max-width: 1366px) {
 			padding-right: 1.8rem;
+		}
+
+		@media(max-width: 1024px) {
+			padding-right: 1.4rem;
 		}
 	}
 
@@ -39,6 +57,10 @@
 
 		@media (max-width: 1366px) {
 			width: 21.3rem;
+		}
+
+		@media(max-width: 1024px) {
+			width: 16rem;
 		}
 
 		img {
@@ -58,6 +80,12 @@
 		@media (max-width: 1366px) {
 			padding-right: 1.8rem;
 			grid-gap: 2.5rem;
+		}
+
+		@media(max-width: 1024px) {
+			padding-right: 1.4rem;
+			font-size: 1.4rem;
+			line-height: 1.8rem;
 		}
 	}
 
@@ -92,36 +120,17 @@
 			font-size: 1.4rem;
 			line-height: 2.1rem;
 		}
+
+		@media(max-width: 1024px) {
+			padding-left: 1.3rem;
+			font-size: 1.2rem;
+			line-height: 1.8rem;
+		}
 	}
 
 	&__favorite-btn {
 		grid-area: favorite;
-		@extend %grid-center;
-		border: 0.1rem solid $light-gray;
 		border-bottom: none;
-		transition: 0.3s background-color;
-
-		svg {
-			width: 2.4rem;
-			height: 2.4rem;
-
-			@media (max-width: 1366px) {
-				width: 1.7rem;
-				height: 1.7rem;
-			}
-
-			path {
-				transition: 0.3s fill;
-			}
-		}
-
-		&.active {
-			background-color: $accent;
-
-			svg path {
-				fill: #fff;
-			}
-		}
 	}
 
 	&__cart-btn {
@@ -134,6 +143,11 @@
 		@media (max-width: 1366px) {
 			font-size: 1.4rem;
 			line-height: 2.1rem;
+		}
+
+		@media(max-width: 1024px) {
+			font-size: 1.2rem;
+			line-height: 1.8rem;
 		}
 	}
 }

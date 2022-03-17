@@ -1,0 +1,121 @@
+.slider-section {
+
+	grid-template-rows: 12.2rem max-content 5rem 0.1rem 52.5rem 5rem max-content 12rem;
+	grid-template-areas:
+		'. . . . . . . . . . . . . . . . . . . . . . . .'
+		'. . title title title title title title title title title title title title title title title title title title title title . .'
+		'. . . . . . . . . . . . . . . . . . . . . . . .'
+		'border border border border border border slider slider slider slider slider slider slider slider slider slider slider slider slider slider slider slider slider slider'
+		'. . . . . . slider slider slider slider slider slider slider slider slider slider slider slider slider slider slider slider slider slider'
+		'. . . . . . . . . . . . . . . . . . . . . . . .'
+		'. . . . . . controls controls controls controls controls controls controls controls controls controls controls controls controls controls controls controls controls controls'
+		'. . . . . . . . . . . . . . . . . . . . . . . .'
+	;
+
+	@media(max-width: 1366px) {
+		grid-template-rows: 8.7rem max-content 3.5rem 0.1rem 37.4rem 3.5rem max-content 9rem;
+	}
+
+	@media(max-width: 1024px) {
+		grid-template-rows: 6rem max-content 2rem 28rem 3.5rem max-content 8rem;
+		grid-template-areas:
+			'. . . . . . . . . . . . . . . . . . . . . . . .'
+			'. . . title title title title title title title title title title title title title title title title title title . . .'
+			'. . . . . . . . . . . . . . . . . . . . . . . .'
+			'slider slider slider slider slider slider slider slider slider slider slider slider slider slider slider slider slider slider slider slider slider slider slider slider'
+			'. . . . . . . . . . . . . . . . . . . . . . . .'
+			'. . . controls controls controls controls controls controls controls controls controls controls controls controls controls controls controls controls controls controls controls controls controls'
+			'. . . . . . . . . . . . . . . . . . . . . . . .'
+		;
+	}
+
+	// .slider-section__title
+
+	&__title {
+		grid-area: title;
+	}
+
+	&__border {
+		display: none;
+
+		@media(min-width: 1025px) {
+			display: block;
+			grid-area: border;
+			background-color: $light-gray;
+		}
+	}
+
+	// .slider-section__slider
+
+	&__slider {
+		width: 100%;
+		grid-area: slider;
+		border-bottom: 0.1rem solid $light-gray;
+
+		.swiper-slide {
+
+			@media(min-width: 1025px) {
+				width: 33.94rem !important;
+			}
+
+			@media(min-width: 1367px) {
+				width: 47.38rem !important;
+			}
+		}
+	}
+
+	&__slider-controls {
+		grid-area: controls;
+		display: grid;
+		grid-template-columns: max-content 1.5rem max-content 3.7rem 1fr;
+		grid-template-areas:
+			'prev . next . progress'
+		;
+		align-items: center;
+
+		@media(max-width: 1366px) {
+			grid-template-columns: max-content 1rem max-content 3rem 1fr;
+		}
+
+		.swiper-button {
+
+			&-prev,
+			&-next {
+				width: 2.4rem;
+				height: 2.4rem;
+
+				@media(max-width: 1366px) {
+					width: 1.5rem;
+					height: 1.5rem;
+				}
+
+				svg {
+					fill: $accent;
+				}
+			}
+
+			&-prev {
+				grid-area: prev;
+				transform: rotate(180deg);
+			}
+
+			&-next {
+				grid-area: next;
+			}
+		}
+
+		.swiper-pagination {
+			grid-area: progress;
+		}
+	}
+}
+
+.swiper-pagination-progressbar.swiper-pagination-horizontal {
+	position: relative;
+	height: 0.1rem;
+	background-color: $light-gray;
+}
+
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+	background: $accent;
+}
