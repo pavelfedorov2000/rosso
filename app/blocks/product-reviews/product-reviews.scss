@@ -1,3 +1,161 @@
 .product-reviews {
-  // your code
+	padding: 10.5rem 0;
+
+	@media(max-width: 1366px) {
+		padding: 7.5rem 0;
+	}
+
+	@media(max-width: 1024px) {
+		padding: 4rem 0 5.5rem;
+	}
+
+	@media(max-width: 767px) {
+		padding: 4rem 0;
+	}
+
+	&__title {
+		@media(max-width: 1024px) {
+			font-size: 1.4rem;
+			line-height: 1.8rem;
+		}
+	}
+
+	>* {
+		&:not(:last-child) {
+			margin-bottom: 6rem;
+
+			@media(max-width: 1366px) {
+				margin-bottom: 4rem;
+			}
+
+			@media(max-width: 767px) {
+				margin-bottom: 3rem;
+			}
+		}
+	}
+
+	&__items {
+		display: grid;
+		grid-gap: 3.5rem;
+
+		@media(max-width: 1366px) {
+			grid-gap: 1.5rem;
+		}
+	}
+
+	&__item {
+		&:not(:last-child) {
+			border-bottom: 0.1rem solid $light-gray;
+		}
+	}
+}
+
+.product-review {
+
+	display: grid;
+	grid-template-columns: repeat(9, 1fr);
+	grid-template-rows: max-content 3.5rem max-content 2.5rem;
+	grid-template-areas:
+		'avatar name name name name name . rating rating'
+		'. . . . . . . . .'
+		'text text text text text text . date date'
+		'. . . . . . . . .'
+	;
+	align-items: center;
+
+	@media(max-width: 1366px) {
+		grid-template-rows: max-content 1.5rem max-content 1.5rem;
+	}
+
+	@media(max-width: 1024px) {
+		grid-template-columns: repeat(20, 1fr);
+		grid-template-rows: max-content 2.5rem max-content 1.5rem;
+		grid-template-areas:
+			'avatar avatar name name name name name name name name name name name name name . rating rating rating rating'
+			'. . . . . . . . . . . . . . . . . . . .'
+			'text text text text text text text text text text text text text text text . date date date date'
+			'. . . . . . . . . . . . . . . . . . . .'
+		;
+	}
+
+	@media(max-width: 767px) {
+		grid-template-rows: max-content 1.5rem max-content max-content 1rem;
+		grid-template-areas:
+			'avatar avatar name name name name name name name name name name . rating rating rating rating rating rating rating'
+			'. . . . . . . . . . . . . . . . . . . .'
+			'text text text text text text text text text text text text text text text text text text text text'
+			'date date date date date date date date date date date date date date date date date date date date'
+			'. . . . . . . . . . . . . . . . . . . .'
+		;
+	}
+
+	// .product-review__avatar
+
+	&__avatar {
+		width: 6rem;
+		height: 6rem;
+		border-radius: 50%;
+		border: 0.1rem solid $accent;
+
+		@media(max-width: 1366px) {
+			width: 4rem;
+			height: 4rem;
+		}
+	}
+
+	// .product-review__name
+
+	&__name {
+		grid-area: name;
+		line-height: 2.5rem;
+		font-weight: 600;
+
+		@media(max-width: 1366px) {
+			font-size: 1.4rem;
+			line-height: 2rem;
+		}
+
+		@media(max-width: 767px) {
+			font-size: 1.2rem;
+			line-height: 1.6rem;
+		}
+	}
+
+	// .product-review__rating
+
+	&__rating {
+		grid-area: rating;
+	}
+
+	// .product-review__text
+
+	&__text {
+		@extend %text-16;
+		grid-area: text;
+
+		@media(max-width: 1366px) {
+			font-size: 1.4rem;
+			line-height: 2.1rem;
+		}
+
+		@media(max-width: 1024px) {
+			font-size: 1.2rem;
+			line-height: 1.8rem;
+		}
+	}
+
+	// .product-review__date
+
+	&__date {
+		grid-area: date;
+		@extend %text-14;
+		color: $gray;
+		align-self: flex-end;
+		justify-self: flex-end;
+
+		@media(max-width: 1366px) {
+			font-size: 1.2rem;
+			line-height: 1.8rem;
+		}
+	}
 }

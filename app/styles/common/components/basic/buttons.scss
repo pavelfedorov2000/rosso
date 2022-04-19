@@ -31,6 +31,10 @@
 		@media (max-width: 767px) {
 			grid-template-columns: max-content 1.5rem;
 		}
+
+		&--end {
+			justify-content: flex-end;
+		}
 	}
 
 	&__arrow {
@@ -93,6 +97,11 @@
 		@media (max-width: 1366px) {
 			width: 1.7rem;
 			height: 1.7rem;
+		}
+
+		@media(max-width: 1024px) {
+			width: 1.5rem;
+			height: 1.5rem;
 		}
 
 		path {

@@ -2,38 +2,33 @@ app.sliderSection = {
   name: 'sliderSection',
   description: 'your script description',
   init() {
-    /* for (let i = 0; i < document.querySelectorAll('.slider-section').length; i++) {
-      
-    } */
-    new Swiper('.slider-section__slider', {
-      loop: true,
-      slidesPerView: 3,
-      //spaceBetween: 30,
-      speed: 1000,
-      /* autoplay: {
-        delay: 3000,
-      }, */
-      pagination: {
-        el: ".swiper-pagination",
-        type: "progressbar",
-      },
-      navigation: {
-        nextEl: '.slider-section__slider-arrow--next',
-        prevEl: '.slider-section__slider-arrow--prev',
-      },
-      /* breakpoints: {
-        576: {
-          slidesPerView: 2,
+    document.querySelectorAll('.slider-section').forEach(section => {
+      new Swiper(section.querySelector('.slider-section__slider'), {
+        loop: true,
+        slidesPerView: 2,
+        speed: 1000,
+        /* autoplay: {
+          delay: 3000,
+        }, */
+        pagination: {
+          el: section.querySelector('.swiper-pagination'),
+          type: "progressbar",
         },
-        992: {
-          slidesPerView: 4,
-        }
-      }, */
-      on: {
-        slideChange: function () {
-          new LazyLoad();
+        navigation: {
+          nextEl: section.querySelector('.swiper-button-next'),
+          prevEl: section.querySelector('.swiper-button-prev'),
         },
-      },
+        breakpoints: {
+          768: {
+            slidesPerView: 3,
+          },
+        },
+        on: {
+          slideChange: function () {
+            new LazyLoad();
+          },
+        },
+      });
     });
   },
 };

@@ -8,7 +8,7 @@ $(document).ready(function () {
   app.productDescr.init();
   app.productCardSlider.init();
   app.sliderSection.init();
-  //app.validation.init();
+  app.productReview.init();
 
   $('.form input[type=file]').on('change', function () {
     let arrayFiles = this.files;

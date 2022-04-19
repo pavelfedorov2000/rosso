@@ -1,5 +1,6 @@
 .slider-section {
 
+	border-top: 0.1rem solid $light-gray;
 	grid-template-rows: 12.2rem max-content 5rem 0.1rem 52.5rem 5rem max-content 12rem;
 	grid-template-areas:
 		'. . . . . . . . . . . . . . . . . . . . . . . .'
@@ -25,6 +26,18 @@
 			'slider slider slider slider slider slider slider slider slider slider slider slider slider slider slider slider slider slider slider slider slider slider slider slider'
 			'. . . . . . . . . . . . . . . . . . . . . . . .'
 			'. . . controls controls controls controls controls controls controls controls controls controls controls controls controls controls controls controls controls controls controls controls controls'
+			'. . . . . . . . . . . . . . . . . . . . . . . .'
+		;
+	}
+
+	@media(max-width: 767px) {
+		grid-template-rows: 6rem max-content 2rem 20.7rem 2.5rem max-content 4rem;
+		grid-template-areas: '. . . . . . . . . . . . . . . . . . . . . . . .'
+			'. . title title title title title title title title title title title title title title title title title title title title . .'
+			'. . . . . . . . . . . . . . . . . . . . . . . .'
+			'slider slider slider slider slider slider slider slider slider slider slider slider slider slider slider slider slider slider slider slider slider slider slider slider'
+			'. . . . . . . . . . . . . . . . . . . . . . . .'
+			'. controls controls controls controls controls controls controls controls controls controls controls controls controls controls controls controls controls controls controls controls controls controls controls'
 			'. . . . . . . . . . . . . . . . . . . . . . . .'
 		;
 	}

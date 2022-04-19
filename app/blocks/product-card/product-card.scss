@@ -10,7 +10,7 @@
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
 		border: 0.05rem solid $light-gray;
-		border-bottom-width: 0.1rem;
+		border-bottom: none;
 
 		@media(max-width: 1024px) {
 			grid-template-columns: repeat(24, 1fr);

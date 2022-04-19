@@ -94,18 +94,142 @@
 				</div>
 			</div>
 			<div class="slider-section__slider-controls">
-				<div class="slider-section__slider-arrow swiper-button-prev slider-section__slider-arrow--prev">
+				<div class="swiper-button-prev">
 					<svg>
 						<use xlink:href="assets/images/sprite.svg#btn-arrow-black"></use>
 					</svg>
 				</div>
-				<div class="slider-section__slider-arrow swiper-button-next slider-section__slider-arrow--next">
+				<div class="swiper-button-next">
 					<svg>
 						<use xlink:href="assets/images/sprite.svg#btn-arrow-black"></use>
 					</svg>
 				</div>
 				<div class="swiper-pagination"></div>
 			</div>
+		</section>
+		<section class="slider-section container">
+			<h2 class="title-24 slider-section__title">Недавно просмотренные товары</h2>
+			<span class="slider-section__border"></span>
+			<div class="slider-section__slider swiper">
+				<div class="swiper-wrapper">
+					@@include("blocks/catalog-card/catalog-card.html", {
+					"element": "swiper-slide",
+					"title": "Мойка Taki 54-U/IF-GM",
+					"price": "49 897 ₽",
+					"img": "washes/01",
+					"width": "300",
+					"height": "310"
+					})
+					@@include("blocks/catalog-card/catalog-card.html", {
+					"element": "swiper-slide",
+					"title": "Мойка Daisen 65-PA",
+					"price": "16 317 ₽",
+					"img": "washes/02",
+					"width": "300",
+					"height": "310"
+					})
+					@@include("blocks/catalog-card/catalog-card.html", {
+					"element": "swiper-slide",
+					"title": "Мойка Tedori 57-BL",
+					"price": "25 172 ₽",
+					"img": "washes/03",
+					"width": "300",
+					"height": "310"
+					})
+				</div>
+			</div>
+			<div class="slider-section__slider-controls">
+				<div class="swiper-button-prev">
+					<svg>
+						<use xlink:href="assets/images/sprite.svg#btn-arrow-black"></use>
+					</svg>
+				</div>
+				<div class="swiper-button-next">
+					<svg>
+						<use xlink:href="assets/images/sprite.svg#btn-arrow-black"></use>
+					</svg>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+		</section>
+		<section class="slider-section container">
+			<h2 class="title-24 slider-section__title">Другие товары из этой категории</h2>
+			<span class="slider-section__border"></span>
+			<div class="slider-section__slider swiper">
+				<div class="swiper-wrapper">
+					@@include("blocks/catalog-card/catalog-card.html", {
+					"element": "swiper-slide",
+					"title": "Мойка Taki 54-U/IF-GM",
+					"price": "49 897 ₽",
+					"img": "washes/04",
+					"width": "300",
+					"height": "310"
+					})
+					@@include("blocks/catalog-card/catalog-card.html", {
+					"element": "swiper-slide",
+					"title": "Мойка Daisen 65-PA",
+					"price": "16 317 ₽",
+					"img": "washes/01",
+					"width": "300",
+					"height": "310"
+					})
+					@@include("blocks/catalog-card/catalog-card.html", {
+					"element": "swiper-slide",
+					"title": "Мойка Tedori 57-BL",
+					"price": "25 172 ₽",
+					"img": "washes/02",
+					"width": "300",
+					"height": "310"
+					})
+					@@include("blocks/catalog-card/catalog-card.html", {
+					"element": "swiper-slide",
+					"title": "Мойка Taki 54-U/IF-GM",
+					"price": "49 897 ₽",
+					"img": "washes/04",
+					"width": "300",
+					"height": "310"
+					})
+					@@include("blocks/catalog-card/catalog-card.html", {
+					"element": "swiper-slide",
+					"title": "Мойка Daisen 65-PA",
+					"price": "16 317 ₽",
+					"img": "washes/01",
+					"width": "300",
+					"height": "310"
+					})
+					@@include("blocks/catalog-card/catalog-card.html", {
+					"element": "swiper-slide",
+					"title": "Мойка Tedori 57-BL",
+					"price": "25 172 ₽",
+					"img": "washes/02",
+					"width": "300",
+					"height": "310"
+					})
+				</div>
+			</div>
+			<div class="slider-section__slider-controls">
+				<div class="swiper-button-prev">
+					<svg>
+						<use xlink:href="assets/images/sprite.svg#btn-arrow-black"></use>
+					</svg>
+				</div>
+				<div class="swiper-button-next">
+					<svg>
+						<use xlink:href="assets/images/sprite.svg#btn-arrow-black"></use>
+					</svg>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+		</section>
+		<section class="reviews container">
+			<section class="product-reviews reviews__left">
+				<h3 class="title-24 product-reviews__title">Отзывы о товаре</h3>
+				<div class="product-reviews__items">
+					@@include("blocks/product-reviews/product-review.html", {"name": "Ирина К."})
+					@@include("blocks/product-reviews/product-review.html", {"name": "Семен Ф."})
+				</div>
+			</section>
+			@@include("blocks/leave-feedback/leave-feedback.html")
 		</section>
 	</main>
 	@@include("blocks/footer/footer.html")
