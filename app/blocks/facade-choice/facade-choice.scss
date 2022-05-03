@@ -1,0 +1,126 @@
+.facade-choice {
+    border-top: 0.1rem solid $light-gray;
+    grid-template-rows: 13.2rem max-content 4rem minmax(50rem, max-content) 12rem;
+    grid-template-areas:
+        '. . . . . . . . . . . . . . . . . . . . . . . .'
+        '. . title title title title title title title title title title title title title title title title title title title title . .'
+        '. . . . . . . . . . . . . . . . . . . . . . . .'
+        'figure figure figure figure figure figure figure figure content content content content content content content content content content content content content content content content'
+        'figure figure figure figure figure figure figure figure btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn';
+    @media (max-width: 1366px) {
+        grid-template-rows: 9.4rem max-content 2.7rem minmax(35.6rem, max-content) 8.5rem;
+    }
+    @media (max-width: 1024px) {
+        grid-template-rows: 5.9rem max-content 2rem minmax(43rem, max-content) max-content 8.5rem;
+        grid-template-areas:
+            '. . . . . . . . . . . . . . . . . . . . . . . .'
+            '. . . title title title title title title title title title title title title title title title title title title . . .'
+            '. . . . . . . . . . . . . . . . . . . . . . . .'
+            'figure figure figure figure figure figure figure figure figure figure figure figure figure figure figure figure figure figure figure figure figure figure figure figure'
+            'content content content content content content content content content content content content content content content content content content content content content content content content'
+            'btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn';
+    }
+    @media (max-width: 767px) {
+        grid-template-rows: 4.2rem max-content 2rem minmax(28rem, max-content) max-content 6rem;
+    }
+    // .facade-choice__title
+
+    &__title {
+        grid-area: title;
+    }
+
+    // .facade-choice__figure
+
+    &__figure {
+        grid-area: figure;
+        @extend %grid-center;
+        align-content: end;
+        row-gap: 5rem;
+        padding-bottom: 4.6rem;
+        border-top: 0.1rem solid $light-gray;
+        @media (min-width: 1025px) {
+            border-right: 0.1rem solid $light-gray;
+        }
+        @media (max-width: 1366px) {
+            row-gap: 3.5rem;
+            padding-bottom: 3.2rem;
+        }
+        @media (max-width: 1024px) {
+            row-gap: 2.5rem;
+            padding-bottom: 3.8rem;
+        }
+        @media (max-width: 767px) {
+            row-gap: 1.7rem;
+            padding-bottom: 3.5rem;
+        }
+    }
+
+    // .facade-choice__img
+
+    &__img {
+        width: 18.8rem;
+        height: 37.4rem;
+        @media (max-width: 1366px) {
+            width: 13.4rem;
+            height: 26.7rem;
+        }
+        @media (max-width: 767px) {
+            width: 9.1rem;
+            height: 18.1rem;
+        }
+    }
+
+    // .facade-choice__content
+
+    &__content {
+        display: grid;
+        align-content: center;
+        grid-area: content;
+        border-top: 0.1rem solid $light-gray;
+        grid-template-columns: repeat(16, 1fr);
+        @media (max-width: 1024px) {
+            grid-template-columns: repeat(24, 1fr);
+            padding: 5.8rem 0 5rem;
+        }
+        @media (max-width: 767px) {
+            padding: 2.7rem 0 3.2rem;
+        }
+    }
+
+    &__body {
+        grid-column: 2 / 16;
+        display: grid;
+        grid-template-columns: repeat(14, 1fr);
+        @media (max-width: 1024px) {
+            grid-template-columns: repeat(18, 1fr);
+            grid-column: 4 / 23;
+        }
+    }
+
+    &__colors {
+        grid-column: 2 / span 10;
+        @media (max-width: 1024px) {
+            grid-column: span 17;
+        }
+        @media (max-width: 767px) {
+            grid-column: span 18;
+        }
+    }
+    // .facade-choice__btn
+
+    &__btn {
+        grid-area: btn;
+        grid-template-columns: repeat(16, 1fr);
+        border-left: none;
+        border-bottom: none;
+        @media (max-width: 1024px) {
+            grid-template-columns: repeat(24, 1fr);
+        }
+        .btn__inner {
+            grid-column: 2 / 16;
+            @media (max-width: 1024px) {
+                grid-column: 2 / 24;
+            }
+        }
+    }
+}

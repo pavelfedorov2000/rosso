@@ -46,6 +46,8 @@
         border: 1px solid $light-gray;
         border-left: none;
         img {
+            height: 100%;
+            object-fit: contain;
             width: 24rem;
             @media (max-width: 1366px) {
                 width: 17rem;
@@ -57,133 +59,49 @@
                 width: 12rem;
             }
         }
-    }
 
-    // .partner-brands__brand--transformica
-
-    &__brand--transformica {
-        grid-area: transformica;
-        @media (min-width: 768px) {
-            border-left: 1px solid $light-gray;
+        &--transformica {
+            grid-area: transformica;
+            @media (min-width: 768px) {
+                border-left: 1px solid $light-gray;
+            }
         }
-        img {
-            height: 3.2rem;
-            @media (max-width: 1366px) {
-                height: 2.3rem;
-            }
-            @media (max-width: 1024px) {
-                height: 2rem;
-            }
+
+        &--salice {
+            grid-area: salice;
             @media (max-width: 767px) {
-                height: 1.6rem;
+                border-right: none;
             }
         }
-    }
 
-    // .partner-brands__brand--salice
-
-    &__brand--salice {
-        grid-area: salice;
-        @media (max-width: 767px) {
-            border-right: none;
-        }
-        img {
-            height: 4.4rem;
-            @media (max-width: 1366px) {
-                height: 3.1rem;
-            }
-            @media (max-width: 1024px) {
-                height: 2.7rem;
-            }
+        &--stabilus {
+            grid-area: stabilus;
             @media (max-width: 767px) {
-                height: 2.2rem;
+                border-top: none;
+                border-right: none;
             }
         }
-    }
 
-    // .partner-brands__brand--stabilus
+        &--rejs {
+            grid-area: rejs;
+            @media (max-width: 767px) {
+                border-top: none;
+            }
+        }
 
-    &__brand--stabilus {
-        grid-area: stabilus;
-        @media (max-width: 767px) {
+        &--confurn {
+            grid-area: confurn;
             border-top: none;
-            border-right: none;
-        }
-        img {
-            height: 5.9rem;
-            @media (max-width: 1366px) {
-                height: 4.2rem;
-            }
-            @media (max-width: 1024px) {
-                height: 3.4rem;
-            }
-            @media (max-width: 767px) {
-                height: 2.8rem;
+            @media (min-width: 1025px) {
+                border-left: 1px solid $light-gray;
             }
         }
-    }
 
-    // .partner-brands__brand--rejs
-
-    &__brand--rejs {
-        grid-area: rejs;
-        @media (max-width: 767px) {
+        &--ozmf {
+            grid-area: ozmf;
             border-top: none;
-        }
-        img {
-            height: 8.6rem;
-            @media (max-width: 1366px) {
-                height: 6.1rem;
-            }
-            @media (max-width: 1024px) {
-                height: 5rem;
-            }
             @media (max-width: 767px) {
-                height: 4rem;
-            }
-        }
-    }
-
-    // .partner-brands__brand--confurn
-
-    &__brand--confurn {
-        grid-area: confurn;
-        border-top: none;
-        @media (min-width: 1025px) {
-            border-left: 1px solid $light-gray;
-        }
-        img {
-            height: 8.4rem;
-            @media (max-width: 1366px) {
-                height: 5.9rem;
-            }
-            @media (max-width: 1024px) {
-                height: 5.3rem;
-            }
-            @media (max-width: 767px) {
-                height: 4.3rem;
-            }
-        }
-    }
-
-    // .partner-brands__brand--ozmf
-
-    &__brand--ozmf {
-        grid-area: ozmf;
-        border-top: none;
-        @media (max-width: 767px) {
-            border-right: none;
-        }
-        img {
-            height: 11.8rem;
-            @media (max-width: 1366px) {
-                height: 8.3rem;
-            }
-            @media (max-width: 1024px) {
-                height: 7.2rem;
-            }
-            @media (max-width: 767px) {
-                height: 5.8rem;
+                border-right: none;
             }
         }
     }

@@ -1,124 +1,149 @@
 .facade-card {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 9rem max-content 4rem 1fr 8rem 10rem;
+    grid-template-areas:
+        '. . . . . . . . . . . .'
+        '. title title title title title title title title title title .'
+        '. . . . . . . . . . . .'
+        '. text text text text text text text text text text .'
+        '. . . . . . . . . . . .'
+        'btn btn btn btn btn btn btn btn btn btn btn btn';
+    @extend %bg-cover;
+    position: relative;
+    z-index: 1;
+    border: 0.05rem solid $light-gray;
+    transition: 0.3s color;
 
-	display: grid;
-	grid-template-columns: repeat(12, 1fr);
-	grid-template-rows: 9rem max-content 4rem 1fr 8rem 10rem;
-	grid-template-areas:
-		'. . . . . . . . . . . .'
-		'. title title title title title title title title title title .'
-		'. . . . . . . . . . . .'
-		'. text text text text text text text text text text .'
-		'. . . . . . . . . . . .'
-		'btn btn btn btn btn btn btn btn btn btn btn btn'
-	;
-	@extend %bg-cover;
-	position: relative;
-	z-index: 1;
-	border: 0.05rem solid $light-gray;
-	transition: .3s color;
+    @media (max-width: 1366px) {
+        grid-template-rows: 6.5rem max-content 2.5rem 1fr 3.5rem 7.2rem;
+    }
 
-	@media(max-width: 1366px) {
-		grid-template-rows: 6.5rem max-content 2.5rem 1fr 3.5rem 7.2rem;
-	}
+    @media (max-width: 1024px) {
+        grid-template-rows: 6.5rem max-content 3rem 1fr 6rem 7.2rem;
+        grid-template-areas:
+            '. . . . . . . . . . . .'
+            '. . title title title title title title title title title .'
+            '. . . . . . . . . . . .'
+            '. . text text text text text text text text text .'
+            '. . . . . . . . . . . .'
+            'btn btn btn btn btn btn btn btn btn btn btn btn';
+    }
+    @media (max-width: 767px) {
+        grid-template-columns: repeat(24, 1fr);
+        grid-template-rows: 6.5rem max-content 2rem minmax(7.2rem + 6.5rem, max-content) 6.5rem 6rem;
+        grid-template-areas:
+            '. . . . . . . . . . . . . . . . . . . . . . . .'
+            '. . title title title title title title title title title title title title title title title title title title title title . .'
+            '. . . . . . . . . . . . . . . . . . . . . . . .'
+            '. . text text text text text text text text text text text text text text text text text text text text . .'
+            '. . . . . . . . . . . . . . . . . . . . . . . .'
+            'btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn btn';
+    }
 
-	@media(max-width: 1024px) {
-		grid-template-rows: 6.5rem max-content 3rem 1fr 6rem 7.2rem;
-		grid-template-areas: '. . . . . . . . . . . .'
-			'. . title title title title title title title title title .'
-			'. . . . . . . . . . . .'
-			'. . text text text text text text text text text .'
-			'. . . . . . . . . . . .'
-			'btn btn btn btn btn btn btn btn btn btn btn btn'
-		;
-	}
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        background-color: #fff;
+        transition: 0.3s opacity;
+    }
 
-	&::after {
-		content: '';
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		z-index: -1;
-		background-color: #fff;
-		transition: .3s opacity;
-	}
+    @media (any-hover: hover) {
+        &:hover {
+            color: #fff;
 
-	@media (any-hover: hover) {
-		&:hover {
-			color: #fff;
+            &:after {
+                opacity: 0;
+            }
 
-			&:after {
-				opacity: 0;
-			}
+            .facade-card__btn {
+                color: #fff;
 
-			.facade-card__btn {
-				color: #fff;
+                .btn__arrow {
+                    fill: #fff;
+                }
+            }
+        }
+    }
 
-				.btn__arrow {
-					fill: #fff;
-				}
-			}
-		}
-	}
+    // .facade-card__title
 
-	// .facade-card__title
+    &__title {
+        grid-area: title;
+        @extend %text-24;
 
-	&__title {
-		grid-area: title;
-		@extend %text-24;
+        @media (max-width: 1366px) {
+            font-size: 2rem;
+            line-height: 2.4rem;
+        }
 
-		@media(max-width: 1366px) {
-			font-size: 2rem;
-			line-height: 2.4rem;
-		}
+        @media (max-width: 1024px) {
+            font-size: 1.8rem;
+            line-height: 2.2rem;
+        }
 
-		@media(max-width: 1024px) {
-			font-size: 1.8rem;
-			line-height: 2.2rem;
-		}
-	}
+        @media (max-width: 767px) {
+            font-size: 1.4rem;
+            line-height: 1.8rem;
+        }
+    }
 
-	// .facade-card__text
+    // .facade-card__text
 
-	&__text {
-		grid-area: text;
-		@extend %text-16;
+    &__text {
+        grid-area: text;
+        @extend %text-16;
 
-		@media(max-width: 1366px) {
-			font-size: 1.4rem;
-			line-height: 2.1rem;
-		}
+        @media (max-width: 1366px) {
+            font-size: 1.4rem;
+            line-height: 2.1rem;
+        }
 
-		@media(max-width: 1024px) {
-			font-size: 1.2rem;
-			line-height: 1.8rem;
-		}
-	}
+        @media (max-width: 1024px) {
+            font-size: 1.2rem;
+            line-height: 1.8rem;
+        }
+    }
 
-	// .facade-card__btn
+    // .facade-card__btn
 
-	&__btn {
-		grid-area: btn;
-		font-size: 1.6rem;
-		line-height: 1.9rem;
-		grid-template-columns: repeat(12, 1fr);
-		border-left: none;
-		border-right: none;
-		border-bottom: none;
+    &__btn {
+        grid-area: btn;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        grid-template-columns: repeat(12, 1fr);
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+        @media (max-width: 767px) {
+            font-size: 1.2rem;
+            line-height: 1.6rem;
+        }
 
-		.btn {
-			&__inner {
-				grid-column: 2 / 12;
-				justify-content: flex-end;
-				grid-template-columns: max-content 2rem;
-				grid-gap: 1.5rem;
-			}
+        .btn {
+            &__inner {
+                grid-column: 2 / 12;
+                justify-content: flex-end;
+                grid-template-columns: max-content 2rem;
+                grid-gap: 1.5rem;
+                @media (max-width: 767px) {
+                    grid-template-columns: max-content 1.5rem;
+                }
+            }
 
-			&__arrow {
-				width: 2rem;
-				height: 2rem;
-			}
-		}
-	}
+            &__arrow {
+                width: 2rem;
+                height: 2rem;
+                @media (max-width: 767px) {
+                    width: 1.5rem;
+                    height: 1.5rem;
+                }
+            }
+        }
+    }
 }

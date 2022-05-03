@@ -1,119 +1,126 @@
 .btn {
-	display: grid;
-	align-content: center;
-	background-color: $accent;
-	@extend %dewi;
-	@extend %text-24;
-	color: #fff;
-	transition: 0.3s all;
+    display: grid;
+    align-content: center;
+    background-color: $accent;
+    @extend %dewi;
+    @extend %text-24;
+    color: #fff;
+    transition: 0.3s all;
 
-	@media (max-width: 1366px) {
-		font-size: 1.8rem;
-		line-height: 2.2rem;
-	}
+    @media (max-width: 1366px) {
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+    }
 
-	@media (max-width: 767px) {
-		font-size: 1.6rem;
-		line-height: 1.9rem;
-	}
+    @media (max-width: 767px) {
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+    }
 
-	&__inner {
-		display: grid;
-		grid-template-columns: max-content 2.4rem;
-		grid-gap: 2rem;
-		align-items: flex-end;
+    &__inner {
+        display: grid;
+        grid-template-columns: max-content 2.4rem;
+        grid-gap: 2rem;
+        align-items: flex-end;
 
-		@media (max-width: 1366px) {
-			grid-template-columns: max-content 1.7rem;
-			grid-gap: 1.5rem;
-		}
+        @media (max-width: 1366px) {
+            grid-template-columns: max-content 1.7rem;
+            grid-gap: 1.5rem;
+        }
 
-		@media (max-width: 767px) {
-			grid-template-columns: max-content 1.5rem;
-		}
+        @media (max-width: 767px) {
+            grid-template-columns: max-content 1.5rem;
+        }
 
-		&--end {
-			justify-content: flex-end;
-		}
-	}
+        &--end {
+            justify-content: flex-end;
+        }
+    }
 
-	&__arrow {
-		width: 2.4rem;
-		height: 2.4rem;
-		fill: #fff;
-		transition: 0.3s all;
+    &__arrow {
+        width: 2.4rem;
+        height: 2.4rem;
+        fill: #fff;
+        transition: 0.3s all;
 
-		@media (max-width: 1366px) {
-			width: 1.7rem;
-			height: 1.7rem;
-		}
+        @media (max-width: 1366px) {
+            width: 1.7rem;
+            height: 1.7rem;
+        }
 
-		@media (max-width: 767px) {
-			width: 1.5rem;
-			height: 1.5rem;
-		}
-	}
+        @media (max-width: 767px) {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
 
-	&--border {
-		background-color: transparent;
-		color: $accent;
-		border: 0.1rem solid $light-gray;
+    &--small {
+        @media (max-width: 767px) {
+            font-size: 1.2rem;
+            line-height: 1.6rem;
+        }
+    }
 
-		.btn__arrow {
-			fill: $accent;
-		}
+    &--border {
+        background-color: transparent;
+        color: $accent;
+        border: 0.1rem solid $light-gray;
 
-		//border: 0.1rem solid #;
-	}
+        .btn__arrow {
+            fill: $accent;
+        }
 
-	&--white {
-		background-color: #fff;
-		color: $accent;
-		border: 1px solid $light-gray;
+        //border: 0.1rem solid #;
+    }
 
-		.btn__arrow {
-			fill: $accent;
-		}
-	}
+    &--white {
+        background-color: #fff;
+        color: $accent;
+        border: 1px solid $light-gray;
 
-	@media (any-hover: hover) {
-		&:hover {
-			.btn__arrow {
-				transform: translateX(1.5rem);
-			}
-		}
-	}
+        .btn__arrow {
+            fill: $accent;
+        }
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            .btn__arrow {
+                transform: translateX(1.5rem);
+            }
+        }
+    }
 }
 
 .js-favorite-btn {
-	@extend %grid-center;
-	border: 0.1rem solid $light-gray;
-	transition: 0.3s background-color;
+    @extend %grid-center;
+    border: 0.1rem solid $light-gray;
+    transition: 0.3s background-color;
 
-	svg {
-		width: 2.4rem;
-		height: 2.4rem;
+    svg {
+        width: 2.4rem;
+        height: 2.4rem;
 
-		@media (max-width: 1366px) {
-			width: 1.7rem;
-			height: 1.7rem;
-		}
+        @media (max-width: 1366px) {
+            width: 1.7rem;
+            height: 1.7rem;
+        }
 
-		@media(max-width: 1024px) {
-			width: 1.5rem;
-			height: 1.5rem;
-		}
+        @media (max-width: 1024px) {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
 
-		path {
-			transition: 0.3s fill;
-		}
-	}
+        path {
+            transition: 0.3s fill;
+        }
+    }
 
-	&.active {
-		background-color: $accent;
+    &.active {
+        background-color: $accent;
 
-		svg path {
-			fill: #fff;
-		}
-	}
+        svg path {
+            fill: #fff;
+        }
+    }
 }

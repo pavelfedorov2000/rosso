@@ -1,20 +1,21 @@
 $(document).ready(function () {
-  new LazyLoad();
-  app.burger.init();
-  app.dropCatalog.init();
-  app.frameSystem.init();
-  app.asideFilters.init();
-  app.catalogCard.init();
-  app.productDescr.init();
-  app.productCardSlider.init();
-  app.sliderSection.init();
-  app.productReview.init();
+    new LazyLoad();
+    app.burger.init();
+    app.dropCatalog.init();
+    app.frameSystem.init();
+    app.asideFilters.init();
+    app.catalogCard.init();
+    app.productDescr.init();
+    app.productCardSlider.init();
+    app.sliderSection.init();
+    app.productReview.init();
+    app.colorSolutions.init();
 
-  $('.form input[type=file]').on('change', function () {
-    let arrayFiles = this.files;
-    $('.file-name').text(arrayFiles[0].name); // имя файла
-    $('.file-size').text(`(${Math.floor(arrayFiles[0].size * 0.0009765625)} КБ)`); // переводим байты в килобайты и округляем до нижнего целого значения
-  });
+    $('.form input[type=file]').on('change', function () {
+        let arrayFiles = this.files;
+        $('.file-name').text(arrayFiles[0].name); // имя файла
+        $('.file-size').text(`(${Math.floor(arrayFiles[0].size * 0.0009765625)} КБ)`); // переводим байты в килобайты и округляем до нижнего целого значения
+    });
 });
 
 // pageup

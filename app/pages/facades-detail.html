@@ -4,7 +4,89 @@
 	@@include("blocks/burger/burger.html")
 	@@include("blocks/drop-catalog/drop-catalog.html")
 	<main class="page">
+		<div class="page__top container">
+			<nav class="breadcrumbs" aria-label="breadcrumbs">
+				<ol class="breadcrumbs__list">
+					<li class="breadcrumbs__item">
+						<a href="#">
+							Главная
+						</a>
+					</li>
+					<li class="breadcrumbs__item">
+						<a href="#">
+							Каталог
+						</a>
+					</li>
+					<li class="breadcrumbs__item">
+						<span>
+							Фрезеровка «Лассо»
+						</span>
+					</li>
+				</ol>
+			</nav>
+		</div>
+		@@include("blocks/facade-detail/facade-detail.html")
 
+		<section class="facade-choice container">
+			<h2 class="title-24 facade-choice__title">Цветовые решения</h2>
+			<figure class="facade-choice__figure">
+				<picture class="facade-choice__img">
+					<source type="image/webp" data-srcset="assets/images/content/gray-stone-door.webp"
+						srcset="assets/images/src.webp">
+					<img class="lazy" data-src="assets/images/content/gray-stone-door.jpg" src="assets/images/src.jpg"
+						alt="фото" width="188" height="374">
+				</picture>
+				<figcaption class="facade-choice__img-descr">615 Оксайд серый камень</figcaption>
+			</figure>
+			<div class="facade-choice__content">
+				<div class="facade-choice__body">
+					<div class="color-solutions facade-choice__colors">
+						@@include("blocks/color-solutions/color-solutions.html", {
+						"title": "Фантазийные"
+						})
+						@@include("blocks/color-solutions/color-solutions.html", {
+						"title": "Древесные"
+						})
+						@@include("blocks/color-solutions/color-solutions.html", {
+						"title": "Однотонные"
+						})
+					</div>
+				</div>
+			</div>
+			<button class="btn facade-choice__btn btn--border btn--small">
+				<div class="btn__inner btn__inner--end">
+					<span>Нужна помощь?</span>
+					<svg class="btn__arrow">
+						<use xlink:href="assets/images/sprite.svg#btn-arrow-white"></use>
+					</svg>
+				</div>
+			</button>
+		</section>
+		<section class="facade-choice container">
+			<h2 class="title-24 facade-choice__title">Варианты исполнения</h2>
+			<figure class="facade-choice__figure">
+				<picture class="facade-choice__img execution-img">
+					<source type="image/webp" data-srcset="assets/images/content/showcase-lattice.webp"
+						srcset="assets/images/src.webp">
+					<img class="lazy" data-src="assets/images/content/showcase-lattice.jpg" src="assets/images/src.jpg"
+						alt="фото" width="188" height="374">
+				</picture>
+				<figcaption class="facade-choice__img-descr">Витрина решетка</figcaption>
+			</figure>
+			<div class="facade-choice__content">
+				<div class="facade-choice__body">
+					@@include('blocks/execution-options/execution-options.html')
+				</div>
+			</div>
+			<button class="btn facade-choice__btn btn--border btn--small">
+				<div class="btn__inner btn__inner--end">
+					<span>Нужна помощь?</span>
+					<svg class="btn__arrow">
+						<use xlink:href="assets/images/sprite.svg#btn-arrow-white"></use>
+					</svg>
+				</div>
+			</button>
+		</section>
 	</main>
 	@@include("blocks/footer/footer.html")
 	<!-- @@include("blocks/popups/popups.html") -->
