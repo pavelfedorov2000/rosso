@@ -446,6 +446,289 @@
 			</button>
 		</div>
 		<main class="page">
+			<form action="#" class="checkout container">
+				<div class="checkout__content">
+					<fieldset data-step="1" class="checkout__item checkout-step">
+						<div class="checkout-step__inner">
+							<legend class="checkout-step__title title-24">1/ Контактные данные</legend>
+							<div class="checkout-step__fields">
+								<label class="checkout-step__field">
+									<span class="form-label">Имя *</span>
+									<input class="input" name="name" placeholder="Иван" required>
+								</label>
+								<label class="checkout-step__field">
+									<span class="form-label">Фамилия *</span>
+									<input class="input" name="surname" placeholder="Иванов" required>
+								</label>
+								<label class="checkout-step__field">
+									<span class="form-label">Email *</span>
+									<input class="input" name="email" type="email" placeholder="example@example.com" required>
+								</label>
+								<label class="checkout-step__field">
+									<span class="form-label">Телефон *</span>
+									<input class="input" name="phone" type="tel" placeholder="+7 (___)___-__-__" required>
+								</label>
+							</div>
+							<label class="form-agree checkout-step__agree">
+								<input class="check-box" type="checkbox">
+								<span class="check-style"></span>
+								<span class="check-text form-agree__text">
+									Ознакомлен с условиями <a class="form-agree__link" href="#">Договора оферты</a>
+								</span>
+							</label>
+						</div>
+					</fieldset>
+					<fieldset data-step="2" class="checkout__item checkout-step">
+						<div class="checkout-step__inner">
+							<legend class="checkout-step__title title-24">2/ Способ доставки</legend>
+							<div class="checkout-step__delivery">
+								<label class="checkout-step__field-title">Способ доставки</label>
+								<select class="select checkout-step__select">
+									<option value="door">Службой СДЭК до двери</option>
+									<option value="issue-point">Службой СДЭК до пункта выдачи</option>
+									<option value="pickup">Самовывоз</option>
+								</select>
+							</div>
+							<div class="checkout-step__hidden checkout-step__delivery">
+								<div class="checkout-step__field-title">Адрес доставки</div>
+								<div class="checkout-step__fields">
+									<label class="checkout-step__field">
+										<span class="form-label">Индекс *</span>
+										<input class="input" name="index" placeholder="1956789" required>
+									</label>
+									<label class="checkout-step__field">
+										<span class="form-label">Город *</span>
+										<input class="input" name="city" placeholder="Москва" required>
+									</label>
+									<label class="checkout-step__field">
+										<span class="form-label">Улица *</span>
+										<input class="input" name="street" placeholder="Московская ул." required>
+									</label>
+									<label class="checkout-step__field">
+										<span class="form-label">Дом, корпус, строение *</span>
+										<input class="input" name="home" required>
+									</label>
+									<label class="checkout-step__field">
+										<span class="form-label">Номер квартиры</span>
+										<input class="input" name="flat">
+									</label>
+								</div>
+							</div>
+							<div class="checkout-step__hidden checkout-step__table">
+								<div class="checkout-step__tabs">
+									<a href="#list" class="tab checkout-step__tab tab--active">Списком</a>
+									<a href="#map" class="tab checkout-step__tab">На карте</a>
+								</div>
+								<table class="table">
+									<tbody>
+										<tr>
+											<td>На Комендантском</td>
+											<td>г.&nbsp;Санкт-Петербург, Комендантский пр-кт, 4, корп.&nbsp;2, лит.&nbsp;А</td>
+											<td><a href="tel:+74955067832">+7 (495) 506-78-32</a></td>
+											<td>
+												<dl>
+													<div>
+														<dt>Пн-Чт </dt>
+														<dd>с 9:00 до 18:00</dd>
+													</div>
+													<div>
+														<dt>Пт</dt>
+														<dd>с 9:00 до 17:00</dd>
+													</div>
+													<div>
+														<dt>Сб-Вс</dt>
+														<dd>Выходные</dd>
+													</div>
+												</dl>
+											</td>
+										</tr>
+										<tr>
+											<td>На Типанова</td>
+											<td>г.&nbsp;Санкт-Петербург ул.&nbsp;Типанова, 27/39, номер секции №158</td>
+											<td><a href="tel:+78123806686">+7 (812) 380-66-86</a></td>
+											<td>
+												<dl>
+													<div>
+														<dt>Пн-Пт </dt>
+														<dd>с 9:00 до 20:00</dd>
+													</div>
+													<div>
+														<dt>Сб-Вс</dt>
+														<dd>с 10:00 до 18:00</dd>
+													</div>
+												</dl>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="checkout-step__hidden checkout-step__table">
+								<div class="checkout-step__tabs">
+									<a href="#list" class="tab checkout-step__tab tab--active">Списком</a>
+									<a href="#map" class="tab checkout-step__tab">На карте</a>
+								</div>
+								<table class="table">
+									<tbody>
+										<tr>
+											<td>г.&nbsp;Реутов</td>
+											<td><span>ул.&nbsp;Фабричная, д.6</span></td>
+											<td>
+												<a href="tel:+74955067832">+7 (495) 506-78-32</a>
+												<a href="tel:+78123806686">+7 (812) 380-66-86</a>
+											</td>
+											<td>
+												<dl>
+													<div>
+														<dt>Пн-Чт </dt>
+														<dd>с 9:00 до 18:00</dd>
+													</div>
+													<div>
+														<dt>Пт</dt>
+														<dd>с 9:00 до 17:00</dd>
+													</div>
+													<div>
+														<dt>Сб-Вс</dt>
+														<dd>Выходные</dd>
+													</div>
+												</dl>
+											</td>
+										</tr>
+										<tr>
+											<td>г.&nbsp;Санкт-Петербург</td>
+											<td><span>ул. Фабричная, д.6</span></td>
+											<td>
+												<a href="tel:+78123806686">+7 (812) 380-66-86</a>
+												<a href="tel:+78125402272">+7 (812) 540-22-72</a>
+											</td>
+											<td>
+												<dl>
+													<div>
+														<dt>Пн-Пт </dt>
+														<dd>с 9:00 до 18:00</dd>
+													</div>
+													<div>
+														<dt>Сб-Вс</dt>
+														<dd>выходные</dd>
+													</div>
+												</dl>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</fieldset>
+					<fieldset data-step="1" class="checkout__item checkout-step">
+						<div class="checkout-step__inner">
+							<legend class="checkout-step__title title-24">3/ Выбор способа оплаты</legend>
+							<div class="checkout-step__checks">
+								<label class="checkout-step__check">
+									<input class="check-box" type="radio" name="payment">
+									<span class="check-style"></span>
+									<span class="check-text">
+										Связаться со мной для уточнения деталей оплаты
+									</span>
+								</label>
+								<label class="checkout-step__check">
+									<input class="check-box" type="radio" name="payment">
+									<span class="check-style"></span>
+									<span class="check-text">
+										Онлайн-оплата полной стоимости картой VISA, Mastercard, МИР
+									</span>
+								</label>
+								<label class="checkout-step__check">
+									<input class="check-box" type="radio" name="payment">
+									<span class="check-style"></span>
+									<span class="check-text">
+										Онлайн-оплата 25% стоимости заказа (но не менее 500 рублей) картой VISA, Mastercard и МИР
+									</span>
+								</label>
+								<label class="checkout-step__check">
+									<input class="check-box" type="radio" name="payment">
+									<span class="check-style"></span>
+									<span class="check-text">
+										Оплата заказа по выставленному счету (безнал для юр. и физ. лиц)
+									</span>
+								</label>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+				<div class="cart checkout__cart">
+					<div class="cart__top">
+						<div class="cart__title title-24">Ваш заказ</div>
+					</div>
+					<div class="cart__items">
+						<div class="cart__item cart-item">
+							<picture class="cart-item__img">
+								<source type="image/webp" data-srcset="assets/images/content/cart/01.webp" srcset="assets/images/src.webp">
+								<img class="lazy" data-src="assets/images/content/cart/01.png" src="assets/images/src.jpg" alt="фото" width="120" height="114">
+							</picture>
+							<div class="cart-item__articul">5а640</div>
+							<div class="cart-item__title">
+								Ручка-скоба Verona 11.4149.12, черный мат. лак, 160/177, Metakor
+							</div>
+							<button class="cart-item__trash" type="button">
+								<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M21 5.99991H16V4.32991C15.9765 3.68973 15.7002 3.08497 15.2316 2.64821C14.7629 2.21144 14.1402 1.97831 13.5 1.99991H10.5C9.85975 1.97831 9.23706 2.21144 8.76843 2.64821C8.2998 3.08497 8.02346 3.68973 8 4.32991V5.99991H3C2.73478 5.99991 2.48043 6.10527 2.29289 6.29281C2.10536 6.48034 2 6.7347 2 6.99991C2 7.26513 2.10536 7.51948 2.29289 7.70702C2.48043 7.89456 2.73478 7.99991 3 7.99991H4V18.9999C4 19.7956 4.31607 20.5586 4.87868 21.1212C5.44129 21.6838 6.20435 21.9999 7 21.9999H17C17.7956 21.9999 18.5587 21.6838 19.1213 21.1212C19.6839 20.5586 20 19.7956 20 18.9999V7.99991H21C21.2652 7.99991 21.5196 7.89456 21.7071 7.70702C21.8946 7.51948 22 7.26513 22 6.99991C22 6.7347 21.8946 6.48034 21.7071 6.29281C21.5196 6.10527 21.2652 5.99991 21 5.99991ZM10 4.32991C10 4.16991 10.21 3.99991 10.5 3.99991H13.5C13.79 3.99991 14 4.16991 14 4.32991V5.99991H10V4.32991ZM18 18.9999C18 19.2651 17.8946 19.5195 17.7071 19.707C17.5196 19.8946 17.2652 19.9999 17 19.9999H7C6.73478 19.9999 6.48043 19.8946 6.29289 19.707C6.10536 19.5195 6 19.2651 6 18.9999V7.99991H18V18.9999Z" fill="#C1C1C1" />
+								</svg>
+							</button>
+							<div class="cart-item__price">740 ₽</div>
+							<div class="cart-item__quantity">Количество:</div>
+							<select class="select cart-item__select">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+							</select>
+						</div>
+						<div class="cart__item cart-item">
+							<picture class="cart-item__img">
+								<source type="image/webp" data-srcset="assets/images/content/cart/02.webp" srcset="assets/images/src.webp">
+								<img class="lazy" data-src="assets/images/content/cart/02.png" src="assets/images/src.jpg" alt="фото" width="120" height="114">
+							</picture>
+							<div class="cart-item__articul">Г0231</div>
+							<div class="cart-item__title">
+								Ручка-скоба с фарфоровой вставкой M95.07.00.CLG, 96 мм, хром/блестящий черный фарфор, Giusti
+							</div>
+							<button class="cart-item__trash" type="button">
+								<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M21 5.99991H16V4.32991C15.9765 3.68973 15.7002 3.08497 15.2316 2.64821C14.7629 2.21144 14.1402 1.97831 13.5 1.99991H10.5C9.85975 1.97831 9.23706 2.21144 8.76843 2.64821C8.2998 3.08497 8.02346 3.68973 8 4.32991V5.99991H3C2.73478 5.99991 2.48043 6.10527 2.29289 6.29281C2.10536 6.48034 2 6.7347 2 6.99991C2 7.26513 2.10536 7.51948 2.29289 7.70702C2.48043 7.89456 2.73478 7.99991 3 7.99991H4V18.9999C4 19.7956 4.31607 20.5586 4.87868 21.1212C5.44129 21.6838 6.20435 21.9999 7 21.9999H17C17.7956 21.9999 18.5587 21.6838 19.1213 21.1212C19.6839 20.5586 20 19.7956 20 18.9999V7.99991H21C21.2652 7.99991 21.5196 7.89456 21.7071 7.70702C21.8946 7.51948 22 7.26513 22 6.99991C22 6.7347 21.8946 6.48034 21.7071 6.29281C21.5196 6.10527 21.2652 5.99991 21 5.99991ZM10 4.32991C10 4.16991 10.21 3.99991 10.5 3.99991H13.5C13.79 3.99991 14 4.16991 14 4.32991V5.99991H10V4.32991ZM18 18.9999C18 19.2651 17.8946 19.5195 17.7071 19.707C17.5196 19.8946 17.2652 19.9999 17 19.9999H7C6.73478 19.9999 6.48043 19.8946 6.29289 19.707C6.10536 19.5195 6 19.2651 6 18.9999V7.99991H18V18.9999Z" fill="#C1C1C1" />
+								</svg>
+							</button>
+							<div class="cart-item__price">793 ₽</div>
+							<div class="cart-item__quantity">Количество:</div>
+							<select class="select cart-item__select">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+							</select>
+						</div>
+					</div>
+					<dl class="cart__list">
+						<div>
+							<dt>Предварительная стоимость</dt>
+							<dd>1533 ₽</dd>
+						</div>
+						<div>
+							<dt>Доставка</dt>
+							<dd>0 ₽</dd>
+						</div>
+					</dl>
+					<div class="cart__total">
+						Итого:
+						<span>1533 ₽</span>
+					</div>
+				</div>
+				<button class="btn checkout__btn checkout__back-btn js-checkout-back btn--border" type="button">
+					<div class="btn__inner">
+						<svg class="btn__arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M13.9982 5.00006C14.2319 4.9996 14.4583 5.08098 14.6382 5.23006C14.7395 5.31401 14.8232 5.41711 14.8846 5.53346C14.9459 5.6498 14.9837 5.77711 14.9958 5.90809C15.0079 6.03906 14.994 6.17114 14.9549 6.29674C14.9159 6.42234 14.8524 6.53901 14.7682 6.64006L10.2882 12.0001L14.6082 17.3701C14.6913 17.4723 14.7533 17.59 14.7908 17.7164C14.8282 17.8427 14.8403 17.9752 14.8264 18.1062C14.8124 18.2373 14.7727 18.3643 14.7095 18.4799C14.6464 18.5955 14.561 18.6975 14.4582 18.7801C14.3548 18.8711 14.2336 18.9398 14.1023 18.9818C13.9711 19.0237 13.8326 19.0381 13.6955 19.0241C13.5584 19.01 13.4257 18.9677 13.3057 18.8999C13.1857 18.8321 13.081 18.7402 12.9982 18.6301L8.16824 12.6301C8.02116 12.4511 7.94075 12.2267 7.94075 11.9951C7.94075 11.7634 8.02116 11.539 8.16824 11.3601L13.1682 5.36006C13.2686 5.23904 13.396 5.14338 13.5402 5.08083C13.6844 5.01828 13.8413 4.99061 13.9982 5.00006Z" fill="#444" />
+						</svg>
+						<span>Назад</span>
+					</div>
+				</button>
+				<button class="btn checkout__btn checkout__submit-btn" type="submit">Оформить заказ</button>
+			</form>
 		</main>
 		<footer class="footer">
 			<div class="container footer__container">

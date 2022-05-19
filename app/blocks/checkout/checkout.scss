@@ -1,3 +1,199 @@
 .checkout {
-  // your code
+    height: calc(100vh - 17.8rem);
+    overflow-y: auto;
+    grid-template-rows: 1fr 10rem;
+    //grid-template-rows: minmax(calc(100vh - 17.8rem - 7rem), max-content) 7rem;
+    grid-template-areas:
+        '. checkout checkout checkout checkout checkout checkout checkout checkout checkout checkout checkout checkout checkout . cart cart cart cart cart cart cart cart cart'
+        'back back back back back back back back back back back back back back back submit submit submit submit submit submit submit submit submit';
+    &::-webkit-scrollbar {
+        width: 0;
+        -webkit-appearance: none;
+    }
+
+    &__content {
+        padding-top: 5rem;
+        grid-area: checkout;
+    }
+
+    &__cart {
+        grid-area: cart;
+    }
+
+    &__back-btn {
+        grid-area: back;
+        display: grid;
+        grid-template-columns: repeat(15, 1fr);
+        .btn__inner {
+            grid-column: 2 / 15;
+            grid-template-columns: 2.4rem max-content;
+            grid-gap: 1.5rem;
+        }
+    }
+
+    &__submit-btn {
+        grid-area: submit;
+    }
+
+    &__btn {
+        font-size: 2rem;
+        line-height: 2.3rem;
+    }
+}
+
+.checkout-step {
+    border: none;
+    display: none;
+    &:first-child {
+        display: grid;
+    }
+
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(13, 1fr);
+        > * {
+            grid-column: span 11;
+            &:not(:last-child) {
+                margin-bottom: 4rem;
+            }
+        }
+    }
+    // .checkout-step__title
+
+    &__title {
+        width: 100%;
+        padding-bottom: 2.3rem;
+        border-bottom: 0.1rem solid $light-gray;
+    }
+
+    // .checkout-step__fields
+
+    &__fields {
+        display: grid;
+        grid-template-columns: repeat(11, 1fr);
+        row-gap: 3rem;
+    }
+
+    // .checkout-step__field
+
+    &__field {
+        display: grid;
+        row-gap: 0.5rem;
+        &:nth-child(odd) {
+            grid-column: 1 / 6;
+        }
+        &:nth-child(even) {
+            grid-column: 7 / 12;
+        }
+    }
+
+    &__select {
+        font-family: 'Montserrat', sans-serif;
+        @extend %text-18;
+        padding-bottom: 1.8rem;
+        border-bottom-color: $accent;
+    }
+
+    &__agree {
+        display: flex;
+        align-items: center;
+        grid-column: span 11;
+    }
+
+    &__delivery {
+        display: grid;
+        row-gap: 4rem;
+    }
+
+    &__hidden {
+        display: none;
+        margin-top: 4rem;
+    }
+
+    &__field-title {
+        @extend %text-20;
+        @extend %dewi;
+        font-weight: 600;
+        margin-bottom: 4rem;
+    }
+
+    &__table {
+        grid-column: span 13;
+    }
+
+    &__tabs {
+        display: flex;
+        margin-bottom: 2rem;
+    }
+
+    &__tab {
+        @extend %text-20;
+        @extend %dewi;
+        font-weight: 600;
+        color: #c1c1c1;
+        &:not(:last-child) {
+            margin-right: 1.8rem;
+        }
+
+        &.tab--active {
+            color: $accent;
+        }
+    }
+
+    &__checks {
+        display: grid;
+        row-gap: 2.5rem;
+    }
+
+    &__check {
+        display: flex;
+        align-items: flex-start;
+        .check-style {
+            margin-top: 0.4rem;
+        }
+        .check-text {
+            margin-left: 2.3rem;
+        }
+    }
+}
+
+.table {
+    border: 0.1rem solid $light-gray;
+    tbody {
+        vertical-align: top;
+    }
+    tr {
+        &:not(:last-child) {
+            border-bottom: 0.1rem solid $light-gray;
+        }
+    }
+    td {
+        padding: 1.6rem 2.5rem 3rem;
+        color: #333333;
+        &:first-child {
+            padding-left: 1.5rem;
+            white-space: nowrap;
+        }
+        &:last-child {
+            padding-right: 5.5rem;
+        }
+        span {
+            white-space: nowrap;
+        }
+    }
+    dl {
+        display: grid;
+        grid-gap: 0.9rem;
+        > div {
+            display: grid;
+            grid-template-columns: minmax(5.6rem, max-content) max-content;
+            column-gap: 5rem;
+        }
+        dt {
+        }
+    }
+
+    a {
+        white-space: nowrap;
+    }
 }

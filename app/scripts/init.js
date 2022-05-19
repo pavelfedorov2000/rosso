@@ -10,6 +10,7 @@ $(document).ready(function () {
     app.sliderSection.init();
     app.productReview.init();
     app.colorSolutions.init();
+    app.checkout.init();
 
     $('.form input[type=file]').on('change', function () {
         let arrayFiles = this.files;
