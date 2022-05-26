@@ -327,7 +327,7 @@ label.error, .drop-catalog__view-more, .catalog-sort, .catalog-filters__btn, .bu
   line-height: 2.1rem;
 }
 
-.promo-facades__text, .promo-catalog__text, .product-review__text, .product-description__item-content p, .product-card__status, .header__action span, .header__menu-link, .header__link, .header__phone, .header__city, .footer__menu-title, .facade-detail__section-content, .facade-card__text, .drop-catalog-item__list-link, .drop-catalog__download-item, .catalog-card__title, .cart-item__quantity, .cart-item__title, .aside-filters__price-value, .aside-filters__all-btn, .aside-filters__check-item, .aside-filters__reset-btn, .breadcrumbs__item, .description-list, .radio-style {
+.promo-facades__text, .promo-catalog__text, .product-review__text, .product-description__item-content p, .product-card__status, .header__action span, .header__menu-link, .header__link, .header__phone, .header__city, .footer__menu-title, .facade-detail__section-content, .facade-card__text, .drop-catalog-item__list-link, .drop-catalog__download-item, .catalog-card__title, .cart-item__quantity, .cart-item__title, .aside-filters__price-value, .aside-filters__all-btn, .aside-filters__check-item, .aside-filters__reset-btn, .breadcrumbs__item, .description-list, .radio-style, .js-view-more {
   font-size: 1.6rem;
   line-height: 2.4rem;
 }
@@ -412,8 +412,8 @@ label.error, .drop-catalog__view-more, .catalog-sort, .catalog-filters__btn, .bu
   }
 }
 
-.popular-category__img, .partner-brands__brand, .header__action span, .header__action, .header__logo, .frame-system__btn, .frame-system__pagination, .facade-choice__figure, .drop-catalog__category, .drop-catalog__view-more, .catalog__view-more, .brands-grid__item, .brand__logo, .swiper-button-prev,
-.swiper-button-next, .js-favorite-btn {
+.popular-category__img, .partner-brands__brand, .header__action span, .header__action, .header__logo, .frame-system__btn, .frame-system__pagination, .facade-choice__figure, .drop-catalog__category, .drop-catalog__view-more, .brands-grid__item, .brand__logo, .swiper-button-prev,
+.swiper-button-next, .js-view-more, .js-favorite-btn {
   display: grid;
   place-items: center;
 }
@@ -726,6 +726,38 @@ table img {
 }
 .js-favorite-btn.active svg path {
   fill: #fff;
+}
+
+.js-view-more {
+  height: 12.2rem;
+  border-top: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+@media (max-width: 1366px) {
+  .js-view-more {
+    height: 8.8rem;
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+  }
+}
+@media (max-width: 1366px) {
+  .js-view-more .btn__inner {
+    grid-template-columns: -webkit-max-content 1.5rem;
+    grid-template-columns: max-content 1.5rem;
+    align-items: center;
+  }
+}
+@media (max-width: 1366px) {
+  .js-view-more .btn__arrow {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+@media (any-hover: hover) {
+  .js-view-more:hover .btn__arrow {
+    transform: none;
+  }
 }
 
 .select {
@@ -1638,48 +1670,112 @@ input[type=number]:focus {
 }
 
 .brands-grid {
-  grid-template-rows: 20.5rem -webkit-max-content 2rem 0.1rem 7rem -webkit-max-content 20rem repeat(3, 28rem);
-  grid-template-rows: 20.5rem max-content 2rem 0.1rem 7rem max-content 20rem repeat(3, 28rem);
-  grid-template-areas: "transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica . . . . . . . . . . . ." "transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica . title title title title title title title title title title ." "transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica . . . . . . . . . . . ." "transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica divider divider divider divider divider divider divider divider divider divider divider divider" "transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica . . . . . . . . . . . ." "transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica . . text text text text text text . . . ." "transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica . . . . . . . . . . . ." "metacor metacor metacor metacor metacor metacor confurn confurn confurn confurn confurn confurn giusti giusti giusti giusti giusti giusti rejs rejs rejs rejs rejs rejs" "gamet gamet gamet gamet gamet gamet stabilus stabilus stabilus stabilus stabilus stabilus salice salice salice salice salice salice lincos lincos lincos lincos lincos lincos" "ozmf ozmf ozmf ozmf ozmf ozmf nomet nomet nomet nomet nomet nomet formenti formenti formenti formenti formenti formenti korner korner korner korner korner korner";
+  grid-template-rows: 20.5rem -webkit-max-content 2rem 0.1rem 7rem -webkit-max-content 20rem auto;
+  grid-template-rows: 20.5rem max-content 2rem 0.1rem 7rem max-content 20rem auto;
 }
 @media (max-width: 1366px) {
   .brands-grid {
-    grid-template-rows: 14.5rem -webkit-max-content 1.5rem 0.1rem 5rem -webkit-max-content 11.5rem repeat(3, 20rem);
-    grid-template-rows: 14.5rem max-content 1.5rem 0.1rem 5rem max-content 11.5rem repeat(3, 20rem);
-    grid-template-areas: "transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica . . . . . . . . . . . ." "transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica . title title title title title title title title title title ." "transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica . . . . . . . . . . . ." "transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica divider divider divider divider divider divider divider divider divider divider divider divider" "transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica . . . . . . . . . . . ." "transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica . . text text text text text . . . . ." "transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica . . . . . . . . . . . ." "metacor metacor metacor metacor metacor metacor confurn confurn confurn confurn confurn confurn giusti giusti giusti giusti giusti giusti rejs rejs rejs rejs rejs rejs" "gamet gamet gamet gamet gamet gamet stabilus stabilus stabilus stabilus stabilus stabilus salice salice salice salice salice salice lincos lincos lincos lincos lincos lincos" "ozmf ozmf ozmf ozmf ozmf ozmf nomet nomet nomet nomet nomet nomet formenti formenti formenti formenti formenti formenti korner korner korner korner korner korner";
-  }
-}
-@media (max-width: 1024px) {
-  .brands-grid {
-    grid-template-rows: 24.5rem -webkit-max-content 2.5rem 0.1rem 3.5rem -webkit-max-content 8.5rem repeat(4, 15rem);
-    grid-template-rows: 24.5rem max-content 2.5rem 0.1rem 3.5rem max-content 8.5rem repeat(4, 15rem);
-    grid-template-areas: "transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica . . . . . . . . . . ." "transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica . title title title title title title title title title ." "transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica . . . . . . . . . . ." "transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica divider divider divider divider divider divider divider divider divider divider divider" "transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica . . . . . . . . . . ." "transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica . text text text text text text text text . ." "transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica . . . . . . . . . . ." "metacor metacor metacor metacor metacor metacor metacor metacor confurn confurn confurn confurn confurn confurn confurn confurn giusti giusti giusti giusti giusti giusti giusti giusti" "rejs rejs rejs rejs rejs rejs rejs rejs gamet gamet gamet gamet gamet gamet gamet gamet stabilus stabilus stabilus stabilus stabilus stabilus stabilus stabilus" "salice salice salice salice salice salice salice salice lincos lincos lincos lincos lincos lincos lincos lincos ozmf ozmf ozmf ozmf ozmf ozmf ozmf ozmf" "nomet nomet nomet nomet nomet nomet nomet nomet formenti formenti formenti formenti formenti formenti formenti formenti korner korner korner korner korner korner korner korner";
+    grid-template-rows: 14.5rem -webkit-max-content 1.5rem 0.1rem 5rem -webkit-max-content 11.5rem auto;
+    grid-template-rows: 14.5rem max-content 1.5rem 0.1rem 5rem max-content 11.5rem auto;
   }
 }
 @media (max-width: 767px) {
   .brands-grid {
-    grid-template-rows: 11.5rem -webkit-max-content 2rem 0.1rem 4rem -webkit-max-content 4rem repeat(6, 16rem);
-    grid-template-rows: 11.5rem max-content 2rem 0.1rem 4rem max-content 4rem repeat(6, 16rem);
+    grid-template-rows: 11.5rem -webkit-max-content 2rem 0.1rem 4rem -webkit-max-content 4rem auto;
+    grid-template-rows: 11.5rem max-content 2rem 0.1rem 4rem max-content 4rem auto;
     grid-template-areas: "transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica . . . . . . . . . . . . . ." "transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica . title title title title title title title title title title title title ." "transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica . . . . . . . . . . . . . ." "transformica transformica transformica transformica transformica transformica transformica transformica transformica transformica divider divider divider divider divider divider divider divider divider divider divider divider divider divider" ". . . . . . . . . . . . . . . . . . . . . . . ." ". . text text text text text text text text text text text text text text text text . . . . . ." ". . . . . . . . . . . . . . . . . . . . . . . ." "metacor metacor metacor metacor metacor metacor metacor metacor metacor metacor metacor metacor confurn confurn confurn confurn confurn confurn confurn confurn confurn confurn confurn confurn" "giusti giusti giusti giusti giusti giusti giusti giusti giusti giusti giusti giusti rejs rejs rejs rejs rejs rejs rejs rejs rejs rejs rejs rejs" "gamet gamet gamet gamet gamet gamet gamet gamet gamet gamet gamet gamet stabilus stabilus stabilus stabilus stabilus stabilus stabilus stabilus stabilus stabilus stabilus stabilus" "salice salice salice salice salice salice salice salice salice salice salice salice lincos lincos lincos lincos lincos lincos lincos lincos lincos lincos lincos lincos" "ozmf ozmf ozmf ozmf ozmf ozmf ozmf ozmf ozmf ozmf ozmf ozmf nomet nomet nomet nomet nomet nomet nomet nomet nomet nomet nomet nomet" "formenti formenti formenti formenti formenti formenti formenti formenti formenti formenti formenti formenti korner korner korner korner korner korner korner korner korner korner korner korner";
+  }
+}
+.brands-grid__logos {
+  grid-column: 1/-1;
+  grid-row: 8/9;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 28rem;
+}
+@media (max-width: 1366px) {
+  .brands-grid__logos {
+    grid-auto-rows: 20rem;
+  }
+}
+@media (max-width: 1024px) {
+  .brands-grid__logos {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 15rem;
+  }
+}
+@media (max-width: 767px) {
+  .brands-grid__logos {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 16rem;
   }
 }
 .brands-grid__item {
   border: 0.05rem solid #c1c1c1;
 }
 .brands-grid__title {
-  grid-area: title;
+  grid-row: 2/3;
+  grid-column: 14/span 10;
+}
+@media (max-width: 1024px) {
+  .brands-grid__title {
+    grid-column: 15/-2;
+  }
+}
+@media (max-width: 767px) {
+  .brands-grid__title {
+    grid-column: 11/-2;
+  }
 }
 .brands-grid__divider {
-  grid-area: divider;
+  grid-row: 4/5;
+  grid-column: 13/-1;
   background-color: #c1c1c1;
 }
+@media (max-width: 1024px) {
+  .brands-grid__divider {
+    grid-column: 14/-1;
+  }
+}
+@media (max-width: 767px) {
+  .brands-grid__divider {
+    grid-column: 10/-1;
+  }
+}
 .brands-grid__text {
-  grid-area: text;
+  grid-row: 6/7;
+  grid-column: 15/span 5;
+}
+@media (max-width: 1024px) {
+  .brands-grid__text {
+    grid-column: 15/-3;
+  }
+}
+@media (max-width: 767px) {
+  .brands-grid__text {
+    grid-column: 3/span 16;
+  }
+}
+.brands-grid__item img {
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .brands-grid__item--transformica {
-  grid-area: transformica;
+  grid-column: 1/span 12;
+  grid-row: 1/8;
   border-top: none;
   border-right-width: 0.1rem;
+}
+@media (max-width: 1024px) {
+  .brands-grid__item--transformica {
+    grid-column: 1/span 13;
+  }
+}
+@media (max-width: 767px) {
+  .brands-grid__item--transformica {
+    grid-column: 1/span 9;
+    grid-row: 1/5;
+  }
 }
 .brands-grid__item--transformica img {
   width: 72rem;
@@ -1703,9 +1799,6 @@ input[type=number]:focus {
     height: 1.6rem;
   }
 }
-.brands-grid__item--metakor {
-  grid-area: metacor;
-}
 .brands-grid__item--metakor img {
   width: 24rem;
   height: 14rem;
@@ -1727,9 +1820,6 @@ input[type=number]:focus {
     width: 12rem;
     height: 7rem;
   }
-}
-.brands-grid__item--confurn {
-  grid-area: confurn;
 }
 .brands-grid__item--confurn img {
   width: 32rem;
@@ -1753,34 +1843,6 @@ input[type=number]:focus {
     height: 4.3rem;
   }
 }
-.brands-grid__item--giusti {
-  grid-area: giusti;
-}
-.brands-grid__item--giusti img {
-  width: 24rem;
-  height: 20.3rem;
-}
-@media (max-width: 1366px) {
-  .brands-grid__item--giusti img {
-    width: 17.1rem;
-    height: 14.4rem;
-  }
-}
-@media (max-width: 1024px) {
-  .brands-grid__item--giusti img {
-    width: 12.8rem;
-    height: 10.9rem;
-  }
-}
-@media (max-width: 767px) {
-  .brands-grid__item--giusti img {
-    width: 12rem;
-    height: 10rem;
-  }
-}
-.brands-grid__item--rejs {
-  grid-area: rejs;
-}
 .brands-grid__item--rejs img {
   width: 24rem;
   height: 8.6rem;
@@ -1802,9 +1864,6 @@ input[type=number]:focus {
     width: 12rem;
     height: 4rem;
   }
-}
-.brands-grid__item--gamet {
-  grid-area: gamet;
 }
 .brands-grid__item--gamet img {
   width: 32rem;
@@ -1828,9 +1887,6 @@ input[type=number]:focus {
     height: 2.3rem;
   }
 }
-.brands-grid__item--stabilus {
-  grid-area: stabilus;
-}
 .brands-grid__item--stabilus img {
   width: 32rem;
   height: 7.9rem;
@@ -1852,9 +1908,6 @@ input[type=number]:focus {
     width: 12rem;
     height: 2.8rem;
   }
-}
-.brands-grid__item--salice {
-  grid-area: salice;
 }
 .brands-grid__item--salice img {
   width: 24rem;
@@ -1878,9 +1931,6 @@ input[type=number]:focus {
     height: 2.2rem;
   }
 }
-.brands-grid__item--lincos {
-  grid-area: lincos;
-}
 .brands-grid__item--lincos img {
   width: 32rem;
   height: 8.1rem;
@@ -1902,9 +1952,6 @@ input[type=number]:focus {
     width: 12rem;
     height: 3.1rem;
   }
-}
-.brands-grid__item--ozmf {
-  grid-area: ozmf;
 }
 .brands-grid__item--ozmf img {
   width: 24rem;
@@ -1928,9 +1975,6 @@ input[type=number]:focus {
     height: 5.8rem;
   }
 }
-.brands-grid__item--nomet {
-  grid-area: nomet;
-}
 .brands-grid__item--nomet img {
   width: 24rem;
   height: 7.1rem;
@@ -1953,9 +1997,6 @@ input[type=number]:focus {
     height: 3.5rem;
   }
 }
-.brands-grid__item--formenti {
-  grid-area: formenti;
-}
 .brands-grid__item--formenti img {
   width: 24rem;
   height: 11.6rem;
@@ -1977,9 +2018,6 @@ input[type=number]:focus {
     width: 12rem;
     height: 5.8rem;
   }
-}
-.brands-grid__item--korner {
-  grid-area: korner;
 }
 .brands-grid__item--korner img {
   width: 24rem;
@@ -2366,36 +2404,7 @@ input[type=number]:focus {
   }
 }
 .catalog__view-more {
-  height: 12.2rem;
-  grid-column: 7/25;
-  border-top: none;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-}
-@media (max-width: 1366px) {
-  .catalog__view-more {
-    height: 8.8rem;
-    font-size: 1.4rem;
-    line-height: 2.1rem;
-  }
-}
-@media (max-width: 1366px) {
-  .catalog__view-more .btn__inner {
-    grid-template-columns: -webkit-max-content 1.5rem;
-    grid-template-columns: max-content 1.5rem;
-    align-items: center;
-  }
-}
-@media (max-width: 1366px) {
-  .catalog__view-more .btn__arrow {
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-}
-@media (any-hover: hover) {
-  .catalog__view-more:hover .btn__arrow {
-    transform: none;
-  }
+  grid-column: 7/-1;
 }
 .catalog__card:nth-child(2) {
   grid-column: 2/4;
@@ -4835,6 +4844,13 @@ input[type=file] {
     width: 1.5rem;
     height: 1.5rem;
   }
+}
+
+.news-article {
+  display: grid;
+}
+.ttu {
+  text-transform: uppercase;
 }
 
 .partner-brands {

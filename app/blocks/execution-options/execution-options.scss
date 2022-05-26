@@ -1,46 +1,56 @@
 .execution-options {
-    grid-column: span 14;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    @media (max-width: 1024px) {
-        grid-column: span 18;
-    }
+	grid-column: span 14;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
 
-    // .execution-options__item
+	@media (max-width: 1024px) {
+		grid-column: span 18;
+	}
 
-    &__item {
-        min-width: 7.5rem;
-        cursor: pointer;
-        @media (max-width: 1366px) {
-            min-width: 5.4rem;
-        }
-        @media (max-width: 1024px) {
-            min-width: 4.4rem;
-        }
-        @media (max-width: 767px) {
-            min-width: 2.1rem;
-        }
-        .border-check__img {
-            height: 15rem;
-            @media (max-width: 1366px) {
-                height: 10.8rem;
-            }
-            @media (max-width: 1024px) {
-                height: 8.7rem;
-            }
-            @media (max-width: 767px) {
-                height: 4rem;
-            }
-        }
-        .radio-box:checked + .radio-style {
-            .border-check__img {
-                width: 58 / 91 * 100%;
-                height: 116 / 150 * 100%;
-                @media (max-width: 1366px) {
-                    height: 116 / 150 * 100%;
-                }
-            }
-        }
-    }
+	// .execution-options__item
+
+	&__item {
+		min-width: 7.5rem;
+		cursor: pointer;
+
+		@media (max-width: 1366px) {
+			min-width: 5.4rem;
+		}
+
+		@media (max-width: 1024px) {
+			min-width: 4.4rem;
+		}
+
+		@media (max-width: 767px) {
+			min-width: 2.1rem;
+		}
+
+		.border-check__img {
+			height: 15rem;
+
+			@media (max-width: 1366px) {
+				height: 10.8rem;
+			}
+
+			@media (max-width: 1024px) {
+				height: 8.7rem;
+			}
+
+			@media (max-width: 767px) {
+				height: 4rem;
+			}
+		}
+
+		.radio-box:checked+.radio-style {
+			.border-check__img {
+				width: calc(58 / 91 * 100%);
+				height: calc(116 / 150 * 100%);
+
+				@media (max-width: 1366px) {
+					height: calc(116 / 150 * 100%);
+				}
+			}
+		}
+	}
 }

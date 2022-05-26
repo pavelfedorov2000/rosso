@@ -215,42 +215,7 @@
 	}
 
 	&__view-more {
-		@extend %grid-center;
-		height: 12.2rem;
-		grid-column: 7 / 25;
-		border-top: none;
-		font-family: 'Montserrat', sans-serif;
-		font-weight: 400;
-
-		@media (max-width: 1366px) {
-			height: 8.8rem;
-			font-size: 1.4rem;
-			line-height: 2.1rem;
-		}
-
-		.btn {
-			&__inner {
-				@media (max-width: 1366px) {
-					grid-template-columns: max-content 1.5rem;
-					align-items: center;
-				}
-			}
-
-			&__arrow {
-				@media (max-width: 1366px) {
-					width: 1.5rem;
-					height: 1.5rem;
-				}
-			}
-		}
-
-		@media (any-hover: hover) {
-			&:hover {
-				.btn__arrow {
-					transform: none;
-				}
-			}
-		}
+		grid-column: 7 / -1;
 	}
 
 	&__card {

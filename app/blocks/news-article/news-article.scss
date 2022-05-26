@@ -1,3 +1,27 @@
 .news-article {
-  // your code
+
+	display: grid;
+	// .news-article__top
+
+	&__top {}
+
+	// .news-article__date
+
+	&__date {}
+
+	// .news-article__title
+
+	&__title {}
+
+	// .news-article__text
+
+	&__text {}
+
+	// .news-article__arrow
+
+	&__arrow {}
+}
+
+.ttu {
+	text-transform: uppercase;
 }
